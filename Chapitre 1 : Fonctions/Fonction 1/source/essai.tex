@@ -1,0 +1,499 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[french,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Les fonctions},
+            pdfauthor={Fabien Delhomme},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=french]{babel}
+\else
+  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{french}
+\fi
+
+\title{Les fonctions}
+\author{Fabien Delhomme}
+\date{3 septembre 2018}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\textbf{\huge{Disclaimer}}
+
+Bonjour à tous, ceci est le cours que je vais vous dispenser pendant
+cette année de 2018--2019, avec pour objectif d'avoir le bac S.
+
+Ce document est le support de cours. Il sera divisé en plusieurs
+documents qui présenterons chacun à chapitres.
+
+Il est \textbf{très important} de retenir que ce document est encore en
+construction, c'est-à-dire qu'il subsiste des fautes de typo, ou
+mathématiques. Si vous en voyez, \textbf{il faut le signaler} pour que
+je puisse le corriger au plus vite.
+
+Trêve de parole, commençons !
+
+\newpage
+
+\hypertarget{quest-ce-quune-fonction}{%
+\section{Qu'est-ce qu'une fonction ?}\label{quest-ce-quune-fonction}}
+
+\hypertarget{motivations}{%
+\subsection{Motivations}\label{motivations}}
+
+Les fonctions permettent de modéliser au mieux des phénomènes physiques.
+C'est un formalisme très utilisé en physique, biologie, et en
+mathématiques.
+
+Les fonctions sont aussi présentes au bac: il y a forcément au moins un
+exercice qui porte sur les variations d'une fonctions.
+
+\hypertarget{duxe9finition}{%
+\subsection{Définition}\label{duxe9finition}}
+
+Une fonction associe quelque chose avec quelque chose. Ici, on
+s'intéresse uniquement aux \emph{fonctions numériques}. C'est-à-dire à
+des fonctions qui associent des nombres réels à des nombres réels. On
+verra dans un second temps quelques fonctions définies sur les
+\emph{complexes} (notion que l'on verra plus tard).
+
+\hypertarget{repruxe9sentation-dune-fonctions-numuxe9riques}{%
+\section{Représentation d'une fonctions
+numériques}\label{repruxe9sentation-dune-fonctions-numuxe9riques}}
+
+On peut donc représenter une fonctions dans un repère orthonormé. Cela
+permet de visualiser les fonctions, et surtout :
+
+\begin{itemize}
+\tightlist
+\item
+  De retenir certaines de leur propriétés
+\item
+  D'avoir un sens intuitif de leur croissance
+\end{itemize}
+
+On reparlera de cela prochainement, mais retenez qu'il est
+\emph{essentiel} d'avoir en tête les principales fonctions qui sont au
+programme pour avoir une intuition correcte.
+
+\hypertarget{comment-repruxe9senter-une-fonction}{%
+\subsection{Comment représenter une fonction
+?}\label{comment-repruxe9senter-une-fonction}}
+
+Il suffit de représenter tous les couples de points de la forme
+\[ (x, f(x))\] avec \(x \in \mathbb{R}\).
+
+\hypertarget{les-fonctions-de-base}{%
+\section{Les fonctions de base}\label{les-fonctions-de-base}}
+
+\hypertarget{motivations-1}{%
+\subsection{Motivations}\label{motivations-1}}
+
+Pour mieux appréhender le concept de fonction, il faut avoir en tête ces
+exemples.
+
+\hypertarget{les-fonctions-linuxe9aires-et-affines}{%
+\subsection{Les fonctions linéaires et
+affines}\label{les-fonctions-linuxe9aires-et-affines}}
+
+Ce sont les deux types de fonctions les plus simples qui existent ! Ces
+fonctions sont sont très importante, comme on le verra par la suite.
+
+Ce sont les fonctions du type : \[f(x) = a *x\] Où \(a\) est une
+constante, comme par exemple \[f(x) = 3*x\] où ici \(a\) vaut \(3\).
+
+Ce genre de fonctions permet de modéliser des phénomènes dits linéaires.
+Un exemple très concret peut être donnée par les soldes, ou par la
+modélisation du prix d'un abonnement :
+
+Imaginons qu'une entreprise propose un abonnement de ce type :
+
+\begin{itemize}
+\tightlist
+\item
+  Tout nouvel abonnement coute 10 euros
+\item
+  Puis, le client paye 3 euros par mois
+\end{itemize}
+
+Comment modéliser le prix en fonction du mois que coute cette abonnement
+? Et bien, la réponse est donnée par la fonction \(f(x) = 10*x + 3\).
+
+\textbf{Remarques :} Attention à la notation, normalement (c'est-à-dire
+techniquement parlant), \(f(x)\) représente un nombre. De façon abusive
+je noterai parfois dans ce cours \(f(x)\) pour parler d'une fonction. Je
+vous dirai les endroits où il est important de faire la distinction
+(surtout lors de la rédaction des copies).
+
+La représentation graphique de cette fonction (c'est-à-dire sa
+\emph{courbe représentative}) est une \emph{droite}! (cf exercices).
+
+\hypertarget{fonction-carruxe9}{%
+\subsection{Fonction carré}\label{fonction-carruxe9}}
+
+Un pas vers une fonction plus compliquée ! C'est la fonction suivante :
+\[f : x \longrightarrow x *x = x^2\]
+
+Par exemple:
+
+\begin{itemize}
+\tightlist
+\item
+  \(f(1) = 1\)
+\item
+  \(f(2) = 2*2 = 4\)
+\end{itemize}
+
+\hypertarget{interlude-fonction-ruxe9ciproque}{%
+\subsection{Interlude : fonction
+réciproque}\label{interlude-fonction-ruxe9ciproque}}
+
+On parle de réciproque \(g\), d'une fonction \(f\), une fonction telle
+que, si : \[ y = f(x) \]
+
+Alors : \[ x = g(y) \].
+
+Les prochaines sections montrent des exemples de fonctions réciproques.
+
+\hypertarget{fonction-racine-carruxe9e}{%
+\subsection{Fonction racine carrée}\label{fonction-racine-carruxe9e}}
+
+C'est la fonction réciproque de la fonction racine carré. Attention,
+ici, j'ai omis par soucis de rapidité une tonne de détails techniques,
+mais en gros, et nous y reviendrons plus tard de toute façon, la
+fonction racine marche comme il suit :
+
+\begin{itemize}
+\tightlist
+\item
+  \(3^2 = 9\), donc \(\sqrt{9} = 3\)
+\item
+  \(4^2 = 16\), donc \(\sqrt{16} = 4\)
+\item
+  \(\sqrt{x}\) pour \(x\) négatif n'a pas vraiment de sens (pour
+  l'instant !)
+\item
+  \(\sqrt{2}\) est un nombre bien mystérieux.. (Que nous essaierons de
+  calculer, et voir quelques propriétés).
+\end{itemize}
+
+\hypertarget{fonction-inverse}{%
+\subsection{Fonction inverse}\label{fonction-inverse}}
+
+Fonction qui associe un nombre à son inverse, tout simplement. Par
+exemple, \(f(3) = \frac{1}{3}\). On peut remarquer que \(f\) est sa
+propre réciproque.
+
+\hypertarget{les-polynuxf4mes}{%
+\subsection{Les polynômes}\label{les-polynuxf4mes}}
+
+Les polynômes sont les premières constructions à partir des briques de
+fonctions élémentaires. On parle de polynôme dès que l'on a une fonction
+du type \[ f(x) = a_n * x^n + \dots + a_1 *x + a_0 \] Autrement dit, dès
+que l'on a une somme de puissance de \(x\) multipliés par des nombres
+\(a_n, \dots, a_0\), c'est que l'on a affaire à des polynômes.
+
+Les polynômes sont \textbf{très} importants pour le mathématicien, car
+en un certain sens, ils permettent de tester des théorèmes (et même d'en
+prouver) facilement, puis d'étendre la véracité de ces théorèmes à
+toutes les fonctions possibles !
+
+Faisons le point dès maintenant sur quelque chose qu'il faut à tout prix
+maitriser : la recherche de racines d'un polynôme.
+
+\textbf{Vocabulaire:} une \emph{racine} d'un polynôme \(P\) est un
+nombre \(x\) tel que \(P(x) = 0\).
+
+Au lycée, vous ne verrez jamais de polynôme de degré supérieure à 3.
+C'est-à-dire que vous serrez confronter, au pire, à des \(x^3\) dans vos
+calculs (et heureusement !)
+
+On peut remarquer au passage que les fonctions affines, les fonctions
+linéaires, et les fonctions constantes, sont des polynômes !
+
+\hypertarget{trouver-les-racines-dun-polynuxf4me-de-second-degruxe9}{%
+\subsubsection{Trouver les racines d'un polynôme de second
+degré}\label{trouver-les-racines-dun-polynuxf4me-de-second-degruxe9}}
+
+Voici un paragraphe du type " formulaire ", que je déteste faire car il
+ne donne pas d'explication sur ce qui se passe, mais uniquement des
+formules à retenir. Je prendrai néanmoins soin d'écrire des exercices
+qui vous feront prouver les formules ci-dessous.
+
+On se donne un polynôme de second degré : \[ f(x) = ax^2 + bx + c\]
+
+Où \(a,b\) et \(c\) sont des nombres quelconques.
+
+\textbf{Premier réflexe pour trouver les racines:} (tous en chœurs !)
+\emph{trouver le discriminant !} Pour un polynôme de second degré, on a
+la formule \[ \boxed{ \Delta = b^2 - 4ac }\]
+
+Et les racines sont données par les formules (magique !)
+\[ x_1 = \frac{ - b + \sqrt{\Delta}}{2a}\]
+\[ x_2 = \frac{ - b - \sqrt{\Delta}}{2a}\]
+
+\textbf{Conclusion:}
+
+\begin{itemize}
+\tightlist
+\item
+  Si \(\Delta\) est négatif, il \emph{n'y a pas de racines réelles} (ce
+  qui ont vu les complexes comprennent pourquoi j'insiste sur le mot «
+  réel » )
+\item
+  Si \(\Delta\) est nul, alors ``vous vous êtes fait avoir'', car il n'y
+  a qu'une seule racine, et c'était une simple identité remarquable
+  permettait de conclure. Vous inquiétez pas, cela arrive aux meilleurs.
+\item
+  Si \(\Delta\) est positif, on obtient deux racines distinctes.
+\end{itemize}
+
+\textbf{Astuce de pro:}
+
+\begin{itemize}
+\tightlist
+\item
+  Parfois, lorsque \(a =1\), on a un critère qui permet de trouver les
+  racines d'un polynôme de second degré (voir exercice). En effet, il se
+  trouve que si on note \(x_1\) et \(x_2\) les deux racines d'un
+  polynôme, et que \(a=1\), alors : \[ x_1 x_2 = c\] \[ x_1 + x_2 = b\]
+  Donc, à votre avis, quelles sont les racines du polynôme
+  \(x^2 + 3x +2\) ?
+\end{itemize}
+
+\hypertarget{le-sens-de-variation-dun-polynuxf4me-de-second-degruxe9}{%
+\subsubsection{Le sens de variation d'un polynôme de second
+degré}\label{le-sens-de-variation-dun-polynuxf4me-de-second-degruxe9}}
+
+Dans ce paragraphe, j'empiète un peu sur les notions présentées au
+suivant. Mais je pense qu'il est important de tout mettre au même
+endroit. Si vous ne savez plus ce que représente un tableau de
+variation, alors regardez
+{[}\^{}croissance-décroissance{]}(\#Croissance, décroissance).
+
+On peut donc en déduire le sens de variation facilement. Il y a deux
+cas.
+
+\begin{itemize}
+\tightlist
+\item
+  Soit \(a\) est positif, et alors \(f\) décroit de \(-\infty\) à
+  \(\frac{b}{2a}\) et croit de \(-\frac{b}{2a}\) à \(+ \infty\).
+\item
+  Soit \(a\) est négatif, et c'est l'inverse..
+\end{itemize}
+
+Ce qui donne pour \(a\) positif :
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+x & \(]-\infty \quad \frac{b}{2a}]\) &
+\([\frac{b}{2a} \quad \infty[\)\tabularnewline
+\midrule
+\endhead
+P(x) & \(\searrow\) & \(\nearrow\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{Astuce de mémorisation:} On retrouvera ces résultats rapidement
+grâce à la dérivée, ou en ayant en tête la représentation graphique d'un
+polynôme.
+
+\hypertarget{tableau-de-signe-dun-polynuxf4me-de-second-degruxe9.}{%
+\subsubsection{Tableau de signe d'un polynôme de second
+degré.}\label{tableau-de-signe-dun-polynuxf4me-de-second-degruxe9.}}
+
+Plus important, le tableau de signe d'un polynôme de second degré peut
+\emph{toujours} être trouvé rapidement, avec un peu d'entrainement. Il
+ne doit donc pas vous posez de grandes difficultés.
+
+Là encore, il y a deux cas, selon le signe de \(a\).
+
+Dans le cas où \(a\) est positif :
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.09\columnwidth}\raggedright
+x\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright
+\(]-\infty,x_2]\)\strut
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedright
+\([x_2 ,x_1]\)\strut
+\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\raggedright
+\([x_1, +\infty[\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+P(x)\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright
+\(+\)\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\(-\)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(+\)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Et c'est l'inverse quand \(a\) est négatif.
+
+\textbf{Astuce de mémorisation :} Là encore, n'essayez pas de retenir ce
+tableau par coeur, mais à la place, ayez en tête la courbe
+représentative d'une fonction polynômiale simple comme \(x^2 -1\), qui a
+pour racine \(x_1 = -1\) et \(x_2 =1\)\footnote{c'est une identité
+  remarquable !}, qui vous permet de retrouver tous ces résultats ci
+dessus !
+
+\hypertarget{propriuxe9tuxe9s-des-fonctions}{%
+\section{Propriétés des
+fonctions}\label{propriuxe9tuxe9s-des-fonctions}}
+
+Maintenant que l'on a toutes ses fonctions en tête, regardons les
+principales propriétés de ces fonctions
+
+\hypertarget{croissance-duxe9croissance}{%
+\subsection{Croissance, décroissance}\label{croissance-duxe9croissance}}
+
+Une fonction est dite \emph{croissante} (resp. \emph{décroissante}) sur
+un intervalle \(I\) si et seulement si :
+\[ \forall x, y \in I \quad x \geq y \iff f(x) \geq f(y) \] resp:
+\[ \forall x, y \in I \quad x \leq y \iff f(x) \geq f(y) \]
+
+On parle de \emph{stricte} croissante (resp. \emph{stricte}
+décroissance) lorsque les propriétés énoncées plus haut sont vraies en
+remplaçant une inégalité large par une inégalité stricte..
+
+Pour résumer :
+
+\begin{itemize}
+\tightlist
+\item
+  Une fonction croissante conserve l'ordre des antécédents. C'est-à-dire
+  que l'odre des images et des antécédents et le même.
+\item
+  Au contraire, une fonction décroissante reverse cet ordre.
+\end{itemize}
+
+\textbf{Points de vocabulaire} :
+
+\begin{itemize}
+\tightlist
+\item
+  Le symbole \(\forall\) signifie ``pour tout''. Ce n'est pas dans le
+  programme, mais c'est sacrément pratique ! (Ça veut dire qu'il faut
+  pas l'utiliser dans les copies).
+\item
+  L'image d'un point \(x\) par la fonction \(f\) est simplement
+  \(f(x)\).
+\item
+  L'antécédent d'un point \(y\) par la fonction \(f\) est \textbf{un}
+  (il est possible qu'il y en ait plusieurs) nombre \(x\) tel que
+  \(f(x) = y\)
+\end{itemize}
+
+Souvent (au bac, dans la vie d'un mathématicien, d'un physicien, d'un
+ingénieur etc..) ou veut connaître le \textbf{sens de variation} d'une
+fonction. Cela revient à construite un tableau qui résume les endroits
+(ensemble de nombres) où la fonctions croit ou lorsque la fonction
+décroit.
+
+Voir les exercices pour des exemples.
+
+\hypertarget{signe-dune-fonction}{%
+\subsection{Signe d'une fonction}\label{signe-dune-fonction}}
+
+Le signe d'une fonction désigne assez simplement les endroits (les
+ensembles de nombres, réunions d'intervalles) où la fonction est
+positive, et les endroits où la fonction est négative.
+
+De même, on cherche souvent à établir un \textbf{tableau de signe} d'une
+fonction pour savoir les endroits où elle est positive ou négative.
+D'ailleurs, souvent, le tableau de signe est plus simple à établir que
+le tableau de variation. (Cela explique la puissance de la dérivée, qui
+comme nous allons bientôt le voir, permet de ramener l'étude d'une
+tableau de variation à un tableau de signe !!).
+
+Mais d'abord, il nous faut comprendre le concept de limite.
+
+\hypertarget{domaine-de-duxe9finition}{%
+\section{Domaine de définition}\label{domaine-de-duxe9finition}}
+
+Une domaine de définition d'une fonction \(f\) est l'ensemble des
+nombres sur lequel la fonction \(f\) est définie.
+
+\textbf{Exemple:} la fonction inverse admet pour domaine de définition
+\(] -\infty; 0[ \cup ]0; \infty[\), car il n'existe pas d'inverse pour 0
+( la division par 0 n'a pas de sens !!).
+
+\textbf{Notes:} il faut \emph{toujours} commencer par se demander, même
+si cela n'est pas écrit explicitement dans l'énoncé, quel est le domaine
+de définition d'une fonction que l'on a sous les yeux. Cela permet
+d'éviter bien des problèmes !
+
+\textbf{Remarques: (à relire plus tard)} Vous pouvez maintenant
+comprendre ce que j'ai passé sous silence avec les fonctions
+réciproques. En effet, pour calculer la réciproque d'une fonction, il
+faut toujours considérer son domaine de définition, et surtout son
+domaine image. La réciproque de \(f\) aura comme ensemble de départ le
+domaine image de \(f\). C'est pourquoi par exemple la fonction racine
+carrée n'est pas défini pour des nombres réels négatifs (et pour les
+petits malins du fond qui connaissent les complexes, notions au
+programme de terminal S, sachez qu'on y reviendra !)
+
+\end{document}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Delhomme Fabien">
+  <title>Les fonctions</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/home/fabien/cours Gallien/Cours/reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="/home/fabien/cours Gallien/Cours/reveal.js/css/theme/solarized.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '/home/fabien/cours Gallien/Cours/reveal.js/css/print/pdf.css' : '/home/fabien/cours Gallien/Cours/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="/home/fabien/cours Gallien/Cours/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Les fonctions</h1>
+  <p class="author">Delhomme Fabien</p>
+  <p class="date">3 septembre 2018</p>
+</section>
+
+<section><section id="quest-ce-quune-fonction" class="title-slide slide level1"><h1>Qu’est-ce qu’une fonction ?</h1></section><section id="motivations" class="slide level2">
+<h2>Motivations</h2>
+<ul>
+<li>Au bac, il y a forcément au moins un exercice qui porte sur les variations d’une fonctions</li>
+<li>Partout dans les domaines scientifiques</li>
+</ul>
+</section><section id="définition" class="slide level2">
+<h2>Définition</h2>
+<ul>
+<li>On s’intéresse uniquement <em>aux fonctions numériques</em></li>
+</ul>
+</section></section>
+<section><section id="courbe-représentative" class="title-slide slide level1"><h1>Courbe représentative</h1></section><section id="utilité" class="slide level2">
+<h2>Utilité</h2>
+<ul>
+<li class="fragment">De retenir plus facilement les propriétés des fonctions</li>
+<li class="fragment">D’avoir un sens intuitif de leur croissance</li>
+</ul>
+</section><section id="comment-représenter-une-fonction" class="slide level2">
+<h2>Comment représenter une fonction ?</h2>
+<div class="fragment">
+<p>Représenter tous les couples de points de la forme <span class="math display">\[ (x, f(x))\]</span> avec <span class="math display">\[x \in
+\mathbb{R}\]</span></p>
+</div>
+<div class="fragment">
+<p>On donnera des exemples juste après !</p>
+</div>
+</section></section>
+<section><section id="fonctions-de-bases" class="title-slide slide level1"><h1>Fonctions de bases</h1></section><section id="fonctions-linéaire-et-affine" class="slide level2">
+<h2>Fonctions linéaire et affine</h2>
+<p><span class="math display">\[f : x \longrightarrow a*x + b\]</span></p>
+<ul>
+<li class="fragment">Permettent de modéliser des phénomènes dits <em>linéaires</em>.</li>
+<li class="fragment">Deviennent utiles lorsqu’on parlera de dérivée</li>
+</ul>
+<aside class="notes">
+<p>Vitesse constante, abonnement fixe par mois, etc</p>
+</aside>
+</section><section id="fonction-carré" class="slide level2">
+<h2>Fonction carré</h2>
+<p><span class="math display">\[ f : x \longrightarrow x*x \]</span></p>
+<ul>
+<li class="fragment">Premier pas dans une «complexité»</li>
+<li class="fragment">Courbe représentative en forme de <em>parabole</em></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>On utilisera la notation <span class="math inline">\(f(x)\)</span> par abus de language</li>
+<li>Faire les graphiques</li>
+</ul>
+</aside>
+</section><section id="les-polynômes" class="slide level2">
+<h2>Les polynômes</h2>
+<p>Ce sont les fonctions du type :</p>
+<p><span class="math display">\[ f(x) = a_n x^n + \dots + a_1 x + a_0 \]</span></p>
+<ul>
+<li class="fragment">Très utilisé en mathématiques</li>
+<li class="fragment">Vous savez trouver les racines d’un polynôme de second degré.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Calculs des racines dans le document</li>
+<li>Représenter quelque polynôme connus, par exemple :
+<ul>
+<li><span class="math inline">\(x^2 - x - 1\)</span></li>
+<li><span class="math inline">\(x^2 + 1\)</span></li>
+<li><span class="math inline">\(x^2 + 2x + 1\)</span></li>
+</ul></li>
+</ul>
+</aside>
+</section></section>
+<section><section id="interlude-fonction-réciproque" class="title-slide slide level1"><h1>Interlude : fonction réciproque</h1></section><section id="définition-fonction-réciproque" class="slide level2">
+<h2>Définition fonction réciproque</h2>
+<p>Une fonction réciproque et la version renversée d’une fonction. <span class="math display">\[ y = f(x) \iff x = g(y) \]</span></p>
+</section><section id="fonction-racine-carrée" class="slide level2">
+<h2>Fonction racine carrée</h2>
+<p><span class="math display">\[ f : \longrightarrow \sqrt{x} \]</span></p>
+<ul>
+<li>Fonction <em>réciproque</em> de la fonction carrée</li>
+</ul>
+<ul>
+<li class="fragment">Compliquée à calculer, mais on y reviendra</li>
+</ul>
+<aside class="notes">
+<p>Donner des exemples au tableau de la valeur de la racine carrée, et son graph</p>
+</aside>
+</section><section id="fonction-inverse" class="slide level2">
+<h2>Fonction inverse</h2>
+<p><span class="math display">\[ f \longrightarrow \frac{1}{x} \]</span></p>
+<ul>
+<li>Fonction qui est sa propre réciproque</li>
+</ul>
+<aside class="notes">
+<p>Utiles contre exemple à cause de son point de discontinuité</p>
+</aside>
+</section></section>
+<section><section id="propriétés" class="title-slide slide level1"><h1>Propriétés</h1></section><section id="croissance-et-décroissance" class="slide level2">
+<h2>Croissance et décroissance</h2>
+<p>Une fonction est dite <em>croissante</em> (resp. <em>décroissante</em>) sur un intervalle <span class="math inline">\(I\)</span> si et seulement si : <span class="math display">\[ \forall x, y \in I \quad x \geq y \iff f(x) \geq f(y) \]</span> resp: <span class="math display">\[ \forall x, y \in I \quad x \leq y \iff f(x) \geq f(y) \]</span></p>
+</section><section id="signe-dune-fonction" class="slide level2">
+<h2>Signe d’une fonction</h2>
+<p>Un <em>tableau de signe</em> d’une fonction désigne un tableau où sont notées par des plus les endroits (les ensembles de nombres, réunions d’intervalles) où la fonction est positive, et par des moins les endroits où la fonction est négative.</p>
+</section></section>
+<section><section id="domaine-de-définition" class="title-slide slide level1"><h1>Domaine de définition</h1></section><section id="définiton" class="slide level2">
+<h2>Définiton</h2>
+<p>Une domaine de définition d’une fonction <span class="math inline">\(f\)</span> est l’ensemble des nombres sur lequel la fonction <span class="math inline">\(f\)</span> est définie.</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="/home/fabien/cours Gallien/Cours/reveal.js/lib/js/head.min.js"></script>
+  <script src="/home/fabien/cours Gallien/Cours/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '/home/fabien/cours Gallien/Cours/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/home/fabien/cours Gallien/Cours/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '/home/fabien/cours Gallien/Cours/reveal.js/plugin/math/math.js', async: true },
+          { src: '/home/fabien/cours Gallien/Cours/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
