@@ -266,15 +266,132 @@ vite pourquoi ).
 
 ### Le contexte
 
-Le théorèe 
+Le théorème des valeurs intermédiaires ne nous donnent pas la _localisation_ des
+nombres $x$ qui sont solution d'une equation $f(x) = 0$. C'est bien dommage, et
+on essaie donc de calculer une _approximation_ de la solution.
+
+### Présentation de la méthode 
+
+Prenons une fonction $f$ qui est strictement croissante et continue, et $a$ et
+$b$ tel que $a<b$ et $f(a)f(b) < 0$. Nous sommes bien dans les hypothèses du
+théorèmes des valeurs intermédiaires, et puisque la fonction est strictement
+croissante, nous pouvons en déduire qu'il existe un unique nombre $c \in [a, b]$
+tel que $f(c) = 0$.
+
+Disons que l'on sait que la solution $c$ est dans l'intervalle $[a, b]$. Donc on
+peut diviser cet intervalle en deux. Prenons $m$ le milieux de cet intervalle.
+C'est-à-dire :
+
+  $$ m = \frac{a + b}{2} $$
+
+Alors, deux options sont possibles :
+
+  - Soit, le nombre $c$ se trouve dans l'intervalle $[a, m]$ Soit le nombre $c$
+  - se trouve dans l'intervalle $[m, b]$
+
+Voilà, nous avons coupé en deux notre problème. Comment décider dans quelle
+option nous sommes ? Et bien, il faut voir ce que donne la fonction $f$, et
+invoquer en particulier sa croissance.
+
+  - Si $f(m) <0$, puisque $f$ est croissante, cela veut dire que $c$ est après
+      $m$, et donc $c$ est dans l'intervalle $[m, b]$
+  - Si $f(m)> 0$, puisque $f$ est croissante, cela veut dire que $c$ est avant
+      $m$, et donc $c$ est dans l'intervalle $[a, m]$
+  - Si jamais (cas très rare) $f(m) = 0$, alors on a trouvé notre nombre $c$,
+      puisque $c = m$ dans ce cas.
+
+Ensuite, une fois que l'on a réduit notre intervalle par deux, on peut continuer
+exactement de la même manière mais sur un intervalle plus réduit. Cela nous
+permet donc de _localiser_ le nombre $c$ en réduisant pas à pas l'intervalle qui
+encadre $c$.
+
+Sous forme d'algorithme, cela peut donner :
+
+	SOIT a un NOMBRE 
+	SOIT b un NOMBRE
+	SOIT f une FONCTION
+	SOIT epsilon un NOMBRE # C'est la précision de notre encadrement
+
+	TANT QUE | a - b | < epsilon
+	ALORS
+	  m = (a + b) / 2
+
+	  SI f(m) > 0
+	  ALORS
+	    a = a #Ligne inutile
+	    b = m 
+	  SINON, si f(m) < 0
+	    a = m
+	    b = b #Ligne inutile
+	
+	RETOURNER a,b
+
+Je vous laisse deviner comment implémenter cette méthode pour calculer
+$\sqrt{2}$...
+
 
 # La dérivée
 
 ## Définition
 
-## Propriété
+Voilà, on y est ! Le merveilleux concept de la dérivée ! 
+Je vous conseille de lire en parallèle de ce cours, le super bouquin, gratuit et
+fait par des talentueux mathématiciens passionnés par la vulgarisation
+accessible [ici](http://catalogue-editions.ens-lyon.fr/html/WYSIWYGfiles/files/349_Borrelli_pdf%20WEB.pdf)[^clic] ! Je vous recommande tout
+le livre si vous avez le temps, mais vous pouvez vous attarder en particulier
+sur le chapitre « La dérivation » qui est très bien fait !
+
+[^clic]: c'est encore un lien cliquable !
+
+Donc, qu'est-ce que la dérivée ? C'est tout d'abord une espèce d'opération, qui
+transformée une fonction en une autre fonction. 
+
+Pour mieux comprendre la dérivée, prenons un exemple concret, d'une fonction $f$
+représentant la position d'une voiture par rapport à un repère quelconque. Et
+bien la dérivée, serait une autre fonction, qui donnerait en tout point la
+vitesse (instantanée) de votre voiture. Oui, en fait, lorsque vous
+conduisez[^permis], l'aiguille qui se tient dans le cadran en face de vous
+calcule en quelque sorte la dérivée de votre position !
+
+[^permis]: si vous avez le permis bien sûr !
+
+Comment on fait pour calculer la vitesse instantannée de notre position ?
+
+Eh bien, il faut mesurer la distance $\Delta d$ que l'on parcourt en une
+fraction de temps $\Delta t$, et calculer le rapport :
+
+  $$ v = \frac{\Delta d}{\Delta t} $$
+
+Bien sûr, dans la vraie vie, pas besoin de prendre une échelle de temps «
+infiniment petite». Mais en mathématiques, on peut le faire, donc on va pas se
+gêner !
+
+Ainsi, pour calculer la dérivée d'une fonction, en un point $x$, on va poser :
+
+$$ \boxed{ f'(x) = \lim_{ h \to 0} \frac{ f(x+ h) - f(x) }{ h } }$$
+
+C'est exactement la même formule que plus haut, mais adaptée aux fonctions.
+
+**Premières remarques** : 
+
+  - Cette limite n'existe pas forcément pour toutes les fonctions, ou pour tout
+      les points $x$ possibles. On reconnait d'ailleurs une « forme
+      indéterminée» de limite.
+  - Il _ne suffit absolument pas_ d'être continue pour être dérivable (dans le
+      sens où il existe des fonctions continues partout, mais dérivable nulle
+      part). Mais une fonction dérivable est nécessairement continue
+  - Heuresement pour nous, nous utiliserons _très rarement_ cette formule pour
+      calculer la dérivée. Nous verrons des règles de calculs qui nous
+      permettent de calculer la dérivée des fonctions usuelles. _Parfois_ la
+      formule de la dérivée permet de calculer des limites comme par exemple :
+	$$ \lim_{x \to 0} \frac{sin(x)}{x}$$
+
+## Propriétés
+
 ### Sur les fonctions, trouver l'extremum
+
 ### Implique la continuité
+
 ### Toutes fonctions n'est pas forcément dérivables
 
 ## Règles de calculs
