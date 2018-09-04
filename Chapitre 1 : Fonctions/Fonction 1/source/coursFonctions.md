@@ -90,7 +90,7 @@ Imaginons qu'une entreprise propose un abonnement de ce type :
   * Puis, le client paye 3 euros par mois
 
 Comment modéliser le prix en fonction du mois que coute cet abonnement ? Et
-bien, la réponse est donnée par la fonction $f(x) = 10*x + 3$.
+bien, la réponse est donnée par la fonction $f(x) = 3x + 10$.
 
 **Remarques :** Attention à la notation, normalement (c'est-à-dire techniquement parlant),
 $f(x)$ représente un nombre. De façon abusive je noterai parfois dans ce cours $f(x)$
