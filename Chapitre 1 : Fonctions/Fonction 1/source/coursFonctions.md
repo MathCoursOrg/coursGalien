@@ -268,7 +268,35 @@ En utilisant quelques tours de passe passe, voici ce que l'on peut obtenir :
   P(x)	&= a \left( x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a}\\
 \end{align*} 
 
-Et nous pouvons conclure sur les racines, et le sens de variation etc.
+La dernière ligne est une forme particulièrement utile pour trouver les racines
+du polynôme, mais aussi son minimun. Elle s'appelle la _forme canonique_.  Donc
+cette forme est
+  $$ \textrm{bidule}*(x + \textrm{truc})^2 + \textrm{machin} $$
+
+En fait, les calculs fait plus haut vous donnent les formules pour calculer
+bidule, truc et machin. En particulier, bidule est toujours égale à $a$. Mais,
+retenir ces formules par coeur ne sert _à rien_ au bac, et ce, pour plusieurs
+raisons :
+
+  - Le correcteur préfère voir comment vous avez fait les calculs
+  - Ces formules sont vraiment très rarement utiles avec les outils comme la
+      dérivée, que l'on utilisera intensivement dans les prochains chapitres
+  - On préfère vous demander de déterminer les racines. Et ce sont d'autres
+      formules, qu'il est beaucoup plus rentable d'apprendre par rapport à celle
+      de la forme canonique !
+
+
+On peut aller plus loin, uniquement avec la condition $\Delta > 0$, si on
+reprend nos calculs :
+\begin{align*}
+  P(x) &= a \left( \left( x + \frac{b}{2a}\right)^2 - \frac{b^2 - 4ac}{4a^2}\right)\\
+       &= a \left( \left( x + \frac{b}{2a}\right)^2 - \left(\frac{\sqrt{\Delta}}{2a}\right)^2\right)\\
+        &= a \left(x + \frac{b}{2a} - \frac{\sqrt{\Delta}}{2a}\right)\left(x + \frac{b}{2a} + \frac{\sqrt{\Delta}}{2a}\right)\\
+       &= a  \left(x + \frac{b-\sqrt{\Delta}}{2a}\right)\left(x + \frac{b + \sqrt{\Delta}}{2a}\right)
+\end{align*} 
+
+Et nous pouvons conclure sur la ou les racines, et le sens de variation etc. En
+particulier, si $\Delta <0$, alors le polynôme n'a pas de racine réelle. 
 
 # Propriétés des fonctions
 
