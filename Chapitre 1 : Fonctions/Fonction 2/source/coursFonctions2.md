@@ -384,24 +384,107 @@ C'est exactement la même formule que plus haut, mais adaptée aux fonctions.
       calculer la dérivée. Nous verrons des règles de calculs qui nous
       permettent de calculer la dérivée des fonctions usuelles. _Parfois_ la
       formule de la dérivée permet de calculer des limites comme par exemple :
-	$$ \lim_{x \to 0} \frac{sin(x)}{x}$$
+	$$ \lim_{x \to 0} \frac{\sin(x)}{x}$$
+
+Si on résume, une fonction $f$ est dérivable sur intervalle $I$ si le calcul de
+limite encadré plus haut a un sens pour tout $x$ dans $I$. Certaines fonctions
+ne sont pas dérivables, soit en un point particulier, soit carrément sur tout
+leur ensemble de définition (ce qui est plutôt rare avec les fonctions usuels).
+
+### Pourquoi c'est génial ?
+
+Donnons dès maintenant une explication sur la puissance de la dérivée. Reprenons
+notre voiture du début. On remarque que la vitesse de notre voiture nous donne
+des informations sur la manière dont sa _position_ varie. En effet :
+
+  - Si la vitesse de la voiture est négative, alors la voiture recule
+  - Si la vitesse de la voiture est positive, alors la voiture avance
+  - Si la vitesse de la voiture est nulle, alors la voiture fait du surplace
+      (attention, dit comme cela c'est faux, mais nous y reviendrons plus tard)
+
+Que donne cette interprétation pour les fonctions ?
+
+  - Si $f'(x) > 0$, alors, localement, la fonction est croissante !
+  - Si $f'(x) < 0$, alors, localement, la fonction est décroissante !
+  - Si $f'(x) = 0$, alors, localement, la fonction est constante !
+
+Ce critère est très pratique pour établir le _sens de variation_ d'une fonction,
+et qui est ramené grâce aux dérivées à établir un _tableau de signe_ de la
+fonction dérivée, ce qui est généralement beaucoup plus simple !
+
+En sachant le tableau de variation d'une fonction, on peut en déduire en
+particulier (si elle est en a) les extrenums de cette fonction, c'est-à-dire les
+points où cette fonction est maximale ou minimale. C'est extrement utile pour
+_optimiser_ une quantité (imaginez optimiser une fonction qui représente le cout
+de production, par rapport à la production, etc..)
 
 ## Propriétés
 
+### Dérivée d'une somme 
+
+On l'a vu, la limite d'une somme est la somme des limites, de là, on en tire
+notre première propriété, avec $f$ et $g$ deux fonctions :
+  $$ (f + g)' = f' + g'$$
+
+Cela signifie que, si $f$ et $g$ sont dérivables sur un intervalle $I$, alors :
+  $$ (f + g)'(x) = f'(x) + g'(x)$$
+
+Autrement dit, _la dérivée de la somme est la somme des dérivées_
+
+### Dérivée d'un produit
+
+Première formule plus difficile, la dérivée du produit de deux fonctions $f$ et $g$ se calcule comme il suit:
+  $$(fg)' = f'g + g'f$$
+
+En cours, j'ai donnée une interprétation de cette formule à l'aide d'un
+rectangle de longueur $f(x)$ et de largeur $g(x)$.
+
+### Dérivée d'un quotient 
+
+Autre formule délicate, la dérivée d'une quotient de deux fonctions :
+
+  $$ \left(\frac{f}{g}\right)' = \frac{ f'g - g'f}{g^2}$$
+
+### Dérivée d'une puissance 
+
+Une des formules les plus puissante que je connaisse ! Elle récapitule bon
+nombre de règle que l'on peut trouver dans d'autres cours !
+
+  $$ (f^n)' = nf'f^{n-1}$$
+
+### Dérivée d'une composée
+
+Voici la dernière formule que je vous recommande de connaître, la dérivée d'une
+composée. On appelle _composée_ de deux fonctions $f$ et $g$ la fonction $x
+\longrightarrow f(g(x))$
+
+  $$ (f(g(x)))' = g'(x) * f'(g(x)) $$
+
+## Dérivée de fonctions usuelles 
+
+Avec toutes les règles vues plus haut, vous pouvez en déduire que :
+
+  - $(x^2)' = 2x$
+  - $(x^3)' = 3x^2$
+  - $(\sqrt{x})' = \frac{1}{2\sqrt{x}}$
+  - $(\frac{1}{x})' = -\frac{1}{x^2}$
+
+Vous savez donc calculer la dérivée d'un polynôme, d'un quotient de polynôme,
+d'une composée par exemple $\sqrt{x^2 -7x + 2}$ etc.. Maintenant, c'est qu'une
+question d'entrainement ![^exo]
+
+[^exo]: ça tombe bien, y'a justement une feuille d'exercice qui vous attend !
+
 ### Sur les fonctions, trouver l'extremum
 
-### Implique la continuité
+Pour trouver l'extrenum d'une fonction, il faut donc :
 
-### Toutes fonctions n'est pas forcément dérivables
+  - Vérifier qu'elle est dérivable
+  - Calculer sa dérivée 
+  - En déduire les points où elle est nulle
+  - Vérifier que ces points sont des extremaux. C'est-à-dire que la fonction est
+      décroissante avant, puis croissante après dans le cas d'un minimun, et
+      vice et versa dans le cas d'un maximun.
 
-## Règles de calculs
-
-### Linéarité
-
-### La formule de la triche
-
-### Autres règles
-
-## Exemples
 
 

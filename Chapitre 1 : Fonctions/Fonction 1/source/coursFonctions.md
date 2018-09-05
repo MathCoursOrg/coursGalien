@@ -165,10 +165,9 @@ linéaires, et les fonctions constantes, sont des polynômes !
 
 ### Trouver les racines d'un polynôme de second degré
 
-Voici un paragraphe du type " formulaire ", que je déteste faire car il ne donne
+Voici un paragraphe du type « formulaire », que je déteste faire car il ne donne
 pas d'explication sur ce qui se passe, mais uniquement des formules à retenir.
-Je prendrai néanmoins soin d'écrire des exercices qui vous feront prouver les
-formules ci-dessous.
+La section suivante vous indiquera comment ces formules ont été trouvées.
 
 On se donne un polynôme de second degré : $$ f(x) = ax^2 + bx + c$$
 
@@ -252,6 +251,24 @@ polynômiale simple comme $x^2 -1$, qui a pour racine $x_1 = -1$ et $x_2
 =1$[^identite], qui vous permet de retrouver tous les résultats ci-dessus !
 
 [^identite]: c'est une identité remarquable !
+
+## Mais d'où viennent ces formules ?
+
+Reprenons notre polynôme :
+
+  $$P(x) = ax^2 + bx + c$$
+
+En utilisant quelques tours de passe passe, voici ce que l'on peut obtenir :
+
+\begin{align*}
+  P(x) &= a \left( x^2 + \frac{b}{a}x + \frac{c}{a}\right)\\
+	&= a \left( \left( x + \frac{b}{2a}\right)^2 - \frac{b^2}{4a^2} + \frac{c}{a}\right)\\
+	&= a \left( \left( x + \frac{b}{2a}\right)^2 - \frac{b^2 - 4ac}{4a^2}\right)\\
+	&= a \left( x + \frac{b}{2a}\right)^2 - \frac{b^2 - 4ac}{4a}\\
+  P(x)	&= a \left( x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a}\\
+\end{align*} 
+
+Et nous pouvons conclure sur les racines, et le sens de variation etc.
 
 # Propriétés des fonctions
 
