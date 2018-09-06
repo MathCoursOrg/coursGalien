@@ -174,33 +174,29 @@ Tracer la courbe représentative des fonctions $A$ et $F$.
 
 ### Résolution d'équation du 2nd degré
 
-Résoudre les équations suivantes :
+Donner la forme canonique de chaque polynôme, ainsi que son tableau de
+variation, et ses racines (c'est à dire les nombres $x$ tel que $P(x)=0$)
 
-  - $t^2+4t+3=0$
-  - $12y^2-16y+5=0$
-  - $-t^2+8t-1=0$
+  - $P(x) = x^2+4x+3=0$
+  - $P(x) = 12y^2-16y+5=0$
+  - $P(x) = -x^2+8x-1=0$
 
-### Factorisation 2nd degré
-
-Factoriser les polyômes suivants
-
-Factoriser  $P(y)=648y^2-144y+8$ à l'aide d'une identité remarquable.
+Même consigne : (juste pour vous y habituez, parfois on note la variable
+autrement que $x$, par exemple, $t$ ou $z$. C'est juste un symbole différent, ça
+ne change rien au principe).
 
   - $Q(t)=t^2-4t+4$
   - $S(y)=12y^2+8y+1$
   - $R(x)=-x^2+3x-4$
-
-Factoriser  $Q(y)=32y^2-32y+8$ à l'aide d'une identité remarquable.
-
-  - $Q(t)=t^2+7t-30$
+  - $Q(t)=t^2-7t-30$
   - $Q(z)=7z^2+9z+2$
   - $S(x)=x^2+6x-8$
-
-Factoriser  $Q(y)=8y^2-72$ à l'aide d'une identité remarquable.
-
-  - $P(t)=t^2-10t+24$
+  - $P(t)=-t^2-10t+24$
   - $Q(x)=14x^2+5x-24$
   - $S(t)=-t^2+6t+4$
+
+Pour tous les polynômes qui s'appellent $S$, tracer sa représentation graphique
+sur Geogebra.
 
 ### Factorisation 3eme degré
 
