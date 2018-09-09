@@ -1,0 +1,13 @@
+filetype plugin on
+
+set shellslash
+set noexpandtab
+set number
+
+filetype indent on 
+
+let g:tex_flavor='latex'
+
+set sw=2
+set iskeyword+=:
+
