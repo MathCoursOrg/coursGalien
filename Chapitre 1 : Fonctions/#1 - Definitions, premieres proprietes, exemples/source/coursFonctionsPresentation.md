@@ -1,7 +1,9 @@
 ---
-title : Les fonctions
-date : 3 septembre 2018
-author : Delhomme Fabien
+title:  Les fonctions
+date: 3 septembre 2018
+author: Delhomme Fabien
+lang: fr
+document: report
 ... 
 
 # Qu'est-ce qu'une fonction ?

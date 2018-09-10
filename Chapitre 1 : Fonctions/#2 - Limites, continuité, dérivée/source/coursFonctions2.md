@@ -120,12 +120,12 @@ cas par cas. Nous verrons des exemples à la section suivante.
 
 Pour le produit :
 
-|         *        | $v = \infty$ | $v =- \infty$ | $v=l \not = 0$ | $v= 0$ |
-|:----------------:|:------------:|:-------------:|:--------------:|:------:|
-|   $u = \infty$   |   $\infty$   |   -$\infty$   |    $\infty$    |   ??   |
-|  $u = - \infty$  |   $-\infty$  |    $\infty$   |    $-\infty$   |   ??   |
-| $u =l' \not = 0$ |   $\infty$   |   -$\infty$   |      $ll'$     |    0   |
-|      $u = 0$     |      ??      |       ??      |        0       |    0   |
+|         *        |          $v = \infty$         |          $v =- \infty$         |          $v=l \not = 0$         | $v= 0$ |
+|:----------------:|:-----------------------------:|:------------------------------:|:-------------------------------:|:------:|
+|   $u = \infty$   |            $\infty$           |            -$\infty$           |  $(\textrm{signe de l})*\infty$ |   ??   |
+|  $u = - \infty$  |           $-\infty$           |            $\infty$            | $-(\textrm{signe de l})*\infty$ |   ??   |
+| $u =l' \not = 0$ | $(\textrm{signe de l})\infty$ | $-(\textrm{signe de l})\infty$ |              $ll'$              |    0   |
+|      $u = 0$     |               ??              |               ??               |                0                |    0   |
 
 Pour la somme :
 
@@ -329,17 +329,17 @@ Sous forme d'algorithme, cela peut donner :
 Je vous laisse deviner comment implémenter cette méthode pour calculer
 $\sqrt{2}$...
 
-
 # La dérivée
 
 ## Définition
 
-Voilà, on y est ! Le merveilleux concept de la dérivée ! 
-Je vous conseille de lire en parallèle de ce cours, le super bouquin, gratuit et
-fait par des talentueux mathématiciens passionnés par la vulgarisation
-accessible [ici](http://catalogue-editions.ens-lyon.fr/html/WYSIWYGfiles/files/349_Borrelli_pdf%20WEB.pdf)[^clic] ! Je vous recommande tout
-le livre si vous avez le temps, mais vous pouvez vous attarder en particulier
-sur le chapitre « La dérivation » qui est très bien fait !
+Voilà, on y est ! Le merveilleux concept de la dérivée !  Je vous conseille de
+lire en parallèle de ce cours, le super bouquin, gratuit et fait par des
+talentueux mathématiciens passionnés par la vulgarisation accessible
+[ici](http://catalogue-editions.ens-lyon.fr/html/WYSIWYGfiles/files/349_Borrelli_pdf%20WEB.pdf)[^clic]
+! Je vous recommande tout le livre si vous avez le temps, mais vous pouvez vous
+attarder en particulier sur le chapitre « La dérivation » qui est très bien fait
+!
 
 [^clic]: c'est encore un lien cliquable !
 
@@ -377,7 +377,7 @@ C'est exactement la même formule que plus haut, mais adaptée aux fonctions.
   - Cette limite n'existe pas forcément pour toutes les fonctions, ou pour tout
       les points $x$ possibles. On reconnait d'ailleurs une « forme
       indéterminée» de limite.
-  - Il _ne suffit absolument pas_ d'être continue pour être dérivable (dans le
+  - Il **ne suffit absolument pas** d'être continue pour être dérivable (dans le
       sens où il existe des fonctions continues partout, mais dérivable nulle
       part). Mais une fonction dérivable est nécessairement continue
   - Heuresement pour nous, nous utiliserons _très rarement_ cette formule pour
