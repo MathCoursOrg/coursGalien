@@ -215,7 +215,7 @@ On peut donc en déduire le sens de variation facilement. Il y a deux cas.
 
 Ce qui donne pour $a$ positif :
 
-  |   x  | $]-\infty \quad \frac{b}{2a}]$ | $[\frac{b}{2a} \quad  \infty[$ |
+  |   x  | $]-\infty \quad -\frac{b}{2a}]$ | $[-\frac{b}{2a} \quad  \infty[$ |
   |:----:|:------------------------------:|:------------------------------:|
   | P(x) |           $\searrow$           |           $\nearrow$           |
 
