@@ -233,6 +233,41 @@ Pour $x \in [ 10, 1000]$. Soit la fonction $f$ définie par $f(x) = 87x - C(x)$
       concrète.
   - Résoudre $f(x) \geq 2100$. Interpréter le résultat.
 
+## Utiliser au mieux la forme canonique d'un polyôme de second degré
+
+Soit $f$ la fonction définie pour tout réel $x$ par :
+  $$ f(x) = -x^2 + 7x - 12$$
+
+  - Trouver la forme factorisée de $f(x)$
+  - Trouver la forme canonique de $f$
+
+Puis, utiliser la forme la plus adaptée pour :
+
+  - calculer $f(0)$
+  - calculer $f(\frac{7}{2})$
+  - résoudre l'équation $f(x) = 0$
+  - résoudre l'équation $f(x) = \frac{1}{4}$
+
+## Inéquations
+
+### Échauffements
+
+Résoudre les inéquations suivantes :
+
+  - $x^2 - 1.4x + 0.49 > 0$
+  - $-x^2 + 3x \leq 10$
+  - $3x(2-3x) \geq 1$
+
+### Entrainement 
+
+Résoudre les inéquations suivantes :
+
+  - $\left(2-6 x^2\right) \left(2 x^2+16 x+22\right)<0$.
+  - $\left(-7 x^2+98 x-337\right) \left(-x^2-14 x-41\right)>0$.
+  - $\left(-7 x^2+112 x-438\right) \left(-6 x^2-48 x-96\right)<0$.
+  - $\left(-7 x^2+42 x-59\right) \left(5 x^2+5\right)\leq 0$.
+  - $\left(-2 x^2-16 x-39\right) \left(8 x^2+6\right)\leq 0$.
+
 ## Relations coefficients racines[^vrainom]
 
 [^vrainom]: c'est le vrai nom de ces formules, aussi appelés somme de Newton.

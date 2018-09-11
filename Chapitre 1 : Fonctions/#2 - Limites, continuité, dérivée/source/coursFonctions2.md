@@ -418,6 +418,84 @@ points où cette fonction est maximale ou minimale. C'est extrement utile pour
 _optimiser_ une quantité (imaginez optimiser une fonction qui représente le cout
 de production, par rapport à la production, etc..)
 
+### Équation de la tangente d'une courbe
+
+Maintenant que vous connaissez la définition, disons calculatoire, de la notion
+de dérivée, nous pouvons attaquer la définition géométrique de la dérivée. Tout
+d'abord, je vous propose un détour par le _taux d'accroissement_[^nom]. La
+section consacrée au taux d'accroissement est facultative, vous pourrez la lire
+plus tard.
+
+[^nom]: rien que le nom devrait vous évoquer le lien avec la dérivée !
+
+
+#### Le taux d'accroissement
+
+Comme son nom l'indique, le taux d'accroissement est un nombre qui quantifie la
+croissance d'une fonction $f$ entre deux points _distincts_. Ce taux existe
+toujours sur l'intervalle de définition de $f$.
+
+**Comment le calculer ?**
+
+Considérons deux points $x, y$ tel que $x < y$. Pour comparer de combien la
+fonction est passée de $x$ à $y$ on peut calculer :
+  $$ f(x) - f(y)$$
+C'est la variation de $f$ entre $x$ et $y$. Maintenant, pour avoir un taux, je
+veux prendre en compte la distance entre $x$ et $y$. Parce qu'il est difficile
+de comparer par exemple $f(1) - f(3)$ avec $f(1) - f(25)$. Peut être que la
+fonction est croissante, mais je ne quantifie pas à quel point elle est
+rapidement croissante !
+
+Donc, on aboutit à la formule :
+  $$ \tau(f)_{x, y} = \frac{f(x) - f(y)}{x - y}$$
+
+Et donc, on voit que la dérivée est la limite du taux d'accroissement lorsque
+la distance entre les deux points $x$ et $y$ sont infiniment proches !
+
+**Graphiquement, comment tracer le taux d'accroissement ?**
+
+Comme je le disais, le taux d'accroissement est un nombre, donc techniquement,
+on ne peut pas le tracer sur un rèpère. Mais on peut le mettre en évidence tout
+simplement en reliant les points $(x, f(x))$ et $(y, f(y)$ par une droite
+(affine dans la plupart des cas) de la courbe représentative de la fonction $f$.
+Vous avez un exemple dans la figure \ref{taux}.
+
+![Exemple pour une fonction quelconque au point $A$ et $B$\label{taux}](../images/Taux\ accroissement.png "taux")
+
+#### Calculer une telle droite
+
+Il suffit de se rappeler qu'une droite affine est la courbe représentatitve
+d'une fonction affine.
+
+Donc, il nous faut une droite qui passe par deux points, $(x, f(x)$ et $(y,
+f(y)$, avec $x$ et $y$ qui sont distincts. On cherche donc $a$ et $b$ deux réels
+tel que :
+
+$$
+\left\{ \begin{array}{ll}
+	a*x + b & = f(x)\\
+	a*y + b & = f(y)
+	\end{array}
+\right.
+$$
+
+Si on résout ce système, on obtient :
+
+$$
+\left\{ \begin{array}{ll}
+	a & = \frac{f(y) - f(x)}{y -x} \\
+	b & = f(y) - \frac{f(y) - f(x)}{y -x}*y = \frac{ f(y)(y-x) -yf(y) + yf(x)
+	}{y -x } \\
+	  & = \frac{yf(x)-xf(y)}{y -x}
+        \end{array}
+\right.
+$$
+
+Finalement, la droite $\tau$ qui passe par $(x, f(x))$ et $(y, f(y)$ s'écrit :
+$$
+  \tau(t) = \frac{f(y) - f(x)}{y -x}*t + \frac{yf(x)-xf(y)}{y -x}
+$$
+
 ## Propriétés
 
 ### Dérivée d'une somme 
