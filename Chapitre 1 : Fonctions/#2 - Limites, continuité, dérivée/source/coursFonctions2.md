@@ -368,7 +368,7 @@ gêner !
 
 Ainsi, pour calculer la dérivée d'une fonction, en un point $x$, on va poser :
 
-$$ \boxed{ f'(x) = \lim_{ h \to 0} \frac{ f(x+ h) - f(x) }{ h } }$$
+  $$ \boxed{ f'(x) = \lim_{ h \to 0} \frac{ f(x+ h) - f(x) }{ h } }$$
 
 C'est exactement la même formule que plus haut, mais adaptée aux fonctions.
 
@@ -464,6 +464,8 @@ Vous avez un exemple dans la figure \ref{taux}.
 
 #### Calculer une telle droite
 
+_Ce paragraphe pourra être lu plus tard !_
+
 Il suffit de se rappeler qu'une droite affine est la courbe représentatitve
 d'une fonction affine.
 
@@ -495,6 +497,31 @@ Finalement, la droite $\tau$ qui passe par $(x, f(x))$ et $(y, f(y)$ s'écrit :
 $$
   \tau(t) = \frac{f(y) - f(x)}{y -x}*t + \frac{yf(x)-xf(y)}{y -x}
 $$
+
+#### Formule de la tangente d'une courbe
+
+Si on prend $f$ une fonction dérivable au point $a$, alors la courbe
+représentative de la fonction $f$ admet un tangente en ce point. Et en fait, la
+réciproque est aussi vraie !
+
+Dans la suite, on appelle $T_a$ la tangente à la courbe de $f$, qui est une
+droite, donc une fonction **affine** !
+
+Il y a alors deux moyens de trouver la formule de la tangente. Soit en passant
+l'équation obtenue plus haut, et passer à la limite lorsque les deux points $x$
+et $y$ sont à une distance $h \to 0$, soit, se rappeler que nécessairement la
+tangente se comporte _localement_ comme la fonction, est donc que son
+coefficient directeur est $f'(a)$. Puis, quelques calculs nécessaire montrent
+que :
+
+  $$\boxed{T_a (x) = f'(a)(x-a) + f(a)}$$
+
+On peut se convaincre de cette formule par différents moyens :
+
+  - On a bien $T_a(a) = f(a)$, c'est-à-dire que la tangente épouse la courbe en
+      $a$. 
+  - Le coefficient directeur est bien $f'(a)$.
+
 
 ## Propriétés
 

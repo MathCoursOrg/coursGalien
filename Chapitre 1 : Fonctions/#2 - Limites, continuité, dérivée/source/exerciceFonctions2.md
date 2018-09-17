@@ -40,6 +40,15 @@ Déterminez la limite de $f$ en $+\infty$.
 
 # Dérivée 
 
+## Dérivée de fonctions usuelles.
+
+Avec les formules du cours (en particulier pour les deux premières la formule
+sur les fonctions puissances) , dérivez les fonctions suivantes :
+
+  - $f(x) = \sqrt{x} = x^{\frac{1}{2}}$
+  - $f(x) = \frac{1}{x} = x^{-1}$
+  - $f(x) = 3x+ 7$
+
 ## Dérivée de polynôme de second degré
 
 Dérivez les fonctions suivantes :
@@ -48,12 +57,23 @@ Dérivez les fonctions suivantes :
   - $f:x\longmapsto - 4 x^2- 5 x+1$.
   - $f:x\longmapsto 10 x^2- 3 x+10$.
   - $f:x\longmapsto 8 x^2- 6$.
-  - $f:x\longmapsto 4 x^2- 5 x$.
-  - $f:x\longmapsto - 5 x^2- 9 x+2$.
-  - $f:x\longmapsto x^2- 4 x- 3$.
-  - $f:x\longmapsto - 7 x^2+4 x+2$.
-  - $f:x\longmapsto - 3 x^2- 4 x+4$.
-  - $f:x\longmapsto 4 x^2+5 x- 3$.
+
+## Dérivée de fonctions 
+
+En utilisant les formules du cours (formule du produit, du quotient, de la
+somme), dérivez les fonctions suivantes :
+
+\begin{align*}
+  f(x) &= x^3 - 2x^2 - 4 \\
+  f(x) &= \frac{x}{4} - 2*\sqrt{2} \\
+  f(x) &= (5x^2 + 1)(4x-x^2) \\
+  f(x) &= \frac{4}{2x-1} - \frac{1}{x} \\
+  f(x) &= \frac{2x-3}{3x+4} \\
+  f(x) &= \frac{-x^2 + 3x - 2}{4x} 
+\end{align*}
+
+On ne se préoccupera pas de l'ensemble de définition et de dérivabilité des
+fonctions.
 
 ## Dérivée de fractions rationnelles
 
@@ -144,7 +164,7 @@ absolue de la population entre ces deux années.
 Calculer $f'(t)$, étudier son signe et en déduire le sens de variation de la
 population.
 
-Dresser le tableau de variation de la fonction $f$ sur l'intervalle $[0, 20]$.\\
+Dresser le tableau de variation de la fonction $f$ sur l'intervalle $[0, 20]$.
 En quelle année la population a-t-elle atteint son maximum depuis 2018 ?
 
 Calculer $f'(4)$ et $f'(5)$, et donner une valeur approchée à $0.001$ millier
