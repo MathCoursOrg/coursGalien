@@ -344,7 +344,7 @@ attarder en particulier sur le chapitre « La dérivation » qui est très bien 
 [^clic]: c'est encore un lien cliquable !
 
 Donc, qu'est-ce que la dérivée ? C'est tout d'abord une espèce d'opération, qui
-transformée une fonction en une autre fonction. 
+transforme une fonction en une autre fonction. 
 
 Pour mieux comprendre la dérivée, prenons un exemple concret, d'une fonction $f$
 représentant la position d'une voiture par rapport à un repère quelconque. Et
