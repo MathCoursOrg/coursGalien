@@ -267,7 +267,7 @@ vite pourquoi ).
 ### Le contexte
 
 Le théorème des valeurs intermédiaires ne nous donnent pas la _localisation_ des
-nombres $x$ qui sont solution d'une equation $f(x) = 0$. C'est bien dommage, et
+nombres $x$ qui sont solution d'une équation $f(x) = 0$. C'est bien dommage, et
 on essaie donc de calculer une _approximation_ de la solution.
 
 ### Présentation de la méthode 
@@ -355,7 +355,7 @@ calcule en quelque sorte la dérivée de votre position !
 
 [^permis]: si vous avez le permis bien sûr !
 
-Comment on fait pour calculer la vitesse instantannée de notre position ?
+Comment on fait pour calculer la vitesse instantanée de notre position ?
 
 Eh bien, il faut mesurer la distance $\Delta d$ que l'on parcourt en une
 fraction de temps $\Delta t$, et calculer le rapport :
@@ -380,7 +380,7 @@ C'est exactement la même formule que plus haut, mais adaptée aux fonctions.
   - Il **ne suffit absolument pas** d'être continue pour être dérivable (dans le
       sens où il existe des fonctions continues partout, mais dérivable nulle
       part). Mais une fonction dérivable est nécessairement continue
-  - Heuresement pour nous, nous utiliserons _très rarement_ cette formule pour
+  - Heureusement pour nous, nous utiliserons _très rarement_ cette formule pour
       calculer la dérivée. Nous verrons des règles de calculs qui nous
       permettent de calculer la dérivée des fonctions usuelles. _Parfois_ la
       formule de la dérivée permet de calculer des limites comme par exemple :
@@ -413,8 +413,8 @@ et qui est ramené grâce aux dérivées à établir un _tableau de signe_ de la
 fonction dérivée, ce qui est généralement beaucoup plus simple !
 
 En sachant le tableau de variation d'une fonction, on peut en déduire en
-particulier (si elle est en a) les extrenums de cette fonction, c'est-à-dire les
-points où cette fonction est maximale ou minimale. C'est extrement utile pour
+particulier (si elle est en a) les extremums de cette fonction, c'est-à-dire les
+points où cette fonction est maximale ou minimale. C'est extrêmement utile pour
 _optimiser_ une quantité (imaginez optimiser une fonction qui représente le cout
 de production, par rapport à la production, etc..)
 
@@ -455,7 +455,7 @@ la distance entre les deux points $x$ et $y$ sont infiniment proches !
 **Graphiquement, comment tracer le taux d'accroissement ?**
 
 Comme je le disais, le taux d'accroissement est un nombre, donc techniquement,
-on ne peut pas le tracer sur un rèpère. Mais on peut le mettre en évidence tout
+on ne peut pas le tracer sur un repère. Mais on peut le mettre en évidence tout
 simplement en reliant les points $(x, f(x))$ et $(y, f(y)$ par une droite
 (affine dans la plupart des cas) de la courbe représentative de la fonction $f$.
 Vous avez un exemple dans la figure \ref{taux}.
@@ -466,7 +466,7 @@ Vous avez un exemple dans la figure \ref{taux}.
 
 _Ce paragraphe pourra être lu plus tard !_
 
-Il suffit de se rappeler qu'une droite affine est la courbe représentatitve
+Il suffit de se rappeler qu'une droite affine est la courbe représentative
 d'une fonction affine.
 
 Donc, il nous faut une droite qui passe par deux points, $(x, f(x)$ et $(y,
@@ -582,14 +582,14 @@ question d'entrainement ![^exo]
 
 ### Sur les fonctions, trouver l'extremum
 
-Pour trouver l'extrenum d'une fonction, il faut donc :
+Pour trouver l'extremum d'une fonction, il faut donc :
 
   - Vérifier qu'elle est dérivable
   - Calculer sa dérivée 
   - En déduire les points où elle est nulle
-  - Vérifier que ces points sont des extremaux. C'est-à-dire que la fonction est
-      décroissante avant, puis croissante après dans le cas d'un minimun, et
-      vice et versa dans le cas d'un maximun.
+  - Vérifier que ces points sont des extrémaux. C'est-à-dire que la fonction est
+      décroissante avant, puis croissante après dans le cas d'un minimum, et
+      vice et versa dans le cas d'un maximum.
 
 
 
