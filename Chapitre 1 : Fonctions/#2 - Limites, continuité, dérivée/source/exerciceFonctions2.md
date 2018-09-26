@@ -38,6 +38,102 @@ Déterminez la limite de $f$ en $-\infty$.
   $$f(x)=\frac{-5 x^3-2 x^2-5 x-2}{2 x-3}.$$
 Déterminez la limite de $f$ en $+\infty$.
 
+# Le point sur la composée, et les fonctions puissances
+
+## Échauffements sur la composée
+
+Décomposez les fonctions suivantes en la composée de deux fonctions (il existe
+plusieurs solutions correctes !)
+
+**Exemple** : Soit la fonction :
+  $$f : x \to \frac{1}{x^2 +1}$$
+
+On peut décomposer $f$, en disant que 
+
+$$f : x \overset{g}{\longrightarrow} \! x^2 + 1 \! \overset{h}{\longrightarrow}
+\! \frac{1}{x^2+1}$$ 
+
+Où la fonction $g$ envoie $x$ sur $x^2+1$, la fonction $h$ (attention, piège
+!) envoie $x$ sur $\frac{1}{x}$
+
+On a bien ainsi (attention à l'ordre !) :
+
+  $$ h(g(x)) = h( x^2+1) = \frac{1}{x^2 +1} = f(x)$$
+
+Donc on peut écrire $f = h\circ g$
+
+À vous de jouer !
+
+  - $x \to \frac{1}{x^3 + 2}$
+  - $x \to \sqrt{x^2 +1}$
+  - $x \to \frac{1}{\sqrt{x+1}}$
+  - $x \to \sqrt{\frac{x}{x+1}}$
+
+Plusieurs solutions sont possibles !
+
+## Échauffements sur les puissances
+
+Pour utiliser la dérivée des fonctions puissances, il y a quelques formules
+qu'il faut connaître. Vous travaillerez dans un même temps les propriétés de
+l'exponentielle ! 
+
+Attention, les paragraphes qui suivent sont à prendre au sens formel,
+c'est-à-dire que les formules ne marchent pas pour tout $x \in \mathbb{R}$. Je
+détaille pas, mais par exemple il faudrait faire attention au domaine de
+définition des fonctions ci-dessous. Ici, on se concentre juste sur la forme du
+calcul (qui seront justes dans tous les cas au bac), mais il faudrait préciser
+les conditions de validité de telles formules.
+
+### Puissances entières
+
+Premierèment, simplifier les exepressions suivantes :
+
+  - $\frac{x^2}{x^3}$
+  - $x^2*x^9$
+  - $(x^3)^4$ 
+
+Ces deux exemple faciles montrent que les formules sont du types :
+
+\begin{align*}
+  \frac{x^p}{x^q} &= x^{p -q} \quad &&\text{Quotient}\\
+  x^p*x^q &= x^{p+q} \quad &&\text{Produit}\\
+  (x^p)^q &= x^{p*q} \quad && \text{Composée de puissances}
+\end{align*}
+
+Les même formules vont s'appliquer pour les puissances qui ne sont pas
+entières ! Notons la formule qui ressemble presque plus à une convention
+qu'autre chose : 
+  $$x^0 = 1$$
+
+### Puissances non entières
+
+Elles doivent être connues comme le loup blanc ! Nous avons déjà rencontrée
+$\sqrt{x} = x^{\frac{1}{2}}$. En effet, en appliquant la formule de composée de
+puissances, on obtient, $(x^{frac{1}{2}})^2 = x $, ce qui permet de conclure
+(Même si ceci n'est pas vraiment une preuve, c'est plus pour vous convaincre).
+
+De même, si on regarde $\frac{1}{x}$, on peut la réécrire comme
+$\frac{x^0}{x^1} = x^{0-1} = x^{-1}$
+
+On peut maintenant, par exemple, calculer :
+
+  $$ \frac{1}{\sqrt{x}} = \frac{x^{0}}{x^{\frac{1}{2}}} = x^{-\frac{1}{2}}$$
+
+Vous devez savoir passer de l'une à l'autre de ce types d'égalités.
+
+## Exercices 
+
+Simplifiez :
+
+\begin{align*}
+  \frac{x}{x^2} \quad & , \quad \frac{\sqrt{x}}{x^2}\\
+  x\sqrt{x} \quad & , \quad \sqrt[3]{x} \\
+  \frac{x}{\sqrt{x}} \quad &
+\end{align*}
+
+Où $\sqrt[3]{x}$ désigne la racine cubique de $x$, c'est à dire le nombre $y$
+tel que $y^3 = x$.
+
 # Dérivée 
 
 ## Dérivée de fonctions usuelles.
