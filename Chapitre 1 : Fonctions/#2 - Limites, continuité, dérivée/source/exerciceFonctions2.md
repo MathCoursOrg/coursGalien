@@ -248,6 +248,7 @@ courbe $\mathcal{C}_f$ ?
 
 ### Étude de la croissance d'une population
 
+
 La population d'un village est donnée par $f(t) = \frac{8t + 12}{t^2 +4}$ où $t$
 est le nombre d'années écoulée depuis $2018$ et $f(t)$ le nombre d'habitants en
 milliers. On admet que le rythme de croissance de la population est donné par
@@ -269,3 +270,67 @@ près. Comparer à la variation absolue calculée précédemment.
 Résoudre par calcul l'inéquation $f(t) < 0.8$. En déduire en quelle année la
 population du village passera sous le seuil de 800 habitants. Préciser alors le
 rythme de croissance de la population.
+
+
+## Tangente à une courbe
+
+### Exercice 1
+
+Déterminer une équation de la tangente à l'hyperbole d'équation :
+  $$ y = \frac{4}{x-1}$$
+au point d'absicce 3.
+
+### Exercice 2, instant contemplatif
+
+Regardez sur un logiciel (ou calculatrice) la courbe représentative de la
+fonction 
+  $$ f(x) = | x^2 - 1|$$
+
+(La notation $| |$ représente la valeur absolue. Afficher la fonction $x \to
+|x|$ pour bien comprendre à quoi elle correspond).
+
+Cette fonction est-elle dérivable en 1 ? Donner une justification _graphique_
+(pas de calculs !).
+
+### Exercice 3, ou quand le développement, c'est une mauvaise idée
+
+Calculez la dérivée de la fonction $f(x) = (7x -3)^{2018}$. Calculer l'équation
+de la tangente à cette courbe en 3.
+
+# Algorithmie 
+
+## Échauffement
+
+Écrire un algorithme, sous AlgoBox, ou sur papier, qui :
+
+  - Pour $a$, et $b$ entrés par l'utilisateur, l'algorithme renvoie la moyenne
+      de $a$ et de $b$.
+  - Pour $n$ un entier entré par l'utilisateur, l'algorithme affiche 
+
+	      Je sais faire une boucle avec un Pour, ligne 1
+	      Je sais faire une boucle avec un Pour, ligne 2
+	      ...
+	      Je sais faire une boucle, ligne n.
+
+    Par exemple, pour $n=3$, l'algorithme affichera :
+
+	      Je sais faire une boucle avec un Pour, ligne 1
+	      Je sais faire une boucle avec un Pour, ligne 2
+	      Je sais faire une boucle avec un Pour, ligne 3
+
+    Conseil : pour cet algorithme, vous pouvez utiliser l'instruction ``TANT QUE``,
+    mais je pense que l'instruction ``POUR ... ALLANT DE ... À ...`` est plus
+    adaptée (pourquoi ?) !
+
+## Entrainement
+
+Écrire un algorithme, sous AlgoBox, ou sur papier, qui :
+
+  - Calcule $k$ tel que la somme $1^2 + 2^2 + 3^2 + ... + k^2$ dépasse $5000$ mais $1^1 +
+      2^2 + ... + (k-1)^2$ soit en dessous de $5000$.  Donc l'algorithme ne demande
+      aucune variable, mais déclare la variable $k$, qui va être la sortie de
+      l'algorithme, et la variable $s$ qui va contenir la somme dans la boucle.
+      Dans cet exercice, vous __devrez__ utiliser l'instruction ``WHILE`` (ou ``TANT QUE``
+      en bon français).
+
+
