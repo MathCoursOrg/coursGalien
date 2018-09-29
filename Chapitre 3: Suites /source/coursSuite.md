@@ -19,13 +19,12 @@ qu'un exercice au bac porte sur les suites.
 Par basique, j'entends une définition que l'on peut donner à n'importe qui peut
 importe son parcourt. 
 
-Une suite réel, qui s'écrit mathématiquement $(u_n)_{n\in \mathbb{n}}$, est un
+Une suite réel, qui s'écrit mathématiquement $(u_n)_{n\in \mathbb{N}}$, est un
 ensemble de nombre réel indexé par les entiers naturels. Voici un exemple de
 suite :
-
 \begin{align*}
-	( 1,5 , 2,5, 3,3 , 4,6 \ldots ) \\
-	( 1, 2, 3, 4, \ldots)
+	&( 1,5 , 2,5, 3,3 , 4,6 \ldots ) \\
+	&( 1, 2, 3, 4, \ldots)
 \end{align*}
 
 C'est donc un ensemble contenant une _infinité de valeurs_.
@@ -73,3 +72,23 @@ $u_3$, on a calculé $u_3 = u_2 + 2 = 5+2 = 7$.
 Donc, pour $u_n$ le nombre $r$ vaut 2 !
 
 Que vaut $r$ pour $v_n$ ?
+
+### Suite géométrique 
+
+Maintenant, on peut faire exactement la même chose, mais en multipliant par
+toujours le même terme. Partons par exemple de $u_0 = 6$. Alors, on peut définir 
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    $n$   & 6 & 12 & 24 & 48 & 96 & 192 & ... \\
+    \hline
+  \end{tabular}
+\end{center}
+
+C'est exactement la même chose, sauf que cette fois-ci, on a _multiplier_ à
+chaque fois le terme précédent par $2$ pour obtenir le terme suivant.
+
+## Définition d'une suite 
+
+# Raisonnement par récurrence 
