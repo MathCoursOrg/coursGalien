@@ -133,8 +133,6 @@ Quelques exemples pour bien comprendre.
   - Si je cherche le nombre $x$ tel que $\exp{x} = 3$, alors je tape sur la
       calculatrice (qui connait son logarithme !) $\ln{3}$.
 
-![Courbe représentative du logarithme](ln.png)
-
 ## Propriété du logarithme 
 
 ### Graphe du logarithme
@@ -146,7 +144,8 @@ l'axe $y=x$ de la courbe exponentielle pour obtenir celle du logarithme.
 
 Sinon, reportez vous au graphe donné par votre calculatrice, ou à la figure
 \ref{log}. Amusez vous à regarder la courbe de l'exponentielle **et** du
-}ogarithme sur le même graphique, pour voir la symétrie apparaître !
+logarithme sur le même graphique, pour voir la symétrie apparaître !
+
 ![Courbe représentative du logarithme \label{log}](ln.png)
 
 ### Produit en somme
