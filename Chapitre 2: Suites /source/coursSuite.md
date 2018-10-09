@@ -320,3 +320,45 @@ La troisième méthode sera toujours guidée dans les exercices de type bac.
 suite revient à une espèce de «dérivée discrète». Je vous laisse méditer là
 dessus.
 
+# Le raisonnement par récurrence
+
+Ce type de raisonnement logique est très adapté pour démontrer des résultats qui
+sont indexés sur des réels, par exemple :
+  $$\text{Pour tout}  \, n \in \mathbb{N} \quad  \sum_{k=1}^{n} k = \frac{n(n+1)}{2}$$
+
+Il s'agit donc de montrer, que :
+
+  $$ P(n) := \text{«} \quad \sum_{k=1}^{n} k = \frac{n(n+1)}{2} \quad \text{»}$$
+
+Est vraie pour tout $n \in \mathbb{N}$.
+
+Comment cela fonctionne ? Il y a trois étapes. L'_initialisation_, l'_hérédité_, et
+la _conclusion_. Les deux premières étapes sont **cruciales** pour la validité du
+raisonnement. La dernière est une sorte de synthèse pour bien montrer au
+correcteur que vous avez compris l'enjeu de la démonstration.
+
+Imaginons que nous ayons à montrer une proposition qui est indexée par un entier
+naturel $n \in \mathbb{N}$. On peut donc noter cette proposition $P(n)$. La
+démonstration par récurrence fonctionne alors ainsi :
+
+Initialisation
+
+:	On commence par montrer que la propriété au rang 0 est vraie.
+	C'est-à-dire que l'on montre que $P(0)$ est vraie. 
+
+
+Hérédité
+
+:	On continue ensuite, en montrant alors que **si la propriété est vraie
+	pour UN RANG QUELCONQUE** $n \in \mathbb{N}$, alors elle sera vraie au rang
+	$n+1$. C'est-à-dire qu'il faut montrer l'implication $P(n) \implies
+	P(n+1)$
+
+
+Conclusion
+
+:	Ce raisonnement nous garantit que :
+	$$P(0) \implies P(1) \implies P(2) \implies \ldots \implies P(n) \ldots$$
+
+	Or $P(0)$ est vraie, donc l'ensemble des
+	propositions $P(n)$ sont vraies pour tout $n \in \mathbb{N}$.
