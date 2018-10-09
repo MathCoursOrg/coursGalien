@@ -6,21 +6,22 @@ lang: fr
 ...
 
 \newpage 
+
 # Introduction 
 
 Dans ce cours, je vais vous montrer toutes les méthodes relatives aux suites.
 Vous pourrez ainsi résoudre tous les exos du bac. Il arrive _très fréquemment_
 qu'un exercice au bac porte sur les suites.
 
-## Définition
+# Définition
 
-### Définition basique 
+## Définition basique 
 
 Par basique, j'entends une définition que l'on peut donner à n'importe qui peut
-importe son parcourt. 
+importe son parcours. 
 
 Une suite réel, qui s'écrit mathématiquement $(u_n)_{n\in \mathbb{N}}$, est un
-ensemble de nombre réel indexé par les entiers naturels. Voici un exemple de
+ensemble de nombres réels indexés par les entiers naturels. Voici un exemple de
 suite :
 \begin{align*}
 	&( 1,5 , 2,5, 3,3 , 4,6 \ldots ) \\
@@ -29,7 +30,7 @@ suite :
 
 C'est donc un ensemble contenant une _infinité de valeurs_.
 
-### À quoi servent les suites ?
+## À quoi servent les suites ?
 
 Les suites servent typiquement à modéliser des phénomènes qui évoluent de
 manière _discrète_ (dans le sens, opposé du continu) dans le temps. Par exemple,
@@ -146,12 +147,12 @@ valeur réelle, on peut définir une suite $u_n$ par :
       les ordres existent en mathématiques.
 
 
-## Premières propriétés des suites 
+# Premières propriétés des suites 
 
 Ce paragraphe permet l'introduction de plusieurs mot de vocabulaire qu'il faut
 maitriser.
 
-### Convergence 
+## Convergence 
 
 Voici la définition de la convergence d'une suite.
 
@@ -161,7 +162,7 @@ Convergence
 	seulement si il existe $l \in \mathbb{R}$ tel que :
 	$$ \lim_{n \to \infty} u_n = l $$
 	
-#### Définition plus précise de la convergence
+### Définition plus précise de la convergence
 
 La définition donnée plus haut se mord la queue : j'ai pas voulu préciser pour plus
 de facilité de compréhension en première lecture. Mais ce qu'il faut retenir
@@ -174,6 +175,8 @@ $u_n$ et $l$ est plus petite que $\varepsilon$.
 
 Dit plus rapidement, quelque soit $\varepsilon > 0$, il existe un rang $N$ tel que
 dès que $n > N$, alors $| u_n - l| < \varepsilon$.
+
+## Divergence 
 
 La définition de la divergence est nettement plus simple (mais regroupe
 plusieurs comportements différents !)
@@ -189,7 +192,7 @@ Il y a plusieurs raisons pour une suite de ne pas converger :
   - Soit elle oscille indéfiniment sans vraiment se stabiliser, par exemple
       $u_n = (-1)^n$.
 
-### Minorant, majorant 
+## Minorant, majorant, suite bornée
 
 On peut commencer par deux définitions
 
@@ -211,7 +214,14 @@ Bornée
 
 [^reflexion]: un petit moment de réflexion est nécessaire ici.
 
-### Théorème de la croissance monotone 
+# Théorèmes pour calculer la limite d'une suite
+
+Toutes les règles de calcul des limites que l'on a vu dans le chapitre portant
+sur les fonctions sont valables ici !
+
+Voici des théorèmes qui ne s'applique qu'aux suites.
+
+## Théorème de la convergence monotone 
 
 C'est un théorème difficile à montrer (en tout cas en terminale !), mais il est
 essentiellement intuitif. Voilà ce qu'il affirme :
@@ -221,6 +231,92 @@ convergente.}}
 
 Quelle est la version pour une suite minorée ?
 
-### Théorème des gendarmes 
+## Théorème des gendarmes 
 
 C'est exactement le même énoncé que pour les fonctions ! 
+
+Soient deux suites $(u_n)$ et $(v_n)$ qui **convergent** vers la même limite $l
+\in \mathbb{R}$.
+Soit $(w_n)$ une suite numérique quelconque. 
+
+Si pour tout $n \in \mathbb{N}$, on a :
+  $$ u_n \leq w_n \leq v_n$$
+Alors, la suite $(w_n)$ converge et admet comme limite $l$ !
+
+## Théorème de comparaison 
+
+Très semblable quelque par au théorème des gendarmes !
+
+Soient deux suites numériques $(u_n)$ et $(v_n)$ telles qu'à partir d'un certain
+rang 
+  $$ u_n \leq v_n$$
+
+Alors, si $\lim_{n \to \infty} u_n= \infty$, il en est de même pour $v_n$ !
+
+Il existe une autre version de ce théorème, pourrez vous la trouver ?
+
+# Étude des suites arithmétiques et géométriques
+
+## Formules explicites
+
+Les suites arithmétiques et géométriques sont suffisamment gentille pour avoir
+une forme explicites simple à déterminer.
+
+### Suites arithmétiques
+
+Soit $(u_n)$ une suite arithmétique de raison $r$ et de terme initiale $u_0 \in
+\mathbb{R}$. Alors :
+
+  $$ \text{Pour tout} \quad n \in \mathbb{N} \quad u_n = u_0 + nr$$
+
+### Suites géométriques
+
+Soit $(u_n)$ une suite géométrique de raison $q$ et de terme initiale $u_0 \in
+\mathbb{R}$. Alors :
+
+  $$ \text{Pour tout} \quad n \in \mathbb{N} \quad u_n = u_0q^n$$
+
+## Limites des suites géométriques
+
+La limite d'une suite arithmétique est très simple à calculer, et est laisser en
+exercice pour le lecteur (il suffit de faire attention au signe de la raison de
+la suite). Mais le critère pour les suites géométriques est un peu plus délicat.
+
+ On a le théorème suivant :
+
+ Soit $(u_n)$ une suite géométrique de raison $q \in \mathbb{R}$. Alors :
+
+  - Si $|q|<1$, la suite converge et admet comme limite 0
+  - Si $|q| > 1$, la suite diverge, et si $q$ est positif, alors la suite tend
+      vers plus l'infini. Si $q$ est négatif, la suite n'admet pas de limite.
+  - Si $q=1$, la suite est constante, donc converge vers $u_0$
+  - Si $q=1$, la suite diverge et n'admet pas de limite.
+
+Il faut savoir que cette distinction autour de la valeur $1$ se retrouve dans
+beaucoup de théorèmes mathématiques à cause du théorème ci-dessus !
+
+# Techniques pour savoir si une suite et croissante ou décroissante
+
+Il n'y a pas trois milles techniques à maitriser. Il y a seulement que trois
+possibilités pour connaître la croissance ou la décroissance d'une suite $(u_n)$
+
+  - Soit, on étudie le signe de la suite $(u_{n+1} - u_{n})$. Si il est négatif,
+      alors la suite est décroissante, sinon la suite est croissante.
+  - Soit, _si la suite ne s'annule pas_, on étudie la suite
+      $\frac{u_{n+1}}{u_n}$. Si le quotient est supérieure à 1, alors la suite
+      est croissante, sinon la suite est décroissante. 
+  - Soit, si la suite est définie par $u_{n+1} = f(u_n)$, alors il faut étudier
+      le croissance de la fonction, et les choses sont un peu plus compliquée.
+      Mais tout à fait faisable. Nous verrons quelques cas en cours !
+
+Dans la grande majorité des cas, c'est la première méthode qui marchera. La
+deuxième méthode est à privilégier quand la suite est définie avec beaucoup de
+multiplications, et peu (voire aucune) somme. Puisque les quotients et les
+sommes ne font pas bon ménage !
+La troisième méthode sera toujours guidée dans les exercices de type bac.
+
+
+**Remarque** Il est intéressant de constater qu'étudier la différence d'une
+suite revient à une espèce de «dérivée discrète». Je vous laisse méditer là
+dessus.
+
