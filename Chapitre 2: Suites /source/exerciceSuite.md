@@ -21,6 +21,11 @@ Déterminer un majorant et un minorant pour les suites suivantes :
   - $u_n = \sin{(n)}$, vous pouvez vous aider en regardant à la calculatrice
       quelques valeurs de la suite 
  
+# Étude des variations d'une suite
+
+Étudier les variations de la suite $u_n = n^3 - 9n^2$, et de la suite $u_n = n^2
+- 10n + 1$.
+
 # Calculs de limites
 
 Déterminer les limites de :
