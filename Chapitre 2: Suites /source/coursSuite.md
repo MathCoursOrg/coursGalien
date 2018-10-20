@@ -302,7 +302,7 @@ possibilités pour connaître la croissance ou la décroissance d'une suite $(u_
 
   - Soit, on étudie le signe de la suite $(u_{n+1} - u_{n})$. Si il est négatif,
       alors la suite est décroissante, sinon la suite est croissante.
-  - Soit, _si la suite ne s'annule pas_, on étudie la suite
+  - Soit, _si la suite ne s'annule pas et qu'elle est de signe constant_, on étudie la suite
       $\frac{u_{n+1}}{u_n}$. Si le quotient est supérieure à 1, alors la suite
       est croissante, sinon la suite est décroissante. 
   - Soit, si la suite est définie par $u_{n+1} = f(u_n)$, alors il faut étudier
@@ -314,7 +314,6 @@ deuxième méthode est à privilégier quand la suite est définie avec beaucoup
 multiplications, et peu (voire aucune) somme. Puisque les quotients et les
 sommes ne font pas bon ménage !
 La troisième méthode sera toujours guidée dans les exercices de type bac.
-
 
 **Remarque** Il est intéressant de constater qu'étudier la différence d'une
 suite revient à une espèce de «dérivée discrète». Je vous laisse méditer là
@@ -345,7 +344,6 @@ Initialisation
 
 :	On commence par montrer que la propriété au rang 0 est vraie.
 	C'est-à-dire que l'on montre que $P(0)$ est vraie. 
-
 
 Hérédité
 
