@@ -4,7 +4,6 @@ date:
 author: Delhomme Fabien
 lang: fr
 document: report
-
 ...
 
 
