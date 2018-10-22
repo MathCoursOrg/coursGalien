@@ -46,7 +46,8 @@ Ensuite, il faut vérifier que $P(n) \implies P(n+1)$ pour tout $n$ non nul ici.
 C'est la propriété d'hérédité. Attention, la rédaction est très importante et
 délicate pour ce point particulier ! Toute la magie de la récurrence a lieu ici
 !
-Le plus souvent, il faut partir de la propriété au rang $n+1$, puis développer,
+
+Le **plus souvent**, il faut partir de la propriété au rang $n+1$, puis développer,
 et tomber sur la propriété $P(n)$ qui est donc vraie, et conclure !
 
 - - -
