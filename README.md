@@ -4,19 +4,19 @@
 ### Les cours qu'il faut relire 
 
   1. Cours sur l'exponentielle, logarithme
-    1. Refaire des exercices complets sur TVI, fonction expo et log (voir annale
-       bac)
-    2. Voir le lien entre le nombre d'opération dans la dichotomie et le
-       logarithme
-    3. Voir le lien entre le nombre d'itération pour une suite géométrique et le
-       logarithme
+     1. Refaire des exercices complets sur TVI, fonction expo et log (voir
+	annale bac)
+     2. Voir le lien entre le nombre d'opération dans la dichotomie et le
+	logarithme
+     3. Voir le lien entre le nombre d'itération pour une suite géométrique et
+	le logarithme
 
 ### Les cours qu'il faut écrire
 
 Par ordre d'importance :
 
-  1. Finir cours sur la méthode de Newton
-  2. Finir le cours sur les complexes
+  1. Finir le cours sur les complexes
+     - Inclure des schémas du plan complexe.
   2. Commencer chapitre sur les probabilités
 
 
@@ -24,9 +24,8 @@ Par ordre d'importance :
 
 Dans l'ordre chronologique :
 
-  - Finir les suites avec Newton 
   - Commencer l'exponentielle, et le logarithme
-      - Exercices avec l'exponentielle, plus TVI avec l'exponentielle 
+      - Exercices avec l'exponentielle, plus TVI avec l'exponentielle 
   - Rappels de trigonométrie,
       - Présentation des fonctions sinus et cosinus
   - Les nombres complexes, toutes les formules
@@ -39,5 +38,5 @@ Dans l'ordre chronologique :
 	  dérivation, avec la physique 
   - Cours sur les probabilités
       - Probabilités
-      - Puis statistiques (et interêt dans la méthode scientifique)
-  - Probabilité 
+      - Puis statistiques (et intérêt dans la méthode scientifique)
+  - Probabilité
