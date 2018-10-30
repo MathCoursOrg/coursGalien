@@ -325,15 +325,15 @@ Pour résumer :
 \frac{1}{2}$, alors je pars de :
   $$ 2 < 3 $$
 Puis, en invoquant la décroissance de la fonction inverse sur l'intervalle $]0;
-+\infty]$, j'obtiens :
++\infty[$, j'obtiens :
   $$ \frac{1}{2} > \frac{1}{3} $$
 J'inverse le sens des inégalités, car la fonction est _décroissante_.
 
 **Points de vocabulaire** : 
 
-  - Le symbole $\forall$ signifie "pour tout". Ce n'est pas dans le programme,
-      mais c'est sacrément pratique ! (Ça veut dire qu'il ne faut pas l'utiliser
-      dans les copies).
+  - Le symbole $\forall$ signifie "pour tout". Ce n'est pas dans au programme
+      du bac, mais c'est sacrément pratique ! (Ça veut dire qu'il ne faut pas
+      l'utiliser dans les copies).
   - L'image d'un point $x$ par la fonction $f$ est simplement $f(x)$.
   - L'antécédent d'un point $y$ par la fonction $f$ est **un** (il est possible
       qu'il y en ait plusieurs) nombre $x$ tel que $f(x) = y$

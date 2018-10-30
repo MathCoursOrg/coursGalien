@@ -18,6 +18,8 @@ Par ordre d'importance :
   1. Finir le cours sur les complexes
      - Inclure des schémas du plan complexe.
   2. Commencer chapitre sur les probabilités
+  3. Commencer chapitre sur la géométrie
+  4. Commencer chapitre sur l'intégration
 
 
 ## Séances de cours
@@ -25,7 +27,8 @@ Par ordre d'importance :
 Dans l'ordre chronologique :
 
   - Commencer l'exponentielle, et le logarithme
-      - Exercices avec l'exponentielle, plus TVI avec l'exponentielle 
+      - Exercices avec l'exponentielle, plus TVI avec l'exponentielle, exercice
+	  de type bac
   - Rappels de trigonométrie,
       - Présentation des fonctions sinus et cosinus
   - Les nombres complexes, toutes les formules
