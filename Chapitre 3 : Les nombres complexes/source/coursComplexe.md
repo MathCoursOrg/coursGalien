@@ -5,13 +5,14 @@ author: Delhomme Fabien
 lang: fr
 document: report
 toc: toc
+
 ...
 
-\newpage 
+\newpage
 
 # Introduction
 
-## Motivation 
+## Motivation
 
 Les complexes, un des chapitres les plus compliqués à introduire peut-être. Pour
 commencer, sachez que les complexes ont été d'abord appelés les _imaginaires_,
@@ -35,14 +36,14 @@ sortent de nulle part, etc. Mais nous verrons tranquillement pourquoi les
 complexes sont presque naturels (même s'il a fallu du temps avant de les
 découvrir).
 
-## Porte d'entrée 
+## Porte d'entrée
 
 Comme souvent en mathématiques, il existe plusieurs portes d'entrée pour
-comprendre les complexes : 
+comprendre les complexes :
 
   - Les polynômes
-  - La géométrie 
-  - Les matrices 
+  - La géométrie
+  - Les matrices
 
 Nous verrons dans ce cours les deux premiers, peut-être que je toucherai deux
 mots sur la troisième porte d'entrée lors des cours de mathématique spécialisée.
@@ -51,7 +52,7 @@ mots sur la troisième porte d'entrée lors des cours de mathématique spéciali
 
 Bon, allez, c'est partit, on y va !
 
-## Soit $i$ un nombre tel que 
+## Soit $i$ un nombre tel que
 
 Nous avons vu dans le chapitre sur les polynômes, que certain polynôme
 n'admettait pas de racine. Par, exemple, et c'est un des exemples le plus simple
@@ -67,18 +68,20 @@ l'on _rajoute_ une racine à ce polynôme. C'est-à-dire que, puisque $P$ n'a pa
 de racine, on va lui en _ajouter_ une !!
 
 C'est-à-dire que l'on va _définir_ $i$ comme étant un nombre, tel que $i^2 =
--1$ (et donc $P(i) = 0$) 
+-1$ (et donc $P(i) = 0$)
 
 Alors, évidemment, $i$ n'est **pas** réel. Donc, il «habite» dans une autre
 ensemble. Mais quel ensemble ? L'ensemble des _complexes_.
 
 Qu'est-ce qu'on peut faire avec $i$ ? Le multiplier par un réel ? C'est-à-dire
 que je peux définir $3i = i + i + i$. L'ajouter à un réel (Soyons fou !),
-d'accord, alors cela donnera $2 + 2i$. 
+d'accord, alors cela donnera $2 + 2i$.
 
 On peut donc définir les complexes par :
 
   $$ \mathbb{C} = \{ a + bi \ | \ a, b \in \mathbb{R} \}$$
+
+![Le plan complexe, avec quelques points tracés dessus](../images/planComplexe.png)
 
 Pour l'instant, tout cela peut paraître mystique, et c'est bien normal. Mais
 maintenant que nous avons découvert un nouveau nombre, autant découvrir de
@@ -116,7 +119,7 @@ Nous avons donc[^montrer] rajouté des racines à tous les polynômes !!!
 
 ## À quoi ressemble $\mathbb{C}$
 
-Nous avons donc un nouvel ensemble, $\mathbb{C}$, mais à quoi ressemble-t-il ?
+Nous avons donc un nouvel ensemble, $\mathbb{C}$, mais à quoi ressemble-t-il ?
 
 En fait, on peut représenter $\mathbb{C}$ comme un plan, comme un ensemble qui
 admet deux coordonnées :
@@ -137,23 +140,23 @@ complexes. C'est le cas de l'exponentielle.
 ## Définition formelle de l'exponentielle pour les complexes (hors programme)
 
 On peut utiliser la formule suivante, qui marche aussi dans les complexes, pour
-définir l'exponentielle :
+définir l'exponentielle :
   $$ \exp(z) = \sum_{k=0}^{+\infty} \frac{z^k}{k!}$$
 
 Il y aurait beaucoup à dire sur cette formule, on y reviendra en temps voulu.
 
-## Définition au programme 
+## Définition au programme
 
 En fait l'exponentielle d'un nombre complexe $z = a + ib \in \mathbb{C}$, où $a
-\in \mathbb{R}$ et $b \in \mathbb{R}$ est définie comme il suit :
+\in \mathbb{R}$ et $b \in \mathbb{R}$ est définie comme il suit :
   $$ \exp(z) = \exp(a + ib ) = \exp(a)*\exp(ib)$$
 On essai effectivement de conserver l'équation fonctionnelle de l'exponentielle,
 pour l'étendre au complexe. Mais comment est donc définie l'exponentielle d'un
 nombre imaginaire pur (c'est-à-dire qui admet une partie réelle nulle, comme le
-nombre $ib \in \mathbb{C}$). Et bien comme il suit :
+nombre $ib \in \mathbb{C}$). Et bien comme il suit :
   $$\exp(ib) = \cos(b) + i\sin(b)$$
 
-Cette formule s'appelle la _formule d'Euler_ !
+Cette formule s'appelle la _formule d'Euler_ !
 
 Il faut voir cette formule comme une rotation d'angle $b$. En effet, si j'ai un
 vecteur dans le plan, et que je veux lui appliquer une rotation d'angle $b$, je
