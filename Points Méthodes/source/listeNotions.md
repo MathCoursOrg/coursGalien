@@ -27,6 +27,8 @@ Voici la documentation autour des _flashcards_ :
 
   - <https://ncase.me/remember/> une mine d'or, comics détaillant comment faire
       ses propres _flashcards_ et pourquoi cela fonctionne-t-il.
+  - <https://azarz.github.io/remember/fr.html> pour une traduction française
+      (que je n'ai pas vérifiée).
   - <https://www.supermemo.com/en/articles/20rules> lien qui détaille les bonnes
       pratiques à avoir pour faire ses _flashcards_.
 

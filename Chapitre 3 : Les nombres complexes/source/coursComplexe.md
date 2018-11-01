@@ -163,4 +163,45 @@ vecteur dans le plan, et que je veux lui appliquer une rotation d'angle $b$, je
 vais multiplier sa première coordonné par $\cos(b)$ et sa deuxième par
 $\sin(b)$ (ceci se comprend mieux avec un schéma).
 
+## Conséquence de la formule d'Euler
+
+Il existe donc deux moyens de regarder un même nombre complexe. Soit avec ses
+coordonnées réelle $a \in \mathbb{R}$ et imaginaire $b \in \mathbb{R}$ pour
+obtenir $z = a + i b \in \mathbb{C}$. Mais deux autres nombres peuvent aussi
+repérer ce nombre complexe dans le plan. En effet, on peut trouver (voir la
+figure \ref{polaire}) $r$ et $\theta$ tels que :
+  $$z = r*(\cos(\theta) + i \sin(\theta)) = re^{i\theta}$$
+
+![Exemple de complexe avec d'autres coordonnées dans le plan \label{polaire}](../images/complexeCoordonneesPolaire.png)
+
+Avec :
+
+  - $r$ la « longueur » du nombre $z$. Ce nombre est appelé le _module_ de $z$.
+  - $\theta$ l'angle entre la droite qui passe par $z$ et l'axe des abscisses,
+      appelé _argument_.
+
+
+C'est en jouant sur ces deux écritures que l'on obtient beaucoup de résultat.
+Par exemple, on peut mieux comprendre la multiplication entre deux complexes.
+
+### La multiplication entre deux complexes
+
+Supposons que l'on veuille regarder la multiplication du complexe $a \in
+\mathbb{C}$ par le nombre $z \in \mathbb{C}$. On note alors $\theta_a$
+l'argument de $a$, et $r_a$ le module de $a$. De même pour $z$. Alors, on
+remarque que :
+\begin{align*}
+   z*a &= r_z * e^{i\theta_z}*r_a * e^{i\theta_a}\\
+       &= r_z r_a e^{i(\theta_z + \theta_a)} \quad \text{Grâce à la formule
+       d'Euler !}
+\end{align*}
+
+Donc, multiplier par $a$ par $z$ a eu pour effet vis à vis de $a$ de :
+  
+  - _multiplier_ son module par celui de $z$
+  - _ajouter_ à son argument celui de $z$
+
+**Question** Comment faire maintenant pour faire effectuer à $a$ une rotation
+d'angle $90$ degrés ? (Autrement dit, en radian, $\frac{\pi}{2}$ radians).
+
 
