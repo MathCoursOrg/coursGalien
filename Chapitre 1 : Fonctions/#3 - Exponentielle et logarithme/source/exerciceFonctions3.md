@@ -93,3 +93,30 @@ exprimée en secondes par :
   - Justifier qu'il existe un instant $t_0$ unique tel que $q(t_0) = 5.7$
   - Au bout de combien de secondes la charge du condensateur sera-t-elle
       supérieure à $5.7$ ?
+
+# Problèmes
+
+## Approximation de banquier
+
+Les banquiers calculent rapidement le temps approximatif du doublement d'un
+capital, placé à intérêts composés, de la façon suivante :
+
+>   Pour un taux d'intérêt de $t\%$, le capital double au bout de $\frac{70}{t}$ années
+
+On essaie de comprendre d'où vient cette astuce.
+
+  1. Au bout de $n$ années, par quel nombre est multiplié la valeur d'un capital
+     placé à $t\%$ ?
+  2. On sait que la courbe représentative de $\ln$ est située sous sa tangente
+     au point d'abscisse 1. Par quelle inégalité vérifiée par $\ln(x)$ pour tout
+     $x$ de $]0, +\infty[$ cela se traduit-il ? En déduire une inégalité
+     vérifiée par $\ln(1+x)$ pour tout $x$ de $]-1, +\infty[$.
+  3. Étudier le sens de variation de la fonction $g : x \mapsto \ln(1+x) -x +
+     \frac{x^2}{2}$
+  4. En déduire des deux questions précédentes, que pour tout $x$ de $]0, +\infty[$, on ait
+    $$ x - \frac{x^2}{2} \leq \ln(1+x) \leq x$$
+    Puis, donner un majorant de l'erreur commise quand on remplace $\ln(1+x)$
+    par $x$.
+  5. Expliciter les approximations qui conduisent à l'astuce du banquier pour
+     des valeurs raisonnables de $t$ (c'est-à-dire pour $0 < t < 14$).
+
