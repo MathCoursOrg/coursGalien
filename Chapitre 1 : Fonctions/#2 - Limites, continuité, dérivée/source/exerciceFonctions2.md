@@ -3,10 +3,11 @@ title: Exercices sur les dérivées
 date: 4 septembre 2018
 author: Delhomme Fabien
 lang: fr
+geometry :
+  margin=1.2in
+fontsize : 11pt
 document: report
 ...
-
-\newpage 
 
 # Limites de fonctions usuelles
 

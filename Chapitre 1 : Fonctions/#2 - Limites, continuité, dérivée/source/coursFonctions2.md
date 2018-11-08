@@ -1,12 +1,18 @@
 ---
-title : Fonctions, suite
-author : Fabien Delhomme
+title: Fonctions, deuxième partie.
+author: Fabien Delhomme
 lang: fr
-date: 3 septembre 2018
-document: report
+
+geometry:
+  margin=1.2in
+fontsize: 11pt
+papersize: a4paper
+document: article
+classoption: twoside
+colorlinks: blue
+pagestyle: headings
 ...
 
-\newpage
 # Limites d'une fonction
 
 ## Motivations
@@ -275,7 +281,7 @@ que :
       dit pas s'il est unique (il peut très bien en avoir plusieurs, par exemple
       la fonction sinus ou cosinus croise plusieurs fois l'axe des abscisses).
       Néanmoins si vous avez _besoin_ de prouver l'unicité d'un nombre $c$, vous
-      le pouvez ! Il suffit de prouver que la fonction est strictement
+      le pouvez ! Il suffit de prouver que la fonction est strictement
       croissante (vous verrez un exemple dans la [section
       suivante](#algorithme)).
   - Le théorème ne nous dit pas non plus où il se trouve ! Le prochain
@@ -360,7 +366,7 @@ $\sqrt{2}$...
 
 ## Définition
 
-Voilà, on y est ! Le merveilleux concept de la dérivée !  Je vous conseille de
+Voilà, on y est ! Le merveilleux concept de la dérivée ! Je vous conseille de
 lire en parallèle de ce cours, le super bouquin, gratuit et fait par des
 talentueux mathématiciens passionnés par la vulgarisation accessible
 [ici](http://catalogue-editions.ens-lyon.fr/html/WYSIWYGfiles/files/349_Borrelli_pdf%20WEB.pdf)[^clic]
@@ -386,9 +392,7 @@ Comment on fait pour calculer la vitesse instantanée de notre position ?
 
 Eh bien, il faut mesurer la distance $\Delta d$ que l'on parcourt en une
 fraction de temps $\Delta t$, et calculer le rapport :
-
   $$ v = \frac{\Delta d}{\Delta t} $$
-
 Bien sûr, dans la vraie vie, pas besoin de prendre une échelle de temps «
 infiniment petite». Mais en mathématiques, on peut le faire, donc on ne va pas
 se gêner !

@@ -88,6 +88,16 @@ Les graphes des fonctions suivantes sont à avoir en tête :
       intervalle de définition ? (Réponse : il suffit de regarder les racines de
       $Q$).
 
+#### Les fonctions exponentielles et logarithme 
+
+  - Les propriétés de dérivation de l'exponentielle et du logarithme 
+  - Les propriétés algébrique de l'exponentielle et du logarithme (par exemple
+      $\ln(x^p) = p \ln(x)$, ou $\exp(a + b) = \exp(a)\exp(b)$).
+  - Les limites de l'exponentielle et du logarithme en plus et moins l'infini.
+  - Les limites $\lim_{x \to 0} \frac{\exp(x) -1}{x}$.
+  - Les graphes de l'exponentielle et du logarithme.
+  - Leur domaine de définition.
+
 #### Théorèmes portant sur les limites et la continuité, raisonnements.
 
   - Théorème des gendarmes.

@@ -3,9 +3,11 @@ title : Exercice sur les fonctions
 date : 3 septembre 2017
 author : Delhomme Fabien
 lang: fr
+fontsize: 11pt
+geometry : 
+  - margin=1.2in
 ...
 
-\newpage 
 # Fonctions linéaires et affines
 
 ## Représentation de fonctions, échauffement

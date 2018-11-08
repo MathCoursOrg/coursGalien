@@ -1,10 +1,18 @@
 ---
-title : L'exponentielle et sa copine, le logarithme
-author : Fabien Delhomme
+title : L'exponentielle et sa copine le logarithme
+author : Fabien Delhomme
 lang: fr
-date: 3 septembre 2018
-document: report, 12
-...
+document: report
+geometry :
+  margin=1.2in
+fontsize : 11pt
+papersize : a4paper
+document : report
+classoption : twoside
+colorlinks : blue
+pagestyle : headings
+
+---
 
 # L'exponentielle
 
@@ -107,7 +115,7 @@ pour un y donné, $\exp{x} = y$ ? ». On pose donc, pour $y <0$ :
   $$ \ln{y} = x = \text{l'unique réel tel que} \ \exp{x} = y $$
 
 Quelques remarques :
- 
+
   - Pour l'instant, nous n'avons aucune formule pour calculer le logarithme !
   - Cette définition est essentielle si vous voulez comprendre le logarithme.
   - Faites bien attention au domaine de définition du logarithme.

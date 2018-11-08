@@ -4,6 +4,13 @@ date:
 author: Delhomme Fabien
 lang: fr
 document: report
+geometry :
+  margin=1.2in
+fontsize : 11pt
+papersize : a4paper
+document : report
+classoption : twoside
+colorlinks : blue
 ...
 
 
