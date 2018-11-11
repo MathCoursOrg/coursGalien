@@ -1,11 +1,18 @@
 ---
 title: Les suites
-date: 13 septembre 2018
 author: Delhomme Fabien
 lang: fr
-...
 
-\newpage 
+geometry :
+  margin=1.2in
+fontsize : 11pt
+papersize : a4paper
+document : report
+classoption : twoside
+colorlinks : blue
+pagestyle : headings
+
+---
 
 # Introduction 
 

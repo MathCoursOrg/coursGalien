@@ -52,9 +52,9 @@ $$
       dessous), à cause de sa propriété : $\exp{x+y}= \exp{x}*\exp{y}$.
 
 De plus, on $\exp{1} = \mathrm{e}$. C'est un nombre que l'on peut calculer, et
-qui donne d'après la calculatrice (ou google !) $\approx 2.71828182846$
+qui donne d'après la calculatrice (ou google !) $ \mathrm{e} = \approx 2.71828182846$
 
-**Lien entre l'exponentielle est les fonctions puissance**
+### Lien entre l'exponentielle est les fonctions puissance
 
 La formule $\exp{x+y}= \exp{x}*\exp{y}$ fait écho avec la formule $a^{x+y} =
 a^{x}*a^{y}$. C'est pour cela que l'on note :
@@ -62,10 +62,13 @@ a^{x}*a^{y}$. C'est pour cela que l'on note :
 
 Donc, calculer $\exp{x}$ revient à calculer $\mathrm{e}$ _puissance_ $x$.
 
-**Exemple de calcul :** on sait que $\exp{\frac{1}{2}}$ est plus petit que
-$\exp{1}$, mais plus grand que $\exp{0} = 1$ donc $\exp{\frac{1}{2}} > 0$
-puisque la fonction exponentielle est croissante. De plus,
-  $$ \left(\exp{\frac{1}{2}}\right)^2 = \exp{\frac{1}{2}}*\exp{\frac{1}{2}} = \exp{\left(\frac{1}{2} + \frac{1}{2}\right)} = \exp{1} = \mathrm{e}$$
+#### Exemple de calcul :
+
+On sait que $\exp{\frac{1}{2}}$ est plus petit que $\exp{1}$, mais plus grand
+que $\exp{0} = 1$ donc $\exp{\frac{1}{2}} > 0$ puisque la fonction exponentielle
+est croissante. De plus, 
+  $$ \left(\exp{\frac{1}{2}}\right)^2 = \exp{\frac{1}{2}}*\exp{\frac{1}{2}} =
+  \exp{\left(\frac{1}{2} + \frac{1}{2}\right)} = \exp{1} = \mathrm{e}$$
 
 Or, le nombre $\exp{\frac{1}{2}} > 0$, donc :
   $$\exp{\frac{1}{2}} = \sqrt{ \mathrm{e}}$$
