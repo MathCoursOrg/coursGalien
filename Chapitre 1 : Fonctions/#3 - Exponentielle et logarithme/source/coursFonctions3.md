@@ -4,10 +4,10 @@ author : Fabien Delhomme
 lang: fr
 document: report
 geometry :
-  margin=1.2in
-fontsize : 11pt
+  margin=1in
+fontsize : 12pt
 papersize : a4paper
-document : report
+document : article
 classoption : twoside
 colorlinks : blue
 pagestyle : headings
@@ -28,6 +28,18 @@ l'une de l'autre. Nous reverrons l'exponentielle dans le chapitre des complexes
 
 ## Définition
 
+La définition de la fonction exponentielle est difficile. En plus, comme souvent
+en mathématiques, il existe plusieurs moyens de définir cette fonction. Ces
+différentes définitions désignent évidement le même objet, mais sont de natures
+assez différentes. Je vais maintenant vous présenter trois définitions de la
+fonctions exponentielles. Elles sont toutes admises (vous comprendrez pourquoi
+dans les paragraphes suivants), et seulement les deux premières sont au
+programme du bac, la troisième servant de culture générale, et me servira au
+chapitre sur les complexes pour vous convaincre que la fonction exponentielle
+peut aussi se définir pour des nombres complexes !
+
+### Définition par une équation différentielle
+
 Voici la définition de la fonction exponentielle réelle. C'est une fonction,
 notée $\exp$, qui va de $\mathbb{R}$ dans $\mathbb{R}$, telle que :
 $$
@@ -39,30 +51,127 @@ $$
 \right.
 $$
 
+On dit que c'est une _équation différentielle_ parce que c'est une équation dans
+laquelle l'inconnue est une fonction, et l'équation fait apparaitre les
+dérivées de la fonction.
+
+À notre niveau, on admet qu'une telle fonction existe, et qu'elle est définie
+sur $\mathbb{R}$. Il existe des moyens pas très compliqués pour le prouver, ils
+sont néanmoins abordés en toute rigueur en licence de mathématique. Une
+démonstration élémentaire s'appuie sur la méthode d'Euler, une méthode que l'on
+explore dans le cas de la fonction exponentielle dans la partie suivante.
+
+### Définition par une équation fonctionnelle
+
+L'équation fonctionnelle respectée par l'exponentielle est la suivante :
+$$ \text{Pour tout } x, y \in \mathbb{R} \ \exp(x) * \exp(y) = \exp(x +y)$$
+
+De la même manière, nous allons admettre que cette équation n'est vérifiée que
+par une seule fonction, et donc que cela nous donne bien une définition, et
+qu'elle est équivalente à la définition précédente (c'est-à-dire que dans les
+deux cas, on tombe parle de la même fonction).
+
+On dit que c'est une _équation fonctionnelle_ parce que c'est une équation dans
+laquelle l'inconnue est une fonction, et implique une égalité entre plusieurs
+termes qui correspondent à plusieurs évaluation de la fonction en différents
+points. Les équations fonctionnelles sont plus difficiles à étudier, et en
+général ne sont abordés qu'en master. Dans le cas de l'exponentielle néanmoins,
+cette équation est simple à vérifier, et cette vérification s'effectue en
+deuxième année de licence de mathématique.
+
+### Définition par une somme infinie
+
+Oui, vous avez bien lu, une somme infinie ! Évidemment, vous n'avez pas assez de
+baguage mathématiques pour que je puisse vous définir proprement ce que
+signifie, et dans quel sens on peut parler tel objet, une somme infinie. Mais
+tout ce que vous pouvez savoir, c'est que cette formule permet de définir
+l'exponentielle sur beaucoup d'autres ensembles que les réels (par exemple les
+complexes, mais aussi les matrices etc..). Sans plus attendre, voici la
+définition.
+$$ \exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} +
+\frac{x^3}{6} + \ldots$$
+
+Ici $k!$ signifie que l'on calcule $k*(k-1)*(k-2)*\ldots*1$. Par exemple $5!$,
+qui se lit «$5$ factoriel» se calcule par $5!= 5*4*3*2*1 = 120$. Nous
+retrouverons cette notation en probabilité.
+
+Pareil, cette formule est vue en pratique en première année de licence de
+mathématiques. C'est souvent par elle d'ailleurs que l'on commence par
+introduire la notion d'exponentielle, et que l'on démontre les autres
+définitions (soit une démarche totalement inverse que celle du bac).
+
+### Commentaires sur ces définitions
+
+Les deux premières définitions sont _essentielles_ pour le programme du bac, car
+elles servent _tout le temps_. Par exemple pour dériver une fonction qui est
+composée d'exponentielles, ou alors pour résoudre des équations simples etc. 
+
+La troisième n'est absolument pas à citer au bac ! C'est-à-dire que vous devrez
+_jamais_ écrire que $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ pour un
+exercice au bac, même si cela est parfaitement valide du point de vue
+mathématique.
+
+Néanmoins, vous voyez ici une formule qui permet de _calculer_ l'exponentielle !
+Par exemple, essayer de comparer à la calculatrice $\exp(1)$ et $1 + 1 +
+\frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \frac{1}{120}$ qui correspondent au
+cinq premiers termes de la somme infinie citée plus haut.
+
 ## Propriétés de l'exponentielle
 
-À cause de sa définition, l'exponentielle admet plusieurs propriétés.
+Voyons maintenant les propriétés de l'exponentielle. Mais avant, regardez
+attentivement le graphe de cette fonction, et vérifiez que chaque propriété se
+retrouve graphiquement à l'aide de la courbe de l'exponentielle.
 
-  - Elle n'est jamais nulle,
-  - elle est toujours strictement positive,
-  - elle est toujours croissante,
-  - Sa limite en plus l'infini vaut l'infini
-  - Sa limite en moins l'infini vaut 0
-  - Elle se comporte comme une fonction puissance (voir le paragraphe du
-      dessous), à cause de sa propriété : $\exp{x+y}= \exp{x}*\exp{y}$.
+![Courbe représentative de la fonction exponentielle \label{exp}](exp.png){ width=15cm}
 
-De plus, on $\exp{1} = \mathrm{e}$. C'est un nombre que l'on peut calculer, et
-qui donne d'après la calculatrice (ou google !) $ \mathrm{e} = \approx 2.71828182846$
+### Propriétés conséquentes de la définition
 
-### Lien entre l'exponentielle est les fonctions puissance
+En combinant les deux premières définitions (l'équation différentielle et
+l'équation fonctionnelle), nous pouvons avoir les premières définitions de la
+fonction exponentielle
 
-La formule $\exp{x+y}= \exp{x}*\exp{y}$ fait écho avec la formule $a^{x+y} =
-a^{x}*a^{y}$. C'est pour cela que l'on note :
+#### Stricte positivité 
+
+L'exponentielle n'est jamais nulle, en effet, pour tout $x \in \mathbb{R}$, nous
+avons :
+$$ \exp{(x)}*\exp{(-x)}=\exp{(x-x)}=\exp{(0)}$$
+Donc, pour tout $\exp{x}$ admet _un inverse_, donc nécessairement n'est pas nul.
+
+Maintenant, nous pouvons montrer que la fonction exponentielle est en fait
+positive, en effet, pour tout $x \in \mathbb{R}$ :
+  $$ \exp(x) = \exp{\left(2\frac{x}{2}\right)} = \exp{\left(\frac{x}{2} + \frac{x}{2}\right)} =
+  \exp{\frac{x}{2}}*\exp{\frac{x}{2}} = \left(\exp{\frac{x}{2}}\right)^2$$
+
+Donc, puisque qu'un carré est toujours positif dans $\mathbb{R}$, le nombre
+$\exp{x}$ est toujours positif, et ceci quelque soit le $x \in \mathbb{R}$ pris
+au départ. Donc la fonction est positive sur tout $\mathbb{R}$.
+
+Finalement, nous avons montrer que la fonction exponentielle est strictement
+positive sur $\mathbb{R}$.
+
+#### Stricte croissance 
+
+Donc, grâce à la première propriété, nous savons que l'exponentielle est sa
+propre dérivée, donc vu que l'on vient de voir qu'elle est strictement positive,
+alors on peut en conclure que l'exponentielle est strictement croissante sur
+$\mathbb{R}$.
+
+#### Lien entre l'exponentielle est les fonctions puissance
+
+La formule de l'équation fonctionnelle $\exp{x+y}= \exp{x}*\exp{y}$ fait écho
+avec la formule $a^{x+y} = a^{x}*a^{y}$. C'est pour cela que l'on note :
   $$ \exp{x} = \mathrm{e}^x $$
 
-Donc, calculer $\exp{x}$ revient à calculer $\mathrm{e}$ _puissance_ $x$.
+Donc, calculer $\exp{x}$ revient à calculer $\mathrm{e}$ _puissance_ $x$, avec
+$\mathrm{e}$ un nombre réel qui vaut[^def] $\exp(1)$.
 
-#### Exemple de calcul :
+[^def]: c'est une définition
+
+En fait, on peut même _définir_ comment élever un nombre $a$ a la puissance $x$
+pour tout $x \in \mathbb{R}$. Ceci sera fait dans le paragraphe de la fonction
+logarithme.
+
+### Exemples de calcul :
 
 On sait que $\exp{\frac{1}{2}}$ est plus petit que $\exp{1}$, mais plus grand
 que $\exp{0} = 1$ donc $\exp{\frac{1}{2}} > 0$ puisque la fonction exponentielle
@@ -81,7 +190,54 @@ retenir :
   - Sa propriété de croissance sur tout $\mathbb{R}$
   - Sa propriété de positivité sur tout $\mathbb{R}$
 
-![Courbe représentative de la fonction exponentielle \label{exp}](exp.png)
+
+## Calculs de limites
+
+### Limites en plus et moins l'infini
+
+Puisque l'exponentielle est sa propre dérivée, on peut se convaincre que plus
+elle croit, plus en va croitre vite, et donc va très rapidement vers $+\infty$.
+Finalement, on obtient :
+  $$ \lim_{x \to \infty} e^{x}= \infty$$
+
+De même, avec un peu de réflexion[^exo], on peut se convaincre que :
+  $$ \lim_{x \to -\infty} e^{x}= 0$$
+
+Ce sont des limites qu'il faut connaitre pour le bac.
+
+[^exo]: c'est un exercice !
+
+### Formes indéterminées avec l'exponentielle
+
+Il arrive très fréquemment au bac que l'on vous demande de calculer des limites
+faisant apparaître des exponentielles. Souvent, ce sera des formes
+indéterminées. Il en existe deux types.
+
+#### Résolution par la définition de la dérivation
+
+Nous pouvons, par définition de la dérivation, calculer la limite de :
+  $$ \lim_{x \to 0} \frac{e^x - 1}{x}$$
+
+C'est une forme indéterminée, du type «$\frac{0}{0}$», et pour lever cette
+indétermination, il faut voir que c'est simplement le nombre qui correspond à
+la dérivée de la fonction exponentielle en $0$ :
+  $$\lim_{x \to 0} \frac{e^x - 1}{x} =\lim_{x \to 0} \frac{ e^x - e^0}{x - 0} = \exp'{0} = \exp(0)= 1$$
+
+Ce calcul de limite est plutôt «rare» au bac. 
+
+#### Résolution par croissance comparée
+
+Un type de limite plus fréquent à calculer, et la croissance comparée. En effet,
+on peut montrer que quelque soit la puissance $k \in \mathbb{R}$ de $x$, alors
+l'exponentielle l'emportera sur la puissance de $x$. Que ce soit en plus
+l'infini ou en moins l'infini. Mathématiquement parlant, cela donne, pour tout
+$k \in \mathbb{R^{+}}$.
+  $$\lim_{x \to \infty} \ x^k*e^{-x} = 0$$ 
+Et,
+  $$\lim_{x \to \infty} \ \frac{e^x}{x^k} = \infty$$
+
+Ce qu'il faut retenir c'est que «l'exponentielle l'emporte devant n'importe quel
+puissance de $x$».
 
 # Le logarithme
 
@@ -108,8 +264,8 @@ si l'on veut résoudre l'équation :
 y aura :
 
   - Soit une unique solution si $y > 0$ (l'unicité est garantie par la stricte
-      croissance, l'existence par le TVI, à cause des limites de l'exponentielle
-      en $-\infty$ et $+\infty$)
+      croissance, l'existence par le théorème des valeurs intermédiaires, à
+      cause des limites de l'exponentielle en $-\infty$ et $+\infty$)
   - Soit aucune solution si $y \leq 0$.
 
 Donc, dans le cas où $y >0$, on peut définir une fonction, que l'on appelle le
@@ -149,10 +305,15 @@ graphe de la fonction racine ! Mathématiquement, on prend la courbe symétriqu
 l'axe $y=x$ de la courbe exponentielle pour obtenir celle du logarithme.
 
 Sinon, reportez vous au graphe donné par votre calculatrice, ou à la figure
-\ref{log}. Amusez vous à regarder la courbe de l'exponentielle **et** du
-logarithme sur le même graphique, pour voir la symétrie apparaître !
+\ref{log}. Le graphe suivant montre la fonction exponentielle et la fonction
+logarithme sur le même graphique, ce qui permet de mettre en évidence la
+symétrie des courbes représentatives autour de l'axe $y=x$ des deux fonctions,
+ce qui est du à la définition du logarithme comme réciproque de la fonction
+exponentielle.
 
-![Courbe représentative du logarithme \label{log}](ln.png)
+![Courbe représentative du logarithme \label{log}](ln.png){ width=15cm}
+
+![Symétrie entre le logarithme et l'exponentielle](symexp-ln.png){ width=15cm}
 
 ### Produit en somme
 

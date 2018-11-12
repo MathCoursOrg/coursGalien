@@ -79,7 +79,7 @@ Les graphes des fonctions suivantes sont à avoir en tête :
   - Quelles sont les formules pour avoir les racines d'un polynôme de second
       degré ?
   - Quelle est l'abscisse du point de l'extremum d'un polynôme ?
-  - Quelles sont les limites d'un polynôme en plus et moins l'infini ?
+  - Quelles sont les limites d'un polynôme non constant en plus et moins l'infini ?
   - Comme se situe le point de l'extremum par rapport aux deux racines ?
       (Réponse : c'est le milieux des deux racines, tracer une courbe pour le
       comprendre géométriquement).
@@ -94,7 +94,8 @@ Les graphes des fonctions suivantes sont à avoir en tête :
   - Les propriétés algébrique de l'exponentielle et du logarithme (par exemple
       $\ln(x^p) = p \ln(x)$, ou $\exp(a + b) = \exp(a)\exp(b)$).
   - Les limites de l'exponentielle et du logarithme en plus et moins l'infini.
-  - Les limites $\lim_{x \to 0} \frac{\exp(x) -1}{x}$.
+  - Les limites $\lim_{x \to 0} \frac{\exp(x) -1}{x}$, et les croissances
+      comparée.
   - Les graphes de l'exponentielle et du logarithme.
   - Leur domaine de définition.
 
