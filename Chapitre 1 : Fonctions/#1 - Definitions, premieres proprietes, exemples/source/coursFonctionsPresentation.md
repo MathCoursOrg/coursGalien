@@ -58,7 +58,7 @@ $$ f : x \longrightarrow x*x $$
 
 :::notes
 
-  - On utilisera la notation $f(x)$ par abus de language
+  - On utilisera la notation $f(x)$ par abus de langage
   - Faire les graphiques 
 :::
 

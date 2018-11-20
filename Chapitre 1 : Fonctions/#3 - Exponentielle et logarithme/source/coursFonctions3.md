@@ -5,7 +5,7 @@ lang: fr
 document: report
 geometry :
   margin=1in
-fontsize : 12pt
+fontsize : 11pt
 papersize : a4paper
 document : article
 classoption : twoside
@@ -40,8 +40,8 @@ peut aussi se définir pour des nombres complexes !
 
 ### Définition par une équation différentielle
 
-Voici la définition de la fonction exponentielle réelle. C'est une fonction,
-notée $\exp$, qui va de $\mathbb{R}$ dans $\mathbb{R}$, telle que :
+Voici la première définition de la fonction exponentielle réelle. C'est une
+fonction, notée $\exp$, qui va de $\mathbb{R}$ dans $\mathbb{R}$, telle que :
 $$
 \left\{
 \begin{array}{lll}
@@ -69,11 +69,11 @@ $$ \text{Pour tout } x, y \in \mathbb{R} \ \exp(x) * \exp(y) = \exp(x +y)$$
 De la même manière, nous allons admettre que cette équation n'est vérifiée que
 par une seule fonction, et donc que cela nous donne bien une définition, et
 qu'elle est équivalente à la définition précédente (c'est-à-dire que dans les
-deux cas, on tombe parle de la même fonction).
+deux cas, on parle de la même fonction).
 
 On dit que c'est une _équation fonctionnelle_ parce que c'est une équation dans
 laquelle l'inconnue est une fonction, et implique une égalité entre plusieurs
-termes qui correspondent à plusieurs évaluation de la fonction en différents
+termes qui correspondent à plusieurs évaluations de la fonction en différents
 points. Les équations fonctionnelles sont plus difficiles à étudier, et en
 général ne sont abordés qu'en master. Dans le cas de l'exponentielle néanmoins,
 cette équation est simple à vérifier, et cette vérification s'effectue en
@@ -143,10 +143,10 @@ positive, en effet, pour tout $x \in \mathbb{R}$ :
   \exp{\frac{x}{2}}*\exp{\frac{x}{2}} = \left(\exp{\frac{x}{2}}\right)^2$$
 
 Donc, puisque qu'un carré est toujours positif dans $\mathbb{R}$, le nombre
-$\exp{x}$ est toujours positif, et ceci quelque soit le $x \in \mathbb{R}$ pris
+$\exp{x}$ est toujours positif, et ceci quel que soit le $x \in \mathbb{R}$ pris
 au départ. Donc la fonction est positive sur tout $\mathbb{R}$.
 
-Finalement, nous avons montrer que la fonction exponentielle est strictement
+Finalement, nous avons montré que la fonction exponentielle est strictement
 positive sur $\mathbb{R}$.
 
 #### Stricte croissance 
@@ -236,8 +236,8 @@ $k \in \mathbb{R^{+}}$.
 Et,
   $$\lim_{x \to \infty} \ \frac{e^x}{x^k} = \infty$$
 
-Ce qu'il faut retenir c'est que «l'exponentielle l'emporte devant n'importe quel
-puissance de $x$».
+Ce qu'il faut retenir c'est que «l'exponentielle l'emporte devant n'importe
+quelle puissance de $x$».
 
 # Le logarithme
 
@@ -308,7 +308,7 @@ Sinon, reportez vous au graphe donné par votre calculatrice, ou à la figure
 \ref{log}. Le graphe suivant montre la fonction exponentielle et la fonction
 logarithme sur le même graphique, ce qui permet de mettre en évidence la
 symétrie des courbes représentatives autour de l'axe $y=x$ des deux fonctions,
-ce qui est du à la définition du logarithme comme réciproque de la fonction
+ce qui est due à la définition du logarithme comme réciproque de la fonction
 exponentielle.
 
 ![Courbe représentative du logarithme \label{log}](ln.png){ width=15cm}
