@@ -74,6 +74,23 @@ vous de la vraie valeur de $\sqrt{e}$ ?
 
 # Exercices 
 
+## Calcul de dérivées de fonctions
+
+Calculer les dérivées des fonctions suivantes
+
+  - $f(x) = (4 - 3x)^3$ 
+  - $f(x) = (7x^2 + x - 3)^5$
+  - $f(x) = x^2 + \frac{1}{x^2 +1}$
+  - $f(x) = \frac{1}{\sqrt{2x}}$
+  - $f(x) = x\sqrt{2x}$
+  - $f(x) = \sqrt{x^3 - 2x}$
+  - $f(x) = \sqrt{3x^2 -1}$
+  - $f(x) = \sqrt{\frac{3x-2}{2x-3}}$
+  - $f(x) = \frac{1}{(x-3)^3}$
+  - $f(x) = \frac{5}{(3 - 2x)^2}$
+  - $f(x) = e^{2x} + e^{x^2 -1}$
+  - $f(x) = 2xe^{x+1}$
+
 ## Fonction que l'on retrouvera en probabilité
 
 On considère la fonction $f : x \longrightarrow \exp{(-\frac{1}{x^2})}$.
