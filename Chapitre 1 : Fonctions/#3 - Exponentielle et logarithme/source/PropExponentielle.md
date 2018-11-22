@@ -30,8 +30,6 @@ Il est rusé, mais il n'hésite pas à tester et à explorer différentes
 possibilités avant de trouver la bonne. J'espère que vous apprécierez sa
 compagnie !
 
-# Les propriétés algébriques.
-
 Je vous propose de commencer par les propriétés de la fonction exponentielle en
 elle-même, c'est à dire sa positivité, puis d'étudier l'équation fonctionnelle
 qu'elle satisfait.
@@ -42,9 +40,9 @@ démonstration de l'activité 2. Le bon déroulement du document est donc de
 commencer l'activité 1, puis de sauter à l'activité 2 au moment indiqué, puis de
 revenir sur l'activité 1 pour conclure.
 
-## La positivité de l'exponentielle -- Activité 1 {#act1}
+# La positivité de l'exponentielle -- Activité 1 {#act1}
 
-### Présentation du contexte.
+## Présentation du contexte.
 
 Dans cette activité, nous prouverons que la fonction exponentielle sur les réels
 et toujours positive. Nous prouverons ce résultat en deux étapes. Nous allons
@@ -60,7 +58,7 @@ Question 0
 : 	Quelles sont ces «règles du jeu» ?
 
 
-### Premier résultat, l'exponentielle ne s'annule jamais
+## Premier résultat, l'exponentielle ne s'annule jamais
 
 Commençons donc par montrer que l'exponentielle ne s'annule jamais. Un premier
 réflexe dans ce cas de figure pour le mathématicien est de _réécrire_ la propriété
@@ -164,7 +162,7 @@ mathématicien.
 [^absurde]: ce qui, nous sommes d'accord, est absurde, mais particulièrement
   efficace vous le verrez !
 
-### Conclusion 
+## Conclusion 
 
 Dans cette démonstration, nous avons vu comment prouver proprement que
 l'exponentielle est toujours strictement positive, donc en exploitant le fait
@@ -179,9 +177,9 @@ Mais on peut aller beaucoup plus loin, et montrer que cette fonction admet une
 équation dite _fonctionnelle_, comme cela est montré dans l'activité 2
 ci-dessous.
 
-## L'équation fonctionnelle -- Activité 2 {#act2}
+# L'équation fonctionnelle -- Activité 2 {#act2}
 
-### Présentation du contexte, et simplification {#eqf}
+## Présentation du contexte, et simplification {#eqf}
 
 Dans cette deuxième activité, nous allons montrer **la** propriété centrale pour
 l'exponentielle, son l'équation fonctionnelle :
@@ -205,7 +203,7 @@ est vraie pour tout $y \in \mathbb{R}$.
 
 Mais quelle fonction doit-on étudier ?
 
-### Choix de la fonction
+## Choix de la fonction
 
 Nous voulons donc prouver l'égalité donnée dans la partie [précédente](#eqf).
 Pour cela, il nous faut nous ramener à une fonction qui va de $\mathbb{R}$ dans
@@ -261,13 +259,13 @@ Question 4
 Bien, maintenant, notre mathématicien peut utiliser de nouveau les outils mise à
 sa disposition pour _montrer_ le résultat qu'il désire obtenir.
 
-#### Exploiter cette fonction
+## Exploiter cette fonction
 
 Question 5
 
 : 	Dériver la fonction que vous avez obtenu à la question 3.
 
-Et la surprise ! Ces outils (la dérivation) lui ont permis de simplifier
+Et là, surprise ! Ces outils (la dérivation) lui ont permis de simplifier
 grandement le problème !
 
 Question 6
@@ -296,7 +294,7 @@ récurrence que $(e^x)^n = e^{x*n}$
 
 <!-- Partie finie d'être corrigé sautCor -->
 
-### Conclusion
+## Conclusion
 
 Ici nous avons montré la propriété principale de l'exponentielle, son équation
 fonctionnelle. Vous pouvez maintenant utiliser cette propriété de
