@@ -18,25 +18,28 @@ pagestyle : headings
 
 ## Motivations
 
-Maintenant que vous connaissez le merveilleux outils qu'est la dérivée, nous
+Maintenant que vous connaissez le merveilleux outil qu'est la dérivée, nous
 allons étudier deux autres fonctions dont les propriétés sont _indispensables_
 en mathématique, et en science en général.
 
 Ces deux fonctions sont l'exponentielle et le logarithme, qui sont réciproques
 l'une de l'autre. Nous reverrons l'exponentielle dans le chapitre des complexes
-(en géométrie).
+(notamment en géométrie).
 
 ## Définition
 
-La définition de la fonction exponentielle est difficile. En plus, comme souvent
-en mathématiques, il existe plusieurs moyens de définir cette fonction. Ces
-différentes définitions désignent évidement le même objet, mais sont de natures
-assez différentes. Je vais maintenant vous présenter trois définitions de la
-fonctions exponentielles. Elles sont toutes admises (vous comprendrez pourquoi
-dans les paragraphes suivants), et seulement les deux premières sont au
-programme du bac, la troisième servant de culture générale, et me servira au
-chapitre sur les complexes pour vous convaincre que la fonction exponentielle
-peut aussi se définir pour des nombres complexes !
+Il n'y a pas vraiment « une » définition de la fonction exponentielle.Comme
+souvent en mathématiques, il existe plusieurs moyens de définir cette fonction.
+
+Ces différentes définitions désignent évidement le même objet, mais sont de
+natures assez différentes. Je vais maintenant vous présenter trois définitions
+de la fonctions exponentielles. Dans tous les cas, on admet que ces définitions
+fonctionnent, c'est-à-dire qu'elles définissent effectivement une fonction, et
+seulement les deux premières sont au programme du bac, la troisième servant de
+culture générale, et me servira au chapitre sur les complexes pour vous
+convaincre que la fonction exponentielle peut aussi se définir sur d'autres
+ensembles que les nombres réels (nous verrons que nous pouvons parler de
+l'exponentielle pour les nombres complexes). 
 
 ### Définition par une équation différentielle
 
@@ -57,9 +60,13 @@ dérivées de la fonction.
 
 À notre niveau, on admet qu'une telle fonction existe, et qu'elle est définie
 sur $\mathbb{R}$. Il existe des moyens pas très compliqués pour le prouver, ils
-sont néanmoins abordés en toute rigueur en licence de mathématique. Une
-démonstration élémentaire s'appuie sur la méthode d'Euler, une méthode que l'on
-explore dans le cas de la fonction exponentielle dans la partie suivante.
+sont néanmoins abordés en toute rigueur qu'en licence de mathématique. Une
+démonstration élémentaire s'appuie sur la méthode d'Euler, que l'on abordera
+peut-être dans autre activité.
+
+Veuillez vous reportez aux activités présentées dans le document
+« PropExponentielle » pour montrer que cette définition entraine la définition
+suivante (par une « équation fonctionnelle »).
 
 ### Définition par une équation fonctionnelle
 
@@ -75,30 +82,69 @@ On dit que c'est une _équation fonctionnelle_ parce que c'est une équation dan
 laquelle l'inconnue est une fonction, et implique une égalité entre plusieurs
 termes qui correspondent à plusieurs évaluations de la fonction en différents
 points. Les équations fonctionnelles sont plus difficiles à étudier, et en
-général ne sont abordés qu'en master. Dans le cas de l'exponentielle néanmoins,
-cette équation est simple à vérifier, et cette vérification s'effectue en
-deuxième année de licence de mathématique.
+général ne sont abordées qu'en master. Dans le cas de l'exponentielle néanmoins,
+cette équation est simple à vérifier, et vous trouverez une démonstration du
+fait que la définition à partir d'une équation différentielle implique la
+définition à partir de l'équation fonctionnelle dans l'activité annexe déjà
+mentionnée.
 
-### Définition par une somme infinie
+### Définition par une somme infinie {#sominf}
 
-Oui, vous avez bien lu, une somme infinie ! Évidemment, vous n'avez pas assez de
-baguage mathématiques pour que je puisse vous définir proprement ce que
-signifie, et dans quel sens on peut parler tel objet, une somme infinie. Mais
-tout ce que vous pouvez savoir, c'est que cette formule permet de définir
-l'exponentielle sur beaucoup d'autres ensembles que les réels (par exemple les
-complexes, mais aussi les matrices etc..). Sans plus attendre, voici la
-définition.
-$$ \exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} +
-\frac{x^3}{6} + \ldots$$
+Oui, vous avez bien lu, une somme infinie ! Évidemment, vous n'avez pas assez le
+baguage mathématique pour que je puisse vous définir proprement ce que cela
+signifie, et dans quel sens on peut parler d'une somme infinie. Mais tout ce que
+vous pouvez savoir, c'est que cette formule permet de définir l'exponentielle
+sur beaucoup d'autres ensembles que les réels (par exemple les complexes, mais
+aussi les matrices etc..). 
+
+Sans plus attendre, voici la définition.  
+$$ \exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \ldots$$
 
 Ici $k!$ signifie que l'on calcule $k*(k-1)*(k-2)*\ldots*1$. Par exemple $5!$,
-qui se lit «$5$ factoriel» se calcule par $5!= 5*4*3*2*1 = 120$. Nous
-retrouverons cette notation en probabilité.
+qui se lit «$5$ factoriel» se calcule par $5!= 5*4*3*2*1 = 120$. Notez que par
+convention, on dit que $0! = 1$. Nous retrouverons cette notation en probabilité
+(pour les coefficients binomiaux).
 
-Pareil, cette formule est vue en pratique en première année de licence de
+Cette formule est vue en pratique en première année de licence de
 mathématiques. C'est souvent par elle d'ailleurs que l'on commence par
 introduire la notion d'exponentielle, et que l'on démontre les autres
 définitions (soit une démarche totalement inverse que celle du bac).
+
+#### Petite application et explication de cette formule {#approxe}
+
+_Ce paragraphe pourra être ignorer en première lecture_
+
+Je ne peux pas m'empêcher de revenir sur cette dernière définition, car elle
+explique très bien de nombreuses notions qui sont au programme du bac.
+
+Par exemple, si vous voulez calculer le nombre $e$ qui est _défini_ par
+$\exp(1)$.  Nous y reviendrons, mais autrement dit $e$ est le nombre qui
+correspond à la fonction exponentielle en $x = 1$, et ceci est une _définition_
+(c'est-à-dire que l'on a choisi de nommer $\exp(1)$ par $e$). Ce nombre $e$ est
+parfois appelé le nombre d'Euler, ou encore, la constante de Néper[^meme].
+
+Vous pouvez remplacer dans l'équation donnée dans la [partie
+précédente](#sominf) le $x$ par $1$, pour obtenir 
+
+[^meme]: le même Néper que dans logarithme _népérien_
+
+$$ \exp(1) = e =  \sum_{k=0}^{\infty} \frac{1^k}{k!} = 1 + 1 + \frac{1}{2} + \frac{1}{6} + \frac{1}{120} \ldots$$
+
+Essayer de calculer les premiers termes de cette somme, et comparer le résultat
+obtenu avec la valeur $\exp(1)$ donné par votre calculatrice !
+
+Pour savoir d'où vient cette formule, essayer de dériver (en oubliant que c'est
+une somme infinie, faites comme-ci on pouvait dériver la somme en dérivant
+termes à termes). Que remarquez vous ? Autre question, que vaut cette somme pour
+$x = 0$ ?
+
+Vous pouvez même comprendre pourquoi on parle de _croissance comparée_. En
+effet, d'après cette formule, que vaut $\frac{\exp(x)}{x}$ ? Que remarque-t-on
+pour une puissance de $x$ plus grande, comme par exemple $\frac{\exp(x)}{x^3}$,
+lorsque $x$ tend vers l'infini ? En revanche, on ne peut rien dire pour $x$ qui
+tend vers moins l'infini, pourquoi[^fi] ?
+
+[^fi]: Montrez que c'est une formée indéterminée.
 
 ### Commentaires sur ces définitions
 
@@ -106,29 +152,37 @@ Les deux premières définitions sont _essentielles_ pour le programme du bac, c
 elles servent _tout le temps_. Par exemple pour dériver une fonction qui est
 composée d'exponentielles, ou alors pour résoudre des équations simples etc. 
 
-La troisième n'est absolument pas à citer au bac ! C'est-à-dire que vous devrez
-_jamais_ écrire que $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ pour un
-exercice au bac, même si cela est parfaitement valide du point de vue
+La troisième n'est absolument pas à citer au bac ! C'est-à-dire que vous ne
+devrez _jamais_ écrire $\exp(x) = \sum_{k=0}^{\infty} \frac{x^k}{k!}$ pour
+un exercice au bac, même si cela est parfaitement valide du point de vue
 mathématique.
 
 Néanmoins, vous voyez ici une formule qui permet de _calculer_ l'exponentielle !
-Par exemple, essayer de comparer à la calculatrice $\exp(1)$ et $1 + 1 +
-\frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \frac{1}{120}$ qui correspondent au
-cinq premiers termes de la somme infinie citée plus haut.
+Par exemple, essayer de comparer à la calculatrice $\exp(1)$ et la somme $1 + 1
++ \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \frac{1}{120}$ qui correspond à la
+somme des cinq premiers termes de la somme infinie citée plus haut.
+
+<!-- la partie située plus haut fut relue et considérée comme terminée -->
 
 ## Propriétés de l'exponentielle
 
 Voyons maintenant les propriétés de l'exponentielle. Mais avant, regardez
-attentivement le graphe de cette fonction, et vérifiez que chaque propriété se
-retrouve graphiquement à l'aide de la courbe de l'exponentielle.
+attentivement le graphe de cette fonction, et ensuite vérifiez que chaque
+propriété se retrouve graphiquement à l'aide de la courbe de l'exponentielle.
+Dans ce paragraphe, seuls les résultats seront donnés, sans les démonstrations.
+Néanmoins, j'ai laissé des calculs que j'espère simple qui vous montre pourquoi
+ces propriétés sont vraies. 
+
+Pour avoir de vraies et solides démonstrations, allez voir les activités sur
+l'exponentielle.
 
 ![Courbe représentative de la fonction exponentielle \label{exp}](exp.png){ width=15cm}
 
 ### Propriétés conséquentes de la définition
 
 En combinant les deux premières définitions (l'équation différentielle et
-l'équation fonctionnelle), nous pouvons avoir les premières définitions de la
-fonction exponentielle
+l'équation fonctionnelle), nous pouvons avoir les premières propriétés de la
+fonction exponentielle.
 
 #### Stricte positivité 
 
@@ -151,7 +205,7 @@ positive sur $\mathbb{R}$.
 
 #### Stricte croissance 
 
-Donc, grâce à la première propriété, nous savons que l'exponentielle est sa
+Donc, grâce à la première définition, nous savons que l'exponentielle est sa
 propre dérivée, donc vu que l'on vient de voir qu'elle est strictement positive,
 alors on peut en conclure que l'exponentielle est strictement croissante sur
 $\mathbb{R}$.
@@ -162,10 +216,9 @@ La formule de l'équation fonctionnelle $\exp{x+y}= \exp{x}*\exp{y}$ fait écho
 avec la formule $a^{x+y} = a^{x}*a^{y}$. C'est pour cela que l'on note :
   $$ \exp{x} = \mathrm{e}^x $$
 
-Donc, calculer $\exp{x}$ revient à calculer $\mathrm{e}$ _puissance_ $x$, avec
-$\mathrm{e}$ un nombre réel qui vaut[^def] $\exp(1)$.
-
-[^def]: c'est une définition
+Donc, calculer $\exp{x}$ revient à calcule $\mathrm{e}$ _puissance_ $x$, avec
+$\mathrm{e}$ un nombre réel qui vaut par définition $\exp(1)$. Pour un calcul
+approché de ce nombre, vous pouvez vous reportez à [cette section](#approxe). 
 
 En fait, on peut même _définir_ comment élever un nombre $a$ a la puissance $x$
 pour tout $x \in \mathbb{R}$. Ceci sera fait dans le paragraphe de la fonction
@@ -240,6 +293,7 @@ Ce qu'il faut retenir c'est que «l'exponentielle l'emporte devant n'importe
 quelle puissance de $x$».
 
 # Le logarithme
+
 
 ## Définition
 

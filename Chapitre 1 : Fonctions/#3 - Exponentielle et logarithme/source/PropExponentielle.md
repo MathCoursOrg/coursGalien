@@ -18,10 +18,10 @@ geometry :
 
 # But de ce document
 
-Ce document a pour but de vous faire découvrir par vous-même les propriétés de
+Ce document a pour but de vous faire découvrir par vous-mêmes les propriétés de
 l'exponentielle. Il vous permettra d'une part de connaître et de mieux retenir
-ces propriétés, essentielles pour le bac, et d'autre part de trouver par vous
-même ces démonstrations qui sont _exigibles_ au bac (même s'il y a peu de
+ces propriétés, essentielles pour le bac, et d'autre part de trouver par
+vous-mêmes ces démonstrations qui sont _exigibles_ au bac (même s'il y a peu de
 chances qu'elles soient demandées).
 
 Pour des besoins pédagogiques, j'ai pris la liberté de faire intervenir un
@@ -74,7 +74,7 @@ dit, les « règles du jeu »).
 
 Question 2
 
-: 	Essayer de jouer avec les propriétés de l'exponentielle (uniquement
+: 	Essayez de jouer avec les propriétés de l'exponentielle (uniquement
 celles des règles du jeu !) pour montrer que c'est une fonction positive.
 
 Beaucoup de calculs plus tard, il apparaît que le problème est un peu plus
@@ -98,7 +98,7 @@ l'on cherche ne serait pas $e^{-x}$.
 
 Question 4
 
-: 	Quel est le lien entre cette proposition est le comportement de
+: 	Quel est le lien entre cette proposition et le comportement de
 	l'exponentielle ?
 
 Question 5
@@ -111,7 +111,7 @@ deux termes que l'on soupçonne d'être les inverses mutuels.
 
 Question 6
 
-: 	Dérivez cette fonction, et concluez comme dans l'activité précédente.
+: 	Dérivez cette fonction, et concluez comme dans l'activité suivante.
 
 Nous avons maintenant prouvé notre premier résultat : l'exponentielle ne
 s'annule jamais ! Fort de cette réussite, le mathématicien veut aller plus loin,
@@ -120,14 +120,14 @@ et il veut montrer que l'exponentielle est toujours positive.
 Pour cela, il existe un outil logique particulièrement puissant dans ce genre de
 situation, c'est la démonstration par l'absurde.
 
-Le mathématicien commence par énoncer (dans son papier ou dans son esprit) que
+Le mathématicien commence par énoncer (sur son papier ou dans son esprit) que
 ce qu'il veut montrer est faux[^absurde]. C'est-à-dire que l'on va proclamer que
 l'exponentielle n'est _pas_ toujours positive. C'est donc qu'il existerait un
 moment où la fonction exponentielle est négative !
 
 Question 7
 
-: 	Écrivez cette dernière phrase avec des connecteurs logiques, et d'une
+: 	Écrivez cette dernière phrase avec des connecteurs logiques, donc d'une
 	manière plus mathématicienne.
 
 En exploitant l'une des règles du jeu, le mathématicien se rend compte que
@@ -137,13 +137,13 @@ Question 8
 
 : 	Quel est ce moment ?
 
-Le mathématicien conclut par un théorème très connu que dans ces conditions, il
+Le mathématicien conclut par un théorème très connu dans ces conditions, il
 existe un endroit pour lequel la fonction exponentielle est nulle.
 
 Question 9
 
-: 	Quel théorème le mathématicien a utilisé ? Vérifier que toutes les
-hypothèses sont satisfaites, et rédiger convenablement la conclusion du
+: 	Quel théorème le mathématicien a-t-il utilisé ? Vérifiez que toutes les
+hypothèses sont satisfaites, et rédigez convenablement la conclusion du
 théorème.
 
 Le mathématicien se rend alors compte de l'absurdité...
@@ -182,7 +182,7 @@ ci-dessous.
 ## Présentation du contexte, et simplification {#eqf}
 
 Dans cette deuxième activité, nous allons montrer **la** propriété centrale pour
-l'exponentielle, son l'équation fonctionnelle :
+l'exponentielle, son équation fonctionnelle :
   $$ \text{Pour tout } \ x, y \in \mathbb{R} \ e^{x + y } = e^{x}e^{y} $$
 
 Ici et comme dans l'activité précédente, on va donc définir l'exponentielle
@@ -196,7 +196,7 @@ Le premier problème pour montrer ce résultat est la présence de deux variable
 $x$ et $y$. Pour pouvoir se ramener à une étude de fonction à un seul paramètre
 (c'est le seul cas étudié à notre niveau), on doit donc _fixer_ un paramètre.
 
-On va donc partir du principe que $y$ est nombre réel fixé quelconque. Ensuite,
+On va donc partir du principe que $y$ est un nombre réel fixé quelconque. Ensuite,
 on pourra dire que notre démonstration marchait quelque soit notre choix de $y$
 (c'est une grosse astuce de mathématiciens !). Et donc que la proposition
 est vraie pour tout $y \in \mathbb{R}$.
@@ -232,9 +232,9 @@ Malheureusement cette fonction n'a pas de bonne propriété.
 
 Question 2
 
-: 	Essayer de comprendre le sens de la phrase précédente, en
+: 	Essayez de comprendre le sens de la phrase précédente, en
 	dérivant la fonction que vous avez obtenue à la question précédente, et en vous
-	demandant si vous avez, après dérivation, obtenue une expression plus simple.
+	demandant si vous avez, après dérivation, obtenu une expression plus simple.
 
 Le mathématicien a d'autres outils à sa disposition, si la différence de deux
 termes ne lui donne pas ce qu'il faut, il peut alors étudier le quotient des
@@ -256,14 +256,14 @@ Question 4
 	résultat de l'activité 1)? Vous remarquez que le mathématicien est alors
 	rassuré.
 
-Bien, maintenant, notre mathématicien peut utiliser de nouveau les outils mise à
+Bien, maintenant, notre mathématicien peut utiliser de nouveau les outils mis à
 sa disposition pour _montrer_ le résultat qu'il désire obtenir.
 
 ## Exploiter cette fonction
 
 Question 5
 
-: 	Dériver la fonction que vous avez obtenu à la question 3.
+: 	Dérivez la fonction que vous avez obtenue à la question 3.
 
 Et là, surprise ! Ces outils (la dérivation) lui ont permis de simplifier
 grandement le problème !
@@ -280,11 +280,12 @@ Question 7
 
 : 	Quel choix peut-on faire pour $x$ ? Finissez la preuve.
 
-Mais le mathématicien veut montrer un peu plus fort !
+Le mathématicien profite de sa lancée pour montrer d'autres résultats qui
+découlent du même principe que ceux déjà trouvés. 
 
 Question 8
 
-: 	Qu'est-ce qu'il se passe lorsqu'on regarde $e^{x - y}$ au lieu de
+: 	Que se passe-t-il se passe lorsqu'on regarde $e^{x - y}$ au lieu de
 	$e^{x+y}$ ?
 
 Question 9
@@ -292,24 +293,9 @@ Question 9
 : 	Donnez encore plus de force à ce résultat en montrant par
 récurrence que $(e^x)^n = e^{x*n}$
 
-<!-- Partie finie d'être corrigé sautCor -->
-
 ## Conclusion
 
 Ici nous avons montré la propriété principale de l'exponentielle, son équation
 fonctionnelle. Vous pouvez maintenant utiliser cette propriété de
 l'exponentielle pour aborder d'autres problèmes : considérez cette proposition
 comme un outil précieux !
-
-<!-- Peut être que finalement je ferai les partie suivantes dans un autre
-document. Je voulais faire les partie :
-
-    # Les propriétés sur les limites.
-
-    ## La « croissance comparée ».
-
-    ## L'approximation de l'exponentielle.
-
-Mais en faire un document à part me permettra d'envoyer ça aux élèves pendant
-que je rédige la partie suivante. -->
-
