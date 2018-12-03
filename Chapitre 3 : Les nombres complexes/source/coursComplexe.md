@@ -4,11 +4,14 @@ date:
 author: Delhomme Fabien
 lang: fr
 document: report
-toc: toc
+geometry:
+  - margin=1in
 
+classoption: draft
 ...
 
-\newpage
+\newcounter{question}
+\stepcounter{question}
 
 # Introduction
 
@@ -24,19 +27,17 @@ sont présents, et incontournables dans de nombreux domaines :
   - Physique (électronique, mécanique)
   - Ingénierie (conception de machine, étude de vibrations d'un véhicule etc)
   - Mathématique (évidemment) : les complexes jouent un rôle plus que centrale !
-      Et contrairement au nom, ils sont plus _simples_ d'une certaine manière,
-      que les réels par exemple.
   - Informatique : nous verrons que les complexes servent à encoder les
       rotations, et donc par exemple de faire des rotations d'images
   - Et tellement d'autres !!
 
 Le grand paradoxe, c'est que pour découvrir les complexes, on passe
-nécessairement par un mode d'incompréhension total, devant des «nombres» qui
+nécessairement par une incompréhension totale, devant des « nombres » qui
 sortent de nulle part, etc. Mais nous verrons tranquillement pourquoi les
 complexes sont presque naturels (même s'il a fallu du temps avant de les
 découvrir).
 
-## Porte d'entrée
+## Portes d'entrées
 
 Comme souvent en mathématiques, il existe plusieurs portes d'entrée pour
 comprendre les complexes :
@@ -45,43 +46,134 @@ comprendre les complexes :
   - La géométrie
   - Les matrices
 
-Nous verrons dans ce cours les deux premiers, peut-être que je toucherai deux
-mots sur la troisième porte d'entrée lors des cours de mathématique spécialisée.
+Nous verrons dans ce cours les deux premiers, peut-être que je parlerai en deux
+mots de la troisième porte d'entrée lors des cours de mathématique spécialisée.
 
-# Définition
+Je vous propose donc d'entrer dans le monde des complexes par la grande porte :
+les polynômes !
 
-Bon, allez, c'est partit, on y va !
+# Les nombres complexes : définition.
 
-## Soit $i$ un nombre tel que
+## Soit $i$ un nombre tel que...
 
 Nous avons vu dans le chapitre sur les polynômes, que certain polynôme
-n'admettait pas de racine. Par, exemple, et c'est un des exemples le plus simple
+n'admettait pas de racine réelle. C'est-à-dire qu'il existe aucun nombre réel
+qui annule ce polynôme. Prenons un exemple et c'est un des exemples le plus simple
 que l'on peut imaginer :
   $$P(x) = x^2 +1$$
-
-Je rappelle que ce polynôme n'a pas de racine réelle puisque $x^2 \geq 0$ pour
-tout $x \in \mathbb{R}$. Donc $x^2 +1 > 0$.
+Et effectivement ce polynôme n'a pas de racine réelle puisque $x^2 \geq 0$ pour
+tout $x \in \mathbb{R}$, et ainsi $x^2 +1 > 0$.
 
 Mais imaginez un peu, (et vous comprenez peut-être pourquoi historiquement, les
 premiers mathématiciens qui ont osé, étaient un peu fébrile à ce moment là), que
 l'on _rajoute_ une racine à ce polynôme. C'est-à-dire que, puisque $P$ n'a pas
-de racine, on va lui en _ajouter_ une !!
-
+de racine, on va lui en _ajouter_ une !!  
 C'est-à-dire que l'on va _définir_ $i$ comme étant un nombre, tel que $i^2 =
--1$ (et donc $P(i) = 0$)
+-1$ (et donc $P(i) = 0$). Attention, $i$ n'est pas un nombre réel, vous l'aurez
+bien compris !
 
-Alors, évidemment, $i$ n'est **pas** réel. Donc, il «habite» dans une autre
-ensemble. Mais quel ensemble ? L'ensemble des _complexes_.
+Nous avons donc définit, ou plutôt imaginé, un nombre $i$ tel que :
+  $$\boxed{i^2 = -1}$$
 
-Qu'est-ce qu'on peut faire avec $i$ ? Le multiplier par un réel ? C'est-à-dire
-que je peux définir $3i = i + i + i$. L'ajouter à un réel (Soyons fou !),
-d'accord, alors cela donnera $2 + 2i$.
+Remarquons alors dès à présent que notre polynôme de départ $P(x) = x^2+1$,
+admet à présent deux racines (complexes donc). En effet, on a crée la première
+avec $x = i$ mais on remarque, par analogie avec la multiplication que l'on
+connait depuis la tendre enfance que :
+  $$ (-i)^2 = (-1*i)^2 = (-1)^2*i^2 = 1*(-1) = -1$$
+On a donc une autre racine de $P$ avec $x = -i$.
 
-On peut donc définir les complexes par :
+## Opérations dans les complexes
+
+### Multiplier $i$ par un réel
+
+Nous allons maintenant présenter les opérations possibles que l'on peut faire
+avec ce nouveau nombre $i$.
+
+Dans les calculs que l'on vient de faire, implicitement on a envie de considérer
+que $i$ admet les mêmes calculs qu'un nombre normal. C'est-à-dire (et on vient
+de le faire) qu'on a envie de définir la multiplication de $i$ par un réel
+quelconque $a \in \mathbb{R}$ par le nombre (complexe) $a*i$ noté souvent $ai$.
+Noter alors que $ai = ia$, comme d'habitude.
+
+Par exemple, si on veut multiplier $3$ par $i$, alors on écrit tout simplement
+$3i$. Maintenant une petite question :
+
+Question \thequestion \stepcounter{question}
+
+: 	Donner les racines complexes du polynôme $x^2 + 3$ (Essayer de calculer
+$(3*i)^2$, et donner l'autre racine par la même remarque que celle décrite au
+paragraphe ci-dessus).
+
+### Additionner avec $i$
+
+On peut aussi définir une opération « plus » avec $i$ et un réel. Par exemple,
+si on veut ajouter $4$ à $i$, alors on écrira $4+i$.
+
+Allons un peu plus loin, que vaut :
+  $$ z = 4+i + 3 - 2i$$
+Déjà, on peut commencer par voir que notre $4$ et notre $3$ sont des nombres
+réels, donc on sait les additionner :
+  $$ z = 7 + i - 2i$$
+Maintenant, si on veut être cohérent, on devrait pouvoir s'autoriser à
+factoriser par $i$ :
+  $$ z = 7 + (1 - 2)i$$
+Ou, cela revient au même, on doit s'autoriser à compter le nombre de $i$ et à
+faire l'addition. Ici on obtient finalement 
+  $$ z = 7 - i$$
+
+Remarquez encore que l'on peut additionner un réel avec $i$ et multiplier le
+tout par un nombre réel. Considérez l'expression complexe suivante :
+  $$ z = (2 + 4i)*7$$
+On distribue comme dans les réels :
+  $$ z = 14 + 28i$$
+Et on obtient le résultat !
+
+Question \thequestion \stepcounter{question}
+
+: 	Que vaut $(2 + 4i - 2 - 2i)*4$ ?
+
+### Multiplions sans complexes !
+
+Nous avons vu comment on pouvait multiplier un nombre $i$ par un nombre réel.
+Maintenant, imaginons que nous ayons deux nombres $z_1 = 3 + 7i$ et $z_2 = -1 +
+3i$. Est-ce qu'on peut définir $z_1 * z_2$ ?
+Essayons, et commençons par distribuer le produit, comme on sait le faire depuis
+le collège, puis utilisons les règles vues plus haut pour simplifier
+l'expression. On obtient alors successivement :
+\begin{align*}
+  z_1z_2  &= (3 + 7i)(-1 + 3i) \\
+	  &= -3 + 9i -7i + (7i)*(3i)\\
+	  &= -3 + 2i + (7*3)*(i*i)\\
+	  &= -3 + 2i + 21*(-1)\\
+  z_1z_1  &= -24 + 2i
+\end{align*}
+
+Vous avez vu ce qui s'est passé ? Le produit des deux nombres (complexes) $7i$
+et $3i$ a redonné un nombre réel, qui s'est additionné normalement avec le
+nombre $-3$ !
+
+Essayez par vous même maintenant :
+
+Question \thequestion \stepcounter{question}
+
+: 	Que vaut $(1-2i)(3-5i)$. Que vaut $( 5 - 4i)(5 + 4i)$. Des remarques
+concernant ce dernier ?
+
+Question \thequestion \stepcounter{question}
+: 	Est-ce que les identités remarquables vues (et connues ?) depuis le
+collège fonctionne avec des complexes ?
+
+## Définition du plan complexe
+
+D'après ce que l'on vient de voir, l'addition et la multiplication de deux
+nombres complexes nous redonne toujours un nombre de la forme $a + ib$ avec $a$
+et $b$ des nombres réels. On peut donc définir les complexes par :
 
   $$ \mathbb{C} = \{ a + bi \ | \ a, b \in \mathbb{R} \}$$
 
 ![Le plan complexe, avec quelques points tracés dessus](../images/planComplexe.png)
+
+<!-- Il faut relire à partir d'ici -->
 
 Pour l'instant, tout cela peut paraître mystique, et c'est bien normal. Mais
 maintenant que nous avons découvert un nouveau nombre, autant découvrir de
@@ -117,7 +209,7 @@ Nous avons donc[^montrer] rajouté des racines à tous les polynômes !!!
 
 [^montrer]: cela reste à montrer tout de même !
 
-## À quoi ressemble $\mathbb{C}$
+## À quoi ressemble $\mathbb{C}$ ?
 
 Nous avons donc un nouvel ensemble, $\mathbb{C}$, mais à quoi ressemble-t-il ?
 
@@ -125,7 +217,7 @@ En fait, on peut représenter $\mathbb{C}$ comme un plan, comme un ensemble qui
 admet deux coordonnées :
 
   - Une réelle
-  - Une appelé imaginaire
+  - Une appelée imaginaire
 
 Par exemple, $3+5i$ a une partie réelle qui vaut $3$, et une partie imaginaire
 qui vaut $5$.
