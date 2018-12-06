@@ -165,19 +165,63 @@ collège fonctionne avec des complexes ?
 
 ## Définition du plan complexe
 
+<!-- Il faut relire à partir d'ici -->
+
+### Le plan complexe, et premières notions 
+
 D'après ce que l'on vient de voir, l'addition et la multiplication de deux
 nombres complexes nous redonne toujours un nombre de la forme $a + ib$ avec $a$
-et $b$ des nombres réels. On peut donc définir les complexes par :
+et $b$ des nombres réels. D'après les calculs effectués plus haut, on voit que
+les réels et les nombres $ib$ avec $b\mathbb{R}$ ne se «mélangent» jamais. On
+pourra interpréter cela géographiquement comme une sorte d'indépenndance, si
+bien que l'on a envie d'associer un complexe $z=a+ib$ avec un **point du plan**
+$(a,b)$. On peut donc définir les complexes par :
 
   $$ \mathbb{C} = \{ a + bi \ | \ a, b \in \mathbb{R} \}$$
 
 ![Le plan complexe, avec quelques points tracés dessus](../images/planComplexe.png)
 
-<!-- Il faut relire à partir d'ici -->
+Pour un nombre complexe $z = a + i b$ avec $a,b$ qui sont des nombres réels, on
+appelle :
 
-Pour l'instant, tout cela peut paraître mystique, et c'est bien normal. Mais
-maintenant que nous avons découvert un nouveau nombre, autant découvrir de
-nouvelles propriétés qui le caractérise !
+  - $a$ la _partie réelle_ de $z$, on la note $\textrm{Re}(z)$
+  - $b$ la _partie imaginaire_ de $z$, on la note $\textrm{Img}(z)$
+
+Nous avons ainsi deux notions qui se dégagent :
+
+  - Un nombre est réel si et seulement si sa partie imaginaire est nulle
+  - Un nombre est dit _imaginaire pur_ si et seulement si sa partie réelle est
+      nulle.
+
+**Remarque** Les parties imaginaires et réelles sont _toujours_ des nombres
+réels.
+
+Une notion très importante est la notion de conjugué d'un complexe. Soit un
+complexe $z$ de partie réelle $a$ et de partie imaginaire $b$. On définit alors
+le _conjugué_ de $z$, qui est noté $\bar{z}$ par :
+  $$ \bar{z} = \bar{a +ib } = a - ib $$
+
+Question \thequestion \stepcounter{question}
+
+: 	Dans le plan complexe, que dire d'un point $z$ et de son conjugué
+$\bar{z}$ (on attend une interprétation géométrique). 
+
+Question \thequestion \stepcounter{question}
+
+: 	Quelle est la partie imaginaire du nombre $z\bar{z}$ ?
+
+Question \thequestion \stepcounter{question}
+
+: 	Quelles sont les partie réelle et imaginaire de $(2+i)(\sqrt{2} - 5i)$ ? 
+
+Question \thequestion \stepcounter{question}
+: 	Si je me donne un nombre complexe $z$ de partie réelle $a$ et de partie
+imaginaire $b$. Essayez d'exprimer $a$ en fonction de $z$ et $\bar{z}$
+(Indication, que donne la somme $z + \bar{z}$ ?). Essayer d'exprimer $b$ en
+fonction de $z$ et $\bar{z}$ (Indication, que donne la différence $z - \bar{z}$
+?)
+
+### Trouver les racines de n'importe quel polynôme de second degré.
 
 Par exemple, si on prend un autre polynôme qui n'a pas de racine réelle, est-ce
 que je peux, avec mon nouveau nombre $i$ lui trouver des racines complexes ? La
@@ -207,21 +251,46 @@ obtenir deux nouvelles racines, complexes, de mon polynôme $Q$ :
 On peut même vérifier que $Q(x_1) = Q(x_2) = 0$ !
 Nous avons donc[^montrer] rajouté des racines à tous les polynômes !!!
 
-[^montrer]: cela reste à montrer tout de même !
+Question \thequestion \stepcounter{question}
 
-## À quoi ressemble $\mathbb{C}$ ?
+: 	Pour un polynôme $az^2 + bz + c$ à discriminant strictement négatif,
+quelles sont les formules qui nous donne les racines de ce polynôme, en vous
+aidant de la discussion ci-dessus ?
 
-Nous avons donc un nouvel ensemble, $\mathbb{C}$, mais à quoi ressemble-t-il ?
+[^montrer]: noter que nous l'avons réellement fait que pour un seul polynôme.
+  Ceci ne constitue donc pas vraiment une « preuve ».
 
-En fait, on peut représenter $\mathbb{C}$ comme un plan, comme un ensemble qui
-admet deux coordonnées :
+### Deux moyens de représenter les nombres complexes.
 
-  - Une réelle
-  - Une appelée imaginaire
+Au paragraphe précédent, nous avons montré pourquoi les complexes sont
+représentés par un plan. Mais comme tous points dans un plan munit d'un repère,
+on peut les représenter par deux moyens :
+  - Soit on lit les coordonnées par rapport au repère du point, et on sait ainsi
+      ou se trouve le point.  
+      Exemple : Dans mon plan complexe, mon repère est formé par les points $(0,
+      1, i)$, ainsi le nombre $3+2i$ admet 3 «pour abscisse» et 2 «pour ordonné»
+      dans le plan.
+  - Soit on donne la distance du point au centre du repère, et l'angle formé
+      entre la droite qui passe par le point et le centre, avec l'abscisse.
+      Exemple : Pour le point $3+2i$, d'après le théorème de pythagore, la
+      distance entre $3+2i$ et $0$ est $\sqrt{3^2 + 2^2} = \sqrt{13}$. Et on
+      peut ensuite soit trouver graphiquement l'angle entre $3+2i$ et l'axe des abscisses, soit s'aider des fonctions trigonométrique pour trouver l'angle. Nous verrons comment faire en détail dans le chapitre qui suit. 
 
-Par exemple, $3+5i$ a une partie réelle qui vaut $3$, et une partie imaginaire
-qui vaut $5$.
+<!-- TODO faire un graphique pour montrer l'angle ! -->
 
+La deuxième manière de représenter un nombre complexe s'appelle la _forme
+trigonométrique_ (puisque cette forme est définie à partir d'angle). 
+
+Le chapitre suivant nous introduira donc la notion d'exponentielle complexe, qui
+montre la puissance de la représentation trigonométrique d'un complexe.
+
+Question \thequestion \stepcounter{question}
+
+: 	Placer dans le plan complexe $\cos{\dfrac{\pi}{3}} + i
+\sin{\dfrac{\pi}{3}}$ et $5\left(\cos{\dfrac{\pi}{6}} + i
+\sin{\dfrac{\pi}{6}}\right)$,
+$6\left( \cos{\dfrac {3\pi }{2}} +i\sin {\dfrac {3\pi
+}{2}} \right)$. Calculer la distance de chacun de ces nombres avec le centre.
 
 # L'exponentielle complexe
 
@@ -231,11 +300,20 @@ complexes. C'est le cas de l'exponentielle.
 
 ## Définition formelle de l'exponentielle pour les complexes (hors programme)
 
-On peut utiliser la formule suivante, qui marche aussi dans les complexes, pour
-définir l'exponentielle :
+Pour définir l'exponentielle sur les nombres complexes, nous avons vu la formule
+suivante dans le cours de l'exponentielle (qui est hors programme) :
   $$ \exp(z) = \sum_{k=0}^{+\infty} \frac{z^k}{k!}$$
 
-Il y aurait beaucoup à dire sur cette formule, on y reviendra en temps voulu.
+En effet, nous savons comment multiplier et additionner les complexes, donc si
+cette formule a bien un sens (ce que nous admettrons) alors cette formule
+fonctionne aussi avec les complexes.
+
+Question \thequestion \stepcounter{question} (difficile)
+
+: 	Pourquoi la définition à l'aide de l'équation différentielle de
+l'exponentielle est plus délicate pour définir cette fonction dans les complexes
+? (Disons que ce n'est pas impossible, mais j'aimerai porter votre attention sur
+ce qui a changé implicitement).
 
 ## Définition au programme
 
