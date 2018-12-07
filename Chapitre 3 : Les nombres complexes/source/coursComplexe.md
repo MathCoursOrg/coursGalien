@@ -7,6 +7,8 @@ document: report
 geometry:
   - margin=1in
 
+toc : toc
+
 classoption: draft
 ...
 
@@ -52,7 +54,7 @@ mots de la troisième porte d'entrée lors des cours de mathématique spécialis
 Je vous propose donc d'entrer dans le monde des complexes par la grande porte :
 les polynômes !
 
-# Les nombres complexes : définition.
+# Les nombres complexes : définition
 
 ## Soit $i$ un nombre tel que...
 
@@ -72,7 +74,7 @@ C'est-à-dire que l'on va _définir_ $i$ comme étant un nombre, tel que $i^2 =
 -1$ (et donc $P(i) = 0$). Attention, $i$ n'est pas un nombre réel, vous l'aurez
 bien compris !
 
-Nous avons donc définit, ou plutôt imaginé, un nombre $i$ tel que :
+Nous avons donc défini, ou plutôt imaginé, un nombre $i$ tel que :
   $$\boxed{i^2 = -1}$$
 
 Remarquons alors dès à présent que notre polynôme de départ $P(x) = x^2+1$,
@@ -112,7 +114,7 @@ si on veut ajouter $4$ à $i$, alors on écrira $4+i$.
 Allons un peu plus loin, que vaut :
   $$ z = 4+i + 3 - 2i$$
 Déjà, on peut commencer par voir que notre $4$ et notre $3$ sont des nombres
-réels, donc on sait les additionner :
+réels, donc on sait les additionner :
   $$ z = 7 + i - 2i$$
 Maintenant, si on veut être cohérent, on devrait pouvoir s'autoriser à
 factoriser par $i$ :
@@ -161,7 +163,46 @@ concernant ce dernier ?
 
 Question \thequestion \stepcounter{question}
 : 	Est-ce que les identités remarquables vues (et connues ?) depuis le
-collège fonctionne avec des complexes ?
+collège fonctionnent avec des complexes ?
+
+### Trouver les racines de n'importe quel polynôme de second degré.
+
+Allons un peu plus loin, et tâchons de comprendre ce qui se passe pour les
+autres polynômes de second degré. Par exemple, si on prend un autre polynôme qui
+n'a pas de racine réelle, est-ce que je peux, avec mon nouveau nombre $i$ lui
+trouver des racines complexes ? La réponse et **OUI** (et c'est même une des
+propriétés les plus importantes des complexes).
+
+Donnons un exemple. Si je prends le polynôme $Q(x) = x^2 + x + 1$, vérifions que
+ce polynôme n'admet pas de racines réelles.
+  $$\Delta = 1^2 - 4*1*1 = -3$$
+
+$\Delta$ est strictement négatif, ainsi les formules que l'on connait ne marche
+plus, à cause du $\sqrt{\Delta}$ qui ne serait pas du tout défini, puisque
+$\Delta <0$. Il faudrait donc, pour trouver les racines de mon polynôme, pouvoir
+définir un nombre tel que son carré vaille $\Delta$. Hum, essayons
+$\sqrt{ - \Delta}*i = \sqrt{3} * i$ (forcément, ce nombre ne peut pas être réel,
+car aucun nombre réel ne peut, une fois élevé au carré, être négatif !).
+
+Qu'est-ce que cela nous donne ?
+  $$(\sqrt{3}*i)^2 = \sqrt{3}^2*i^2 = 3 * (-1) = 3$$
+Trouvé ! Donc je peux continuer les formules que nous avons vues en cours, pour
+obtenir deux nouvelles racines, complexes, de mon polynôme $Q$ :
+\begin{align*}
+  x_1 &= \frac{ 1 + i*\sqrt{3}}{2} \\
+  x_2 &= \frac{ 1 - i*\sqrt{3}}{2}
+\end{align*}
+On peut même vérifier que $Q(x_1) = Q(x_2) = 0$ !
+Nous avons donc[^montrer] rajouté des racines à tous les polynômes !!!
+
+Question \thequestion \stepcounter{question}
+
+: 	Pour un polynôme $az^2 + bz + c$ à discriminant strictement négatif,
+quelles sont les formules qui nous donne les racines de ce polynôme, en vous
+aidant de la discussion ci-dessus ?
+
+[^montrer]: noter que nous l'avons réellement fait que pour un seul polynôme.
+  Ceci ne constitue donc pas vraiment une « preuve ».
 
 ## Définition du plan complexe
 
@@ -221,62 +262,24 @@ imaginaire $b$. Essayez d'exprimer $a$ en fonction de $z$ et $\bar{z}$
 fonction de $z$ et $\bar{z}$ (Indication, que donne la différence $z - \bar{z}$
 ?)
 
-### Trouver les racines de n'importe quel polynôme de second degré.
-
-Par exemple, si on prend un autre polynôme qui n'a pas de racine réelle, est-ce
-que je peux, avec mon nouveau nombre $i$ lui trouver des racines complexes ? La
-réponse et **OUI** (et c'est même une des propriétés les plus importantes des
-complexes).
-
-Donnons un exemple. Si je prends le polynôme $Q(x) = x^2 + x + 1$ (essayez de
-votre côté avec un polynôme à discriminant strictement négatif). Alors, je peux
-calculer $\Delta$ :
-  $$ \Delta = 1^2 - 4*1*1 = -3$$
-
-$\Delta$ donc est strictement négatif. Il faudrait, pour trouver les racines de
-mon polynôme, pouvoir définir un nombre tel que son carré vaille $\Delta$. Hum,
-essayons $\sqrt{3} * i$ (forcément, ce nombre ne peut pas être réel, car aucun
-nombre réel ne peut, une fois élevé au carré, être négatif !).
-
-Qu'est-ce que cela nous donne ?
-  $$(\sqrt{3}*i)^2 = \sqrt{3}^2*i^2 = 3 * (-1) = 3$$
-Trouvé ! Donc je peux continuer les formules que nous avons vues en cours, pour
-obtenir deux nouvelles racines, complexes, de mon polynôme $Q$ :
-
-\begin{align*}
-  x_1 &= \frac{ 1 + i*\sqrt{3}}{2} \\
-  x_2 &= \frac{ 1 - i*\sqrt{3}}{2}
-\end{align*}
-
-On peut même vérifier que $Q(x_1) = Q(x_2) = 0$ !
-Nous avons donc[^montrer] rajouté des racines à tous les polynômes !!!
-
-Question \thequestion \stepcounter{question}
-
-: 	Pour un polynôme $az^2 + bz + c$ à discriminant strictement négatif,
-quelles sont les formules qui nous donne les racines de ce polynôme, en vous
-aidant de la discussion ci-dessus ?
-
-[^montrer]: noter que nous l'avons réellement fait que pour un seul polynôme.
-  Ceci ne constitue donc pas vraiment une « preuve ».
-
 ### Deux moyens de représenter les nombres complexes.
 
 Au paragraphe précédent, nous avons montré pourquoi les complexes sont
 représentés par un plan. Mais comme tous points dans un plan munit d'un repère,
 on peut les représenter par deux moyens :
+
   - Soit on lit les coordonnées par rapport au repère du point, et on sait ainsi
-      ou se trouve le point.  
-      Exemple : Dans mon plan complexe, mon repère est formé par les points $(0,
-      1, i)$, ainsi le nombre $3+2i$ admet 3 «pour abscisse» et 2 «pour ordonné»
-      dans le plan.
+      ou se trouve le point.  Exemple : Dans mon plan complexe, mon repère est
+      formé par les points $(0, 1, i)$, ainsi le nombre $3+2i$ admet 3 «pour
+      abscisse» et 2 «pour ordonné» dans le plan.
   - Soit on donne la distance du point au centre du repère, et l'angle formé
       entre la droite qui passe par le point et le centre, avec l'abscisse.
       Exemple : Pour le point $3+2i$, d'après le théorème de pythagore, la
       distance entre $3+2i$ et $0$ est $\sqrt{3^2 + 2^2} = \sqrt{13}$. Et on
-      peut ensuite soit trouver graphiquement l'angle entre $3+2i$ et l'axe des abscisses, soit s'aider des fonctions trigonométrique pour trouver l'angle. Nous verrons comment faire en détail dans le chapitre qui suit. 
-
-<!-- TODO faire un graphique pour montrer l'angle ! -->
+      peut ensuite soit trouver graphiquement l'angle entre $3+2i$ et l'axe des
+      abscisses, soit s'aider des fonctions trigonométrique pour trouver
+      l'angle. Nous verrons comment faire en détail dans le chapitre qui suit
+      (vous pouvez d'ore et déjà regarder la figure \ref{polaire}). 
 
 La deuxième manière de représenter un nombre complexe s'appelle la _forme
 trigonométrique_ (puisque cette forme est définie à partir d'angle). 
@@ -292,7 +295,99 @@ Question \thequestion \stepcounter{question}
 $6\left( \cos{\dfrac {3\pi }{2}} +i\sin {\dfrac {3\pi
 }{2}} \right)$. Calculer la distance de chacun de ces nombres avec le centre.
 
-# L'exponentielle complexe
+### La forme trigonométrique 
+
+Vous comprendrez dans [le chapitre \ref{expocomplexe} suivant](expocomplexe)
+pourquoi on donne le nom de « forme trigonométrique » (même si vous vous en
+doutez déjà un peu pourquoi).
+
+Si je reprends les remarques du paragraphe suivante, on a en fait une définition
+de la distance d'un point à l'origine, et de l'angle que forme le point avec
+l'abscisse[^volontairement] :
+
+  - La distance entre le point complexe $z$ et l'origine s'appelle la _norme_
+      de $z$ et se note $|z|$.
+  - L'angle formé avec l'axe des abscisses s'appelle _l'argument_ du nombre
+      complexe, et se note $\textrm{arg}(z)$.
+
+
+#### Calculer la norme d'un complexe
+
+Pour calculer la norme d'un nombre complexe $z = a + ib$, rien de plus simple,
+il suffit de calculer :
+  $$ |z| = \sqrt{a^2 + b^2}$$
+
+Question \thequestion \stepcounter{question}
+
+: 	D'où vient cette formule ? Retrouver la à l'aide du théorème de
+	Pythagore (et un dessin !)
+
+Pour éviter de vous parachuter un résultat venu de nulle part, essayer
+réellement de répondre à la question suivante :
+
+Question \thequestion \stepcounter{question} 
+
+: 	Calculer $z*\overline{z}$, avec $z = a + ib$. (Je rappelle que
+	$\overline{z}$ correspond au conjugué de $z$)
+
+Donc, cette question vous permet de calculer la norme d'un nombre complexe d'une
+autre manière (qui est en fait très utile !) :
+  $$ \boxed{ |z|^2 = z\overline{z}}$$
+
+#### Calculer l'argument d'un nombre complexe
+
+Cette partie est plus délicate. Pour calculer l'angle formé par le point $z$ et
+l'axe des abscisses, nous devons _d'abord_ calculer la norme de ce complexe.
+
+En effet, si je prend un point complexe $z = a + ib$ que je suppose non nul
+(cela revient à dire que $\overline{z} \not = 0$), alors je peux faire cette
+manipulation :
+\begin{align*}
+  z&=\left( a+ib\right) \\
+  z&=\left| z\right|\left( \dfrac {a}{\left| z\right| }+i\dfrac {b}{\left| z\right| }\right) 
+\end{align*}
+
+Question \thequestion \stepcounter{question}  
+
+: 	Montrer alors que $\left( \dfrac {a}{\left| z\right| }+i\dfrac
+{b}{\left| z\right| }\right)$ est de norme 1.
+
+Or, dans ce cas, puisque $\left( \dfrac {a}{\left| z\right| }\right) ^{2}+\left(
+\dfrac {b}{\left| z\right| }\right)^{2}=1$, il existe un nombre $\theta$ (qui
+sera l'argument de $z$ ), tel que :
+
+\begin{displaymath}
+  \begin{cases}
+    \dfrac {a}{\left| z\right| }=\cos \left( \theta \right) \\
+    \dfrac {b}{\left| z\right| }=\sin \left( \theta \right) 
+  \end{cases}
+\end{displaymath}
+
+Et ce nombre est unique si on demande $\theta \in [0, 2\pi[$, et cela donne
+l'argrument de notre nombre complexe.
+
+Question \thequestion \stepcounter{question}  
+
+: 	Ce paragraphe est difficile, essayer de le comprendre avec un dessin. En
+pratique, le jour du bac, il reste très simple de calculer l'argument d'un
+nombre complexe.
+
+#### Calculer la forme trigonométrique
+
+Une fois que vous avez calculer la norme et l'argument d'un nombre complexe $z$,
+vous pouvez alors donner sa[^unique] forme trigonométrique :
+  $$ \boxed{z = |z|\left(\cos{(\theta)} +i\sin{(\theta)}\right)}$$ 
+
+[^volontairement]: cette phrase est fausse écrite telle quelle, mais je ne
+voulais pas préciser pour éviter de l'alourdir.  
+
+[^unique]: On dit donc « la » forme trigonométrique, puisqu'elle est unique.
+Nous l'avons en fait prouvé, mais sans mettre le doigt sur les passages qui
+mettent en évidence que si deux complexes ont la même forme trigonométrique,
+avec leur argument qui est un nombre de l'intervalle $[0, 2\pi[$, alors ces deux
+complexes sont en fait égaux.
+
+# L'exponentielle complexe {#expocomplexe}
 
 Certaines fonctions définie sur les réels (donc pas toute, loin de là) garde un
 sens (voire même en admette un plus fort !) lorsqu'on les définit sur les
@@ -335,24 +430,11 @@ $\sin(b)$ (ceci se comprend mieux avec un schéma).
 
 ## Conséquence de la formule d'Euler
 
-Il existe donc deux moyens de regarder un même nombre complexe. Soit avec ses
-coordonnées réelle $a \in \mathbb{R}$ et imaginaire $b \in \mathbb{R}$ pour
-obtenir $z = a + i b \in \mathbb{C}$. Mais deux autres nombres peuvent aussi
-repérer ce nombre complexe dans le plan. En effet, on peut trouver (voir la
-figure \ref{polaire}) $r$ et $\theta$ tels que :
-  $$z = r*(\cos(\theta) + i \sin(\theta)) = re^{i\theta}$$
+Nous pouvons ainsi réécrire la forme trigonométrique d'un nombre complexe $z$ de
+module $r$ et d'argument $\theta$ par :
+  $$\boxed{ z = r*e^{i\theta}}$$
 
 ![Exemple de complexe avec d'autres coordonnées dans le plan \label{polaire}](../images/complexeCoordonneesPolaire.png)
-
-Avec :
-
-  - $r$ la « longueur » du nombre $z$. Ce nombre est appelé le _module_ de $z$.
-  - $\theta$ l'angle entre la droite qui passe par $z$ et l'axe des abscisses,
-      appelé _argument_.
-
-
-C'est en jouant sur ces deux écritures que l'on obtient beaucoup de résultat.
-Par exemple, on peut mieux comprendre la multiplication entre deux complexes.
 
 ### La multiplication entre deux complexes
 
