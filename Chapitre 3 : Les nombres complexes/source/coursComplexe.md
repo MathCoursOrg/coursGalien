@@ -190,7 +190,6 @@ véritable miracle !
 Prenons un exemple. Soit $Q$ le polynôme $Q(x) = x^2 + x + 1$, vérifions que
 ce polynôme n'admet pas de racines réelles.
   $$\Delta = 1^2 - 4*1*1 = -3$$
-
 $\Delta$ est strictement négatif, ainsi les formules déjà connues ne marchent
 plus, à cause de la racine carrée $\sqrt{\Delta}$ qui n'est pas définie sur les
 nombres négatifs. Il faudrait donc, pour trouver les racines de mon polynôme,
@@ -199,7 +198,7 @@ $\sqrt{ - \Delta}*i = \sqrt{3} * i$ (forcément, ce nombre ne peut pas être ré
 car aucun nombre réel ne peut, une fois élevé au carré, être négatif !).
 
 Qu'est-ce que cela nous donne ?
-  $$(\sqrt{3}*i)^2 = \sqrt{3}^2*i^2 = 3 * (-1) = 3$$
+  $$(\sqrt{3}*i)^2 = \sqrt{3}^2*i^2 = 3 * (-1) = -3 = \Delta$$
 Nous avons trouvé une « racine carrée »[^attention] de $\Delta$ ! Donc je peux continuer les
 formules que nous avons vues en cours, pour obtenir deux nouvelles racines,
 complexes, de mon polynôme $Q$ :
@@ -227,8 +226,8 @@ Question \thequestion \stepcounter{question}
 quelles sont les formules qui nous donne les racines de ce polynôme, en vous
 aidant de la discussion ci-dessus ?
 
-[^montrer]: noter que nous l'avons réellement fait que pour un seul polynôme, et
-  que pour un seul degré. Ceci ne constitue donc pas vraiment une « preuve ».
+[^montrer]: notez que nous l'avons réellement fait que pour un seul polynôme, et
+  en particulier que pour un seul degré. Ceci ne constitue donc pas vraiment une « preuve ».
   Mais j'espère vous avoir donné l'intuition de ce résultat, hautement non
   trivial à démontrer (renseignez vous sur le théorème fondamentale de
   d'Alembert-Gauss).
