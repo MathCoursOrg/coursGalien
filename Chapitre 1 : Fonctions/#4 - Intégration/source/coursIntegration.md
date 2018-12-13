@@ -131,7 +131,6 @@ départ, $a$. Donc, nous sommes au point  $a + 4*\frac{b-a}{n}$. Finalement, le
 $k$-ième intervalle $I_k$ peut donc se définir comme :
   $$ I_k = [a + k\frac{b-a}{n}, a + (k+1)\frac{b-a}{n}]$$
 
-
 Exercice
 
 : 	Vérifiez que $b$ appartient bien à l'intervalle $I_n$. Vérifiez que
@@ -145,18 +144,63 @@ $f(a + k\frac{b-a}{n})$.
 
 Ainsi, on aboutit à l'expression suivante :
 \begin{align*}
-  I(f) &\approx \sum_{k=0}^{n} f\left(a + k\frac{b-a}{n}\right)*\frac{1}{n} \\
+  I(f) &\approx \sum_{k=0}^{n-1} f\left(a + k\frac{b-a}{n}\right)*\frac{1}{n} \\
   I(f) &\approx \frac{1}{n} \sum_{k=0}^{n} f\left(a + k\frac{b-a}{n}\right)
 \end{align*}
 En effet, le terme $\frac{1}{n}$ est donc présent dans chaque terme de la somme,
 et ne change pas de terme en terme. La deuxième ligne est donc une simple
 factorisation par ce terme.
 
-Il s'agit donc de montrer que $\frac{1}{n} \sum_{k=0}^{n} f\left(a +
+Il s'agit donc de montrer que $\frac{1}{n} \sum_{k=0}^{n-1} f\left(a +
 k\frac{b-a}{n}\right)$ converge vers quelque chose, et nous noterons ensuite :
 $$ \boxed{\int_{a}^{b} f = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n} f\left(a + k\frac{b-a}{n}\right)}$$
 
 ## Troisième étape : vérification de la convergence
 
+Pour montrer que cette convergence a bien lieu, il faut être un peu plus fin. On
+va d'une part surestimer et d'autre part sous-estimer l'aire d'une fonction sous
+la courbe. En effet, si on regarde bien ce que l'on a fait, avec une fonction
+croissante, si on calcule la somme décrite plus haut, pour un $n$ très grand par
+exemple, nous _sous-estimons_ la véritable valeur de l'aire de la courbe. En
+effet, $f$ est croissante, donc, pour tout $k$ compris entre $0$ et $n-1$ $x \in
+\left[a + k\frac{b-a}{n}, a + (k+1)\frac{b-a}{n}\right]$ :
+  $$ f\left(a + k\frac{b-a}{n}\right) \leq f(x) \leq f\left(a +(k+1)\frac{b-a}{n}\right)$$
+  <!-- Mettre une image qui explique la différence.-->
+
+Alors, nous allons encadrer la véritable valeur de l'intégrale de $f$ par :
+
+\begin{align}
+  \frac{1}{n} \sum_{k=0}^{n-1} f\left(a + k\frac{b-a}{n}\right) \leq \int_{a}^b f
+  \leq \frac{1}{n} \sum_{k=1}^{n} f\left(a + k\frac{b-a}{n}\right)
+\end{align}
+
+D'où finalement : 
+\begin{align}
+  0 \leq \int_a^b f - \frac{1}{n} \sum_{k=0}^{n-1} f\left(a + k\frac{b-a}{n}\right)
+  \leq \frac{f(a) - f(b)}{n}
+\end{align}
+
+Donc, par le théorème des gendarmes, le membre de droite tend vers 0 quand $n$
+tend vers l'infini, donc :
+$$ \boxed{\int_{a}^{b} f = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} f\left(a + k\frac{b-a}{n}\right)}$$
+
+# Lien avec la dérivée 
 
 
+# Propriété de l'intégrale 
+
+# Applications de l'intégration 
+
+# Bonus : l'intégration par partie (hors programme)
+
+Dans ce paragraphe, je vous présenterai une technique qui n'est plus enseignée
+au bac (mais qui l'était il n'y a pas si longtemps), et qui est très puissante
+(on pourrait presque dire que des domaines entiers des mathématiques sont construits
+autour de cette technique).
+
+Tout commence avec la simple formule de la dérivée d'un produit de fonction :
+  $$ (uv)' = u'v + v'u$$
+Si on intégre entre $a$ et $b$, on obtient
+  $$ \int_a^b (uv)' = \int_a^b u'v + \int_a^b v'u$$
+Finalement :
+  $$ \boxed{\int_a^b u'v = [ uv ]_{x = a}^{x=b} - \int_a^b v'u}$$
