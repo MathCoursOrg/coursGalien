@@ -9,9 +9,6 @@ geometry:
 
 ...
 
-<!-- Ce qu'il reste à faire
-  - relecture globale
--->
 
 \newcounter{question}
 \stepcounter{question}

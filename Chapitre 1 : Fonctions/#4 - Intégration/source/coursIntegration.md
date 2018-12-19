@@ -19,27 +19,27 @@ geometry :
 Ce cour présente le dernier outil de l'arsenal du mathématicien, et il s'agit,
 avec la dérivée, d'un des outils sans doute les plus puissants : l'intégration.
 Là encore, ce procédé est utilisé _dans quasiment toutes les sciences_ comme la
-physique, la chimie, mais aussi l'économie, l'ingénieurie et bien bien d'autres
+physique, la chimie, mais aussi l'économie, l'ingénierie et bien bien d'autres
 encore.
 
 Un mot sur le concept d'intégration en mathématiques. Vous apprendrez ici ce
 qu'on appelle l'intégration de Riemann. Pour une multitude de raisons, cette
 manière d'intégrer n'est pas très efficace (mais cela va être suffisamment
 puissant pour nous !). C'est pourquoi en troisième année de licence vous serez
-sensibiliser (si vous suivez un cursus universitaire) une autre intégration,
-plus générale et abstraite, l'intégration de Lesbegue. Pour ceux d'entre vous
-qui continue à faire des maths, sachez que le _principe_ est presque le même,
-donc concentrez vous sur la démarche de la définition de l'intégrale, votre
-apprentissage n'en sera que facilité.
+sensibilisé (si vous suivez un cursus universitaire) à une autre définition de
+l'intégration, plus générale et abstraite, l'intégration de Lesbegue. Pour ceux
+d'entre vous qui continue à faire des maths, sachez que le _principe_ est
+presque le même, donc concentrez vous sur la démarche de la définition de
+l'intégrale, votre apprentissage n'en sera que facilité.
 
 Tout commence par une question assez simpliste au premier abord : comment
 calculer l'aire sous la courbe d'une fonction positive ?
 
 
-C'est-à-dire, regardez la figure \ref{figure}, comment calculer l'aire nommée
+C'est-à-dire, regardez la figure \ref{fctcompliquee}, comment calculer l'aire nommée
 $I$ pour une fonction $f$ qui est définie entre $a$ et $b$ deux nombres réels ?
 
-<!-- Inclure un schéma -->
+![Aire sous la courbe d'une fonction $f$ compliquée \label{fctcompliquee}](../images/aireFonctionComplique.png)
 
 Nous verrons que cette question a des liens très profond avec la notion de
 dérivation, et qu'elle permet aussi (entre autre) d'approximer des fonctions
@@ -129,7 +129,7 @@ Pour cela, imaginons que nous sommes au 4eme sous intervalle en partant de la
 gauche. Cela veut dire que nous sommes séparée de 4 sous intervalles du point de
 départ, $a$. Donc, nous sommes au point  $a + 4*\frac{b-a}{n}$. Finalement, le
 $k$-ième intervalle $I_k$ peut donc se définir comme :
-  $$ I_k = [a + k\frac{b-a}{n}, a + (k+1)\frac{b-a}{n}]$$
+  $$ I_k = \left[a + k\frac{b-a}{n}, a + (k+1)\frac{b-a}{n}\right]$$
 
 Exercice
 
@@ -139,9 +139,7 @@ longueur d'un intervalle $[c,d]$, il suffit de calculer $d-c$).
 
 Ensuite, sur chaque sous intervalle $I_k$, nous approximons $f(x)$ par le nombre
 $f(a + k\frac{b-a}{n})$.
-
 <!-- Faire un zoom pour bien montrer pourquoi on prend f en cette valeur -->
-
 Ainsi, on aboutit à l'expression suivante :
 \begin{align*}
   I(f) &\approx \sum_{k=0}^{n-1} f\left(a + k\frac{b-a}{n}\right)*\frac{1}{n} \\
@@ -184,8 +182,77 @@ Donc, par le théorème des gendarmes, le membre de droite tend vers 0 quand $n$
 tend vers l'infini, donc :
 $$ \boxed{\int_{a}^{b} f = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} f\left(a + k\frac{b-a}{n}\right)}$$
 
-# Lien avec la dérivée 
+## Conclusion et notation
 
+### Les détails techniques qui ne sont pas au programme.
+
+Nous avons donc vu dans les paragraphes précédents comment était définie la
+notion d'aire sous la courbe. Il suffit de calculer une approximation avec des
+rectangles, puis de rendre cette approximation de plus en plus précise en
+augmentant le nombre de subdivision de l'intervalle. Il y a beaucoup de détails
+techniques qui sont passés sous silence, mais qui sont très intuitif à
+comprendre. Voici les détails qui ne sont pas explicités :
+
+  - On peut montrer que la définition de l'aire sous la courbe d'une fonction
+      $f$ ne _dépend pas_ de la subdivision choisie. Les détails techniques sont
+      inutilement compliqué pour en gros affirmer que plus on affine les
+      rectangles, meilleurs est l'approximation, et ceci quelque soit la manière
+      dont on a choisi la largeur de chaque rectangle.
+  - On peut montrer que la définition fonctionne aussi pour des fonctions qui ne
+      sont ni croissante ni décroissante sur $[a, b]$. La démonstration, bien
+      que pas foncièrement difficile, est légèrement différente, et utilise des
+      techniques qui ne sont pas au programme du bac.
+
+
+Nous allons donc admettre tous ces résultats. Ainsi, nous avons une définition
+d'une aire sous la courbe. 
+
+### Notation 
+
+Il existe deux notations pour désigner l'aire sous la courbe d'une fonction
+$f$ sur l'intervalle $[a,b]$. Les deux notations contiennent le symbole $\int$
+qui forme un « S » pour rappeler que l'on _Somme_ sur des quantités infiniment
+petite.
+
+La première notation, 
+
+L'objet du paragraphe suivant est de déterminer comment varie l'aire sous la
+courbe sachant une fonction $f$ continue sur $[a,b]$ donnée ? Existe-t-il un
+lien entre la fonction qui donne l'aire sous la courbe entre $[a, x]$ avec $x
+\in [a, b]$ et $f$ ?
+
+# Lien avec la dérivée
+
+Maintenant, que nous avons défini proprement à quoi correspondait l'aire sous la
+courbe d'une fonction $f$ continue et positive, essayons de comprendre la
+fonction :
+  $$ F : x \mapsto \int_{a}^x f(t)dt$$
+Là encore, on va supposer, pour la démonstration, que la fonction $f$ est
+croissante et positive.
+
+Pour comprendre une fonction, on peut essayer de la dérivée, ou dans un premier
+temps, voir si la dérivée existe !
+
+Pour cela, il nous faut calculer la limite (revoir le cours sur la dérivation
+pour comprendre pourquoi) suivante, pour tout $x \in ]a, b[$^[^remarque]:
+  $$ \lim_{h \to 0 } \frac{ F(x +h ) - F(x)}{h}$$
+
+
+[^remarque]: pourquoi prendre l'intervalle ouvert ?
+
+# Comment définir l'aire sous la courbe d'une fonction négative ?
+
+Pour une fonction négative sur un intervalle $[a, b]$, on pose :
+  $$ \int_a^b f = - \int_a^b (-f)$$
+Où $-f$ est une fonction _positive_.
+
+Ainsi, par exemple, si on doit intégrer entre $0$ et $10$ une fonction qui est :
+  
+  - positive entre $0$ et $2$ et $5$ et $10$
+  - négative entre $2$ et $5$
+
+Alors, on calculera :
+$$\int_{0}^{10} f = \int_0^2 f - \int_2^5 (-f) + \int_{5}^{10} f$$
 
 # Propriété de l'intégrale 
 
@@ -200,7 +267,7 @@ autour de cette technique).
 
 Tout commence avec la simple formule de la dérivée d'un produit de fonction :
   $$ (uv)' = u'v + v'u$$
-Si on intégre entre $a$ et $b$, on obtient
+Si on intègre entre $a$ et $b$, on obtient
   $$ \int_a^b (uv)' = \int_a^b u'v + \int_a^b v'u$$
 Finalement :
   $$ \boxed{\int_a^b u'v = [ uv ]_{x = a}^{x=b} - \int_a^b v'u}$$
