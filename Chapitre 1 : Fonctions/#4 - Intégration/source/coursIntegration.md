@@ -241,7 +241,81 @@ sur $[a,b]$ donnée. En outre, la question que l'on se pose est la suivante :
 existe-t-il un lien entre la fonction qui donne l'aire sous la courbe entre $[a,
 x]$ avec $x \in [a, b]$ et $f$ ?
 
-# Lien avec la dérivée
+# Propriété de l'intégrale
+
+## Positivité de l'intégrale 
+
+Commençons par une première propriété, appelée la propriété de _positivité de
+l'intégrale_. Cette propriété, innocente aux premiers abords, et en fait très
+importante, et admet de nombreuses et utiles propositions !
+
+Proposition : 
+
+: 	Soit une fonction $f$ continue et positive sur un intervalle $[a,b]$.
+Alors on a :
+  $$ \int_a^b f(x)dx \geq 0 \quad \mbox{ et, si} \ a=b \ \mbox{alors} \quad \int_a^b f(x)dx = 0$$
+
+Exercice :
+
+: 	Prouver ce résultat en interprétant $\int_a^b \ f(x)dx$ comme l'aire
+sous la courbe d'une fonction $f$.
+
+
+## Relation de Chasles 
+
+Encore une relation très connue, que nous retrouverons avec les vecteurs (gardez
+en tête la structure de cette proposition). Là encore la démonstration est
+«facile» si on fait un dessin, et toujours en interprétant $\int_a^b \ f(x)dx$
+comme l'aire sous la courbe de la fonction f.
+
+Proposition :
+
+: 	Soit $f$ une fonction continue et positive sur un intervalle $[a; c]$ et
+soit $b \in [a;c]$. On a :
+  $$ \int_a^c \ f(x)dx = \int_a^b \ f(x)dx + \int_b^c \ f(x)dx$$
+
+Exercice :
+
+: 	Faites un dessin qui correspond à une démonstration heuristique de cette
+proposition.
+
+## Comment définir l'aire sous la courbe d'une fonction négative ?
+
+La propriété de Chasles nous «oblige» pour être cohérent à définir, pour une
+fonction négative sur un intervalle $[a, b]$ :
+  $$ \int_a^b f = - \int_a^b (-f)$$
+Où $-f$ est une (donc) fonction _positive_.
+
+Ainsi, par exemple, si on doit intégrer entre $0$ et $10$ une fonction qui est :
+
+  - positive entre $0$ et $2$ et $5$ et $10$
+  - négative entre $2$ et $5$
+
+Alors, on calculera :
+$$\int_{0}^{10} f = \int_0^2 f - \int_2^5 (-f) + \int_{5}^{10} f$$
+
+## Propriété d'invariance 
+
+Encore très classique, sert un peu moins souvent, et se retrouve très vite avec
+un dessin. 
+
+Proposition :
+
+: 	Soient $f$ une fonction continue et positive sur un intervalle $[a,b]$.
+Soit $\mathcal{C}$ sa courbe représentative dans un repère orthogonal et $T$ un
+réel.  
+Si $\mathcal{C}$ est symétrique par rapport à l'axe des ordonnées,
+alors
+  $$\int_{-a}^0 f(x)dx = \int_0^a f(x)dx$$
+Si $\mathcal{C}$ est invariante par translation de vecteur $T*\vec{i}$ alors
+  $$\int_a^b f(x)dx = \int_{a+T}^{b+T} f(x) dx$$
+
+L'énoncé de cette proposition peut être déroutant mais reste très simple.
+Essayez de comprendre seul cette proposition, et si définitivement vous ne
+comprenez pas ce que l'on entend par « $T * \vec{i}$ » alors posez moi la
+question directement.
+
+# Lien avec la dérivée, théorème fondamentale
 
 Maintenant, que nous avons défini proprement à quoi correspondait l'aire sous la
 courbe d'une fonction $f$ continue et positive, nous essayons de comprendre la
@@ -289,39 +363,91 @@ tend vers $0$, on obtient ainsi que $F$ est dérivable pour tout $x \in ]a,b[$,
 et que sa dérivée $F'$ vaut :
   $$\boxed{F'(x) = f(x)}$$
 
-[^remarque]: Alors, pourquoi prendre l'intervalle ouvert ?
-
-# Comment définir l'aire sous la courbe d'une fonction négative ?
-
-Pour une fonction négative sur un intervalle $[a, b]$, on pose :
-  $$ \int_a^b f = - \int_a^b (-f)$$
-Où $-f$ est une fonction _positive_.
-
-Ainsi, par exemple, si on doit intégrer entre $0$ et $10$ une fonction qui est :
-  
-  - positive entre $0$ et $2$ et $5$ et $10$
-  - négative entre $2$ et $5$
-
-Alors, on calculera :
-$$\int_{0}^{10} f = \int_0^2 f - \int_2^5 (-f) + \int_{5}^{10} f$$
-
-# Propriété de l'intégrale
-
-## Linéarité de l'intergrale
-
-Voici la liste des résultats (énoncés rapidement) que nous allons prouver dans ce paragraphe :
-
-  - $\int_a^b f = -\int_b^a f$
-  - $\int_a^b f + \int_b^c f = \int_a^c f$
-
-Cette liste est l'occasion pour vous de vérifier si vous avez compris le concept
-d'intégration.
-
 Exercice :
 
-: 	Essayez de vous convaincre de ces résultats à l'aide d'un graphique, et
-d'une fonction continue quelconque tracée à la main, et des valeurs $a$, $b$,
-et $c$ simples.
+: 	Dans les calculs effectués plus haut, $h$ est considéré comme un
+nombre strictement positif. Démontrer que les calculs sont les même pour $h$
+strictement négatif. Autrement dit, la fonction $F$ est de dérivée _continue_ !
+
+[^remarque]: Alors, pourquoi prendre l'intervalle ouvert ?
+
+Finalement nous avons prouvé un théorème fondamental de l'intégration :
+
+Théorème :
+
+: 	Soient $f$ une fonction continue et positive sur un intervalle $[a,b]$
+et $F$ la fonction définie sur $[a, b]$ par
+  $$F(x) = \int_a^xf(t)dt$$
+La fonction $F$ est dérivable sur $[a,b]$ et a pour dérivée $f$.
+
+Ce théorème motive donc la définition suivante :
+
+Définition :
+
+: 	Soit $f$ une fonction définie sur un intervalle $I$. F est une primitive
+de $f$ sur $I$ si $F$ est dérivable sur $I$ et si $F'=f$.
+
+Donc finalement, avec quelques autres calculs que l'on passe sous silence, nous
+avons le théorème suivant :
+
+Théorème :
+
+: 	Toute fonction continue sur un intervalle $I$ admet des primitives sur
+$I$. 
+
+**Attention** Je dois vous mettre en garde sur l'expression « admet _des_
+primitives » à ne pas confondre avec « admet _une_ primitive». En effet, il
+n'existe pas d'unique primitive à proprement parler d'une fonction $f$. S'il en
+existe une, alors il en existe une infinité d'autres ! Si vous avez $F$ une
+primitive de $f$, alors $x \mapsto F(x) + 2$ est encore une autre primitive !
+En remplaçant $2$ par n'importe quelle valeur de votre choix, vous avez autant
+de primitive que de valeurs réelles ! Mais la question est : existe-t-il
+d'autres primitives possibles ? Réponse :
+
+Théorème :
+
+: 	Soit f une fonction continue sur un intervalle $I$ et soit $F$ une
+primitive de $f$ sur I. 
+
+  - Les primitives de $f$ sur $I$ sont les fonctions $G$ définies sur $I$ par
+      $G(x) = F(x) + k$ où $k \in \mathbb{R}$.
+  - Quels que soient $x_0$ et $y_0$ appartenant à $I$, il existe _une unique_
+      primitive $F$ de $f$ sur $I$ telle que $F(x_0) = y_0$
+
+Pour vérifier que vous avez bien compris ce théorème, essayez de faire cet
+exercice qui en est une application directe !
+
+Exercice d'application 
+
+: 	Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = 6x^2 -3x +1$
+
+  - Montrer que la fonction $F$ définie sur $\mathbb{R}$ par $F(x) = 2x^3 -
+      \frac{3}{2}x^2+x$ est une primitive de $f$ sur $\mathbb{R}$.
+  - En déduire l'ensemble des primitives de $f$ sur $\mathbb{R}$.
+  - Déterminer l'unique primitive de $H$ de $f$ sur $\mathbb{R}$ qui vérifie la
+      relation $H(1) = 0$.
+
+## Ultime lien : le calcul de l'aire à l'aide d'une intégrale 
+
+Maintenant vous avez vu deux aspects de l'intégration :
+  
+  - C'est l'aire sous la courbe d'une fonction continue 
+  - Intégrer c'est aussi trouver une primitive d'une fonction. 
+
+Dans ce paragraphe, nous verrons donc _comment_ calculer en pratique l'aire des
+fonctions dont on connait une primitive.
+
+Propriété 
+
+: 	Soit $f$ une fonction continue et positive sur un intervalle $[a,b]$.
+Soit $F$ une primitive de $f$ sur $[a,b]$. On a alors :
+  $$\boxed{ \int_a^b \ f(x)dx = F(b) - F(a)}$$
+
+Quelques remarques qui s'imposent :
+
+  - Ce calcul ne _dépend pas_ de la primitive que vous avez choisie (pourquoi ?
+      **Exercice** le prouver par calcul).
+  - Le nombre $F(b) - F(a)$ est noté $\left[F(x)\right]_a^b$.
 
 # Applications de l'intégration 
 
@@ -401,3 +527,8 @@ Si on intègre entre $a$ et $b$, on obtient
   $$ \int_a^b (uv)' = \int_a^b u'v + \int_a^b v'u$$
 Finalement :
   $$ \boxed{\int_a^b u'v = [ uv ]_{x = a}^{x=b} - \int_a^b v'u}$$
+
+**Exemple :** calculer à l'aide de l'intégration par partie :
+
+  - $\int_1^2 \ln(x)dx$
+  - $\int_0^{\pi} \cos(x) * \sin(x)dx$
