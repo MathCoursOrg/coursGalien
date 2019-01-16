@@ -53,19 +53,36 @@ _intégrales_.
 
 ## Contexte 
 
-On souhaite donc définir l'aire sous la courbe d'une fonction. Pour plus de
-simplicité, nous allons supposer que la fonction est _positive_ et _continue_
-sur un intervalle $[a,b]$ où $a,b \in \mathbb{R}$. Nous verrons comment étendre
-ce cas à d'autres fonctions (par exemple des fonctions négatives).
+On souhaite donc définir **l'aire sous la courbe d'une fonction**. C'est
+littéralement le but premier de l'intégration. 
 
-Le problème, c'est qu'il n'existe pas vraiment de formule toute faite pour
-donner exactement l'aire sous la courbe d'une fonction. La preuve, si vous
-regarder la figure \ref{fctcompliquee}, vous pouvez vous convaincre qu'il est très
-difficile, si on imagine une fonction qui varie beaucoup, de définir la notion
-d'aire sous la courbe. 
+Pour plus de simplicité, nous allons d'abord considéré uniquement dans les
+premières propositions, les fonctions $f : I \to \mathbb{R}$ qui sont positive
+et continue sur $I=[a,b]$ où $a,b \in \mathbb{R}$. Nous verrons comment étendre
+ce cas à d'autres fonctions (par exemple des fonctions négatives). Dans les
+années supérieure d'étude, vous verrez comment définir l'intégrale d'une
+fonction qui n'est pas forcément continue, ou encore qui admet des valeurs
+complexes. Tout cela est pour l'instant trop compliqué pour nous, et nous nous
+restreignons aux fonctions continues et réelles. Pour les preuves des théorèmes
+fondamentaux de l'intégration, nous présenterons uniquement le cas où la
+fonction est de plus positives (voire même croissante).
 
-C'est pourquoi, l'idée de ce cours est de vous montrer une démarche fondamentale
-en mathématiques, qui est :
+Même pour cette classe de fonction, le problème, c'est qu'il n'existe pas
+vraiment de formule toute faite pour donner exactement l'aire sous la courbe
+d'une fonction. La preuve, si vous regarder la figure \ref{fctcompliquee}, vous
+pouvez vous convaincre qu'il est très difficile, si on imagine une fonction qui
+varie beaucoup, de définir la notion d'aire sous la courbe. 
+
+Dans le reste du paragraphe je vous présente les principales idées qui
+permettent de définir proprement l'intégration. Je vous conseille de lire cela
+en _deuxième lecture_. Ceci n'est pas vraiment au programme du bac, mais
+néanmoins vous _devez_ comprendre les grandes lignes. Un bon test pour savoir si
+vous avez compris, est le suivant : êtes vous, après la lecture de ce cours,
+capable d'écrire un algorithme qui calcule l'aire d'une fonction continue entre
+$[a,b]$ avec une précision de $10^{-1}$ ?
+
+Voici donc une démarche, fondamentale en mathématiques, pour définir certaine
+notion en analyse, comme l'intégration :
 
   - En premier, définir la notion que l'on souhaite sur une classe de fonction
       restreinte, où l'on peut définir facilement cette fonction
@@ -453,6 +470,82 @@ Quelques remarques qui s'imposent :
 
 ## En analyse
 
+Les applications en analyse sont très nombreuses. Nous verrons dans cette
+section qu'un seul cas. Dans les calculs détaillés plus bas, nous utiliserons
+_toutes_ les propriétés de l'intégrale, donc vous pouvez tester votre
+compréhension sur toutes les notions rattachées à l'intégration en un seul
+exemple. Prenez donc le temps de bien lire la suite, et de refaire les calculs
+par vous même sur une feuille à coté.
+
+Nous nous intéresserons donc à la fonction exponentielle. Commençons par un
+petit calcul en guise d'échauffement, calculons :
+  $$ \int_0^1 \exp{x}dx $$
+C'est-à-dire l'aire sous la courbe de la fonction exponentielle entre $0$ et
+$1$.
+
+Eh bien, nous connaissons une primitive de la fonction $x \mapsto \exp(x)$.
+Cette fonction est continue, et de plus $\exp' = \exp$. Donc **une** primitive
+de la fonction exponentielle est donnée par la fonction exponentielle. Donc,
+d'après le théorème fondamentale de l'analyse :
+  $$\int_0^1 \exp(x)dx = [\exp(x)]_0^1 = \exp(1) - \exp(0) = e -1 \approx 1.718$$
+
+Maintenant que nous nous sommes échauffés, essayons de combiner la propriété de
+_positivité de l'intégrale_ avec l'exponentielle.
+
+Dans les exercices, nous avons déjà pourquoi $\exp{x} \geq x + 1$ pour tout $x$
+dans $\mathbb{R}$ (pour retrouver ce résultat, détailler le tableau de variation
+de la fonction $x \mapsto \exp{x} - x -1$ sur $\mathbb{R}$, puis dresser le tableau
+de signe).
+
+À partir de cette inégalité, on peut intégrer. Pour éviter de faire des
+confusions, je vais remplacer l'inégalité par la suivante, parfaitement
+identique :
+  $$\text{Pour tout } \quad u \in \mathbb{R} \exp{u} \geq u + 1$$
+J'ai simplement changé la variable ($u$ va devenir la variable muette
+d'intégration). Maintenant, pour tout $x$ dans $\mathbb{R}$, je peux intégrer
+le membre de gauche et le membre de droite entre de $0$ et $x$. On obtient
+ainsi :
+  $$ \int_0^x \exp(u) \ du \geq \int_0^x (u +1) du $$
+Or, nous pouvons calculer chaque membre de cette nouvelle inéquation. En effet :
+  $$ \int_0^x \exp(u)\ du = [ \exp{u}]_0^x = \exp(x) - \exp(0) = \exp(x) - 1$$
+Et d'autres part, par _linéarité de l'intégrale_ :
+  $$ \int_0^x u+1 \ du = \int_0^x u \ du + \int_0^x 1 \ du$$
+Or :
+  $$ \int_0^x u \ du = \left[\frac{1}{2}u^2 \right]_0^x = \frac{1}{2}x^2 - 0$$
+En effet, **une** primitive de la fonction $u \mapsto u$ (qui est évidemment
+continue), est donnée par la fonction $u \mapsto \frac{1}{2}u^2$ (vérifier en
+dérivant cette dernière fonction).  
+Et :
+  $$ \int_0^x 1 = x $$
+Vous pouvez trouver ce résultat en disant qu'une primitive de la fonction $u
+\mapsto 1$ est la fonction $u \mapsto u$, mais honnêtement, si vous faites un
+dessin, vous vous rendez compte que vous êtes en train d'intégrer une fonction
+constante, donc l'aire sous la courbe d'une telle fonction est donné par l'aire
+du rectangle ainsi dessiné (faites un dessin). Et $1 * x = x$.
+
+On aboutit ainsi à une nouvelle inéquation :
+  $$ \text{Pour tout } x \in \mathbb{R} \quad \exp(x) - 1 \geq \frac{1}{2}x^2 + x$$
+Finalement :
+  $$ \text{Pour tout } x \in \mathbb{R} \quad \boxed{\exp(x)  \geq \frac{x^2}{2} + x + 1}$$
+Vous retrouvez exemple le résultat :
+  $$\lim_{x \to \infty} \frac{\exp(x)}{x} = + \infty$$
+En divisant par $x \not = 0$, puis en utilisant le théorème de comparaison. 
+
+Mais vous pouvez réitérer le processus que l'on vient d'effectuer ! Essayer, et
+intégrez le terme à gauche et le terme à droite de cette nouvelle équation, vous
+trouverez :
+  $$ \text{Pour tout } x \in \mathbb{R} \quad \boxed{\exp(x)  \geq \frac{x^3}{6} + \frac{x^2}{2} + x + 1}$$
+Et par exemple :
+  $$\lim_{x \to \infty} \frac{\exp(x)}{x^2} = + \infty$$
+
+En poussant la généralisation plus loin, essayer de montrer par récurrence que :
+  $$ \text{Pour tout } n \in \mathbb{N} ,\,  \text{pour tout } x \in \mathbb{R} \quad \boxed{\exp(x)  \geq \frac{x^n}{n!} + \ldots + \frac{x^3}{6} + \frac{x^2}{2} + x + 1}$$
+Avec $n! = n*(n-1)*\ldots*1$.
+
+Puis, que pour tout $n \in \mathbb{N}$ (attention il faut utiliser le résultat
+précédent au rang $n+1$ et non pas au rang $n$) :
+  $$\boxed{\lim_{x \to \infty} \frac{\exp(x)}{x^n} = + \infty}$$
+
 ## En physique
 
 Dans ce court paragraphe, je vais essayer de détailler les opérations effectuée
@@ -512,7 +605,25 @@ D'où $v(t) = gt + v(t_0)$.
 
 [^force]: est-ce vraiment une force ? Soyez curieux, et renseignez vous !
 
+Intégrons une nouvelle fois pour obtenir la _position_ en fonction du temps, en
+utilisant à loisir la _linéarité de l'intégrale_ !
+  $$ x(t) = \int_{t_0}^t v(u) \ du= \int_{t_0}^t gu + v(t_0) \ du = g\int_{t_0}^t u + (t - t_0)*v(t_0)$$
+Ainsi :
+  $$ x(t) = \frac{1}{2}gt^2 - \frac{1}{2}gt_0^2+ (t - t_0)*v(t_0)$$
+Ce qui devrait coller avec les calculs que vous avez fait en physique.
+
 ## En probabilité
+
+Deux mots pour résumer en quoi l'intégration a un lien très fort avec la
+probabilité. En effet, nous verrons lors du cours sur les probabilités que l'on
+est souvent amené, lorsque l'on considère une expérience aléatoire avec un
+nombre fini d'issues, des sommes tels que :
+  $$P(\{ X = 0, X = 1, \ldots X = n\}) = \sum_{i = 1}^n P(\{X = i\})$$
+Pour que cette somme soit valable, il manque plein d'hypothèses que je ne
+détaillerai pas ici, mais retenez que lorsque l'on a affaire à une expérience
+aléatoire qui admet une infinité d'issues possibles, alors la somme « $\sum$ »
+se transforme en somme infinie, soit l'intégrale « $\int$ ». Je reste
+volontairement flou pour l'instant.
 
 # Bonus : l'intégration par partie (hors programme)
 
@@ -532,3 +643,6 @@ Finalement :
 
   - $\int_1^2 \ln(x)dx$
   - $\int_0^{\pi} \cos(x) * \sin(x)dx$
+
+Cette méthode est extrêmement puissante. Elle est très utilisée en analyse
+mathématique, mais aussi en physique.
