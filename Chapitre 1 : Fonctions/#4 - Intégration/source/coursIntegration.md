@@ -7,8 +7,7 @@ linestretch : 1
 colorlinks : blue
 papersize : a4paper
 document : article
-classoption : oneside, draft
-
+classoption : oneside
 pagestyle : headings
 geometry :
   - margin=1in
@@ -40,7 +39,7 @@ calculer l'aire sous la courbe d'une fonction positive ?
 C'est-à-dire, regardez la figure \ref{fctcompliquee}, comment calculer l'aire nommée
 $I$ pour une fonction $f$ qui est définie entre $a$ et $b$ deux nombres réels ?
 
-![Aire sous la courbe d'une fonction $f$ compliquée \label{fctcompliquee}](../images/aireFonctionComplique.png)
+![Aire sous la courbe d'une fonction $f$ compliquée \label{fctcompliquee}](../images/aireFonctionComplique.png){ height=30% width=60% }
 
 Nous verrons que cette question a des liens très profond avec la notion de
 dérivation, et qu'elle permet aussi (entre autre) d'approximer des fonctions
@@ -51,7 +50,7 @@ _intégrales_.
 
 # Définition
 
-## Contexte 
+## Contexte
 
 On souhaite donc définir **l'aire sous la courbe d'une fonction**. C'est
 littéralement le but premier de l'intégration. 
@@ -120,9 +119,9 @@ $[a, b]$ en plusieurs sous intervalle. Vous trouverez dans les figures suivantes
 100 sous intervalles.
 
 <!-- Schéma du découpage en 2, 3 et dix parties -->
-![Découpage de l'intervalle en 10 sous intervalles identiques \label{decoupage1}](../images/aire10Rectangles.png)
+![Découpage de l'intervalle en 10 sous intervalles identiques \label{decoupage1}](../images/aire10Rectangles.png){ width=60% }
 
-![Découpage de l'intervalle en 100 sous intervalles identiques \label{decoupage2}](../images/aire100Rectangles.png)
+![Découpage de l'intervalle en 100 sous intervalles identiques \label{decoupage2}](../images/aire100Rectangles.png){ width=60% }
 
 Ensuite, sur chaque sous intervalle, on approxime l'expression de $f$ par sa
 valeur au début du sous intervalle. Certes, on fait une erreur, mais on peut dire
@@ -361,7 +360,7 @@ On a :
 Or, si la fonction $f$ est croissante sur l'intervalle $]a, b[$, cela signifie
 que quelque soit la valeur de $h>0$, $f(x+h) \geq f(x)$. 
 
-![Situation de la preuve](../images/imagePreuveTheoFondamentale.png)
+![Situation de la preuve](../images/imagePreuveTheoFondamentale.png){ width=60% } 
 
 Autrement dit l'aire sous la courbe de $f$ entre $x$ et $x+h$:
 
@@ -527,18 +526,18 @@ On aboutit ainsi à une nouvelle inéquation :
   $$ \text{Pour tout } x \in \mathbb{R} \quad \exp(x) - 1 \geq \frac{1}{2}x^2 + x$$
 Finalement :
   $$ \text{Pour tout } x \in \mathbb{R} \quad \boxed{\exp(x)  \geq \frac{x^2}{2} + x + 1}$$
-Vous retrouvez exemple le résultat :
+Vous retrouvez par exemple le résultat :
   $$\lim_{x \to \infty} \frac{\exp(x)}{x} = + \infty$$
 En divisant par $x \not = 0$, puis en utilisant le théorème de comparaison. 
 
-Mais vous pouvez réitérer le processus que l'on vient d'effectuer ! Essayer, et
+Mais vous pouvez réitérer le processus que l'on vient d'effectuer ! Essayez, et
 intégrez le terme à gauche et le terme à droite de cette nouvelle équation, vous
 trouverez :
   $$ \text{Pour tout } x \in \mathbb{R} \quad \boxed{\exp(x)  \geq \frac{x^3}{6} + \frac{x^2}{2} + x + 1}$$
 Et par exemple :
   $$\lim_{x \to \infty} \frac{\exp(x)}{x^2} = + \infty$$
 
-En poussant la généralisation plus loin, essayer de montrer par récurrence que :
+En poussant la généralisation plus loin, essayez de montrer par récurrence que :
   $$ \text{Pour tout } n \in \mathbb{N} ,\,  \text{pour tout } x \in \mathbb{R} \quad \boxed{\exp(x)  \geq \frac{x^n}{n!} + \ldots + \frac{x^3}{6} + \frac{x^2}{2} + x + 1}$$
 Avec $n! = n*(n-1)*\ldots*1$.
 
