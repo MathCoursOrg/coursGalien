@@ -331,6 +331,23 @@ Essayez de comprendre seul cette proposition, et si définitivement vous ne
 comprenez pas ce que l'on entend par « $T * \vec{i}$ » alors posez moi la
 question directement.
 
+## Valeur moyenne 
+
+Grâce à l'intégrale, on peut faire la moyenne d'une fonction sur un intervalle
+$[a, b]$. En effet, si l'on considère l'intégrale comme une somme « infinie »,
+elle permet de faire une moyenne de toutes les _valeurs_ $f(x)$ pour $x \in [a,
+b]$. Voyez plutôt. On pose $\mu$ la moyenne de $f$, une fonction continue sur
+$[a, b]$, alors $\mu$ se calcule par :
+  $$\mu = \frac{1}{b -a } \int_a^b f(x) dx$$
+
+![Valeur moyenne d'une fonction continue sur $[2,9]$, qui vaut environ $\frac{24.32}{9 - 2} \approx 3.474$](../images/valeurMoyenne.png){ width=60% }
+
+Cette formule est évidemment à mettre en correspondance avec la formule que vous
+utilisez pour faire la moyenne de vos notes de contrôle (par exemple) :
+  $$ \mu = \frac{1}{\text{nombre de notes}} \sum_{i = 1}^{\text{nombre de notes}} \text{note numéro } i $$
+Et il faut interpréter le valeur de $b-a$ comme la longueur de l'intervalle sur
+lequel vous intégrez. C'est un peu l'équivalent du « nombre de notes ».
+
 # Lien avec la dérivée, théorème fondamentale
 
 Maintenant, que nous avons défini proprement à quoi correspondait l'aire sous la
