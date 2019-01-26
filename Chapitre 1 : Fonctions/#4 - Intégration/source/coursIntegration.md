@@ -16,7 +16,7 @@ geometry :
 
 # Motivation
 
-Ce cour présente le dernier outil de l'arsenal du mathématicien, et il s'agit,
+Ce cours présente le dernier outil de l'arsenal du mathématicien, et il s'agit,
 avec la dérivée, d'un des outils sans doute les plus puissants : l'intégration.
 Là encore, ce procédé est utilisé _dans quasiment toutes les sciences_ comme la
 physique, la chimie, mais aussi l'économie, l'ingénierie et bien bien d'autres
@@ -26,9 +26,9 @@ Un mot sur le concept d'intégration en mathématiques. Vous apprendrez ici ce
 qu'on appelle l'intégration de Riemann. Pour une multitude de raisons, cette
 manière d'intégrer n'est pas très efficace (mais cela va être suffisamment
 puissant pour nous !). C'est pourquoi en troisième année de licence vous serez
-sensibilisé (si vous suivez un cursus universitaire) à une autre définition de
+sensibilisés (si vous suivez un cursus universitaire) à une autre définition de
 l'intégration, plus générale et abstraite, l'intégration de Lesbegue. Pour ceux
-d'entre vous qui continue à faire des maths, sachez que le _principe_ est
+d'entre vous qui continuent à faire des maths, sachez que le _principe_ est
 presque le même, donc concentrez vous sur la démarche de la définition de
 l'intégrale, votre apprentissage n'en sera que facilité.
 
@@ -41,11 +41,11 @@ $I$ pour une fonction $f$ qui est définie entre $a$ et $b$ deux nombres réels 
 
 ![Aire sous la courbe d'une fonction $f$ compliquée \label{fctcompliquee}](../images/aireFonctionComplique.png){ height=30% width=60% }
 
-Nous verrons que cette question a des liens très profond avec la notion de
-dérivation, et qu'elle permet aussi (entre autre) d'approximer des fonctions
+Nous verrons que cette question a des liens très profonds avec la notion de
+dérivation, et qu'elle permet aussi (entres autres) d'approximer des fonctions
 comme les fonctions trigonométriques, exponentielle, ou logarithmique.
 
-Enfin, beaucoup (si ce n'est tous) d'énoncé au bac portent sur ces fameuses
+Enfin, beaucoup (si ce n'est tous) d'énoncés au bac portent sur ces fameuses
 _intégrales_.
 
 # Définition
@@ -55,9 +55,9 @@ _intégrales_.
 On souhaite donc définir **l'aire sous la courbe d'une fonction**. C'est
 littéralement le but premier de l'intégration. 
 
-Pour plus de simplicité, nous allons d'abord considéré uniquement dans les
-premières propositions, les fonctions $f : I \to \mathbb{R}$ qui sont positive
-et continue sur $I=[a,b]$ où $a,b \in \mathbb{R}$. Nous verrons comment étendre
+Pour plus de simplicité, nous allons d'abord considérer uniquement dans les
+premières propositions, les fonctions $f : I \to \mathbb{R}$ qui sont positives
+et continues sur $I=[a,b]$ où $a,b \in \mathbb{R}$. Nous verrons comment étendre
 ce cas à d'autres fonctions (par exemple des fonctions négatives). Dans les
 années supérieure d'étude, vous verrez comment définir l'intégrale d'une
 fonction qui n'est pas forcément continue, ou encore qui admet des valeurs
@@ -68,7 +68,7 @@ fonction est de plus positives (voire même croissante).
 
 Même pour cette classe de fonction, le problème, c'est qu'il n'existe pas
 vraiment de formule toute faite pour donner exactement l'aire sous la courbe
-d'une fonction. La preuve, si vous regarder la figure \ref{fctcompliquee}, vous
+d'une fonction. La preuve, si vous regardez la figure \ref{fctcompliquee}, vous
 pouvez vous convaincre qu'il est très difficile, si on imagine une fonction qui
 varie beaucoup, de définir la notion d'aire sous la courbe. 
 
@@ -80,8 +80,8 @@ vous avez compris, est le suivant : êtes vous, après la lecture de ce cours,
 capable d'écrire un algorithme qui calcule l'aire d'une fonction continue entre
 $[a,b]$ avec une précision de $10^{-1}$ ?
 
-Voici donc une démarche, fondamentale en mathématiques, pour définir certaine
-notion en analyse, comme l'intégration :
+Voici donc une démarche, fondamentale en mathématiques, pour définir certaines
+notions en analyse, comme l'intégration :
 
   - En premier, définir la notion que l'on souhaite sur une classe de fonction
       restreinte, où l'on peut définir facilement cette fonction
@@ -90,7 +90,7 @@ notion en analyse, comme l'intégration :
 
 ## Première étape : calculer l'aire sous la courbe de fonctions constantes
 
-Pour la première étape, considérons l'ensemble des fonctions constantes définie
+Pour la première étape, considérons l'ensemble des fonctions constantes définies
 sur un intervalle $[a, b]$, avec $a$ et $b$ des nombres réels. Il est très
 facile de calculer l'aire sous la courbe de telle fonction.
 
@@ -114,7 +114,7 @@ approximée par plusieurs fonctions constantes.
 
 Soit $f$ une fonction continue sur un intervalle $[a, b]$, positive. On va
 supposer de plus que $f$ est croissante. Alors, on peut _découper_ l'intervalle
-$[a, b]$ en plusieurs sous intervalle. Vous trouverez dans les figures suivantes
+$[a, b]$ en plusieurs sous intervalles. Vous trouverez dans les figures suivantes
 \ref{decoupage1} et \ref{decoupage2}, des schémas avec un découpage en 10 puis
 100 sous intervalles.
 
@@ -146,7 +146,7 @@ d'intervalle de taille $\frac{b-a}{n}$. Ensuite, il nous faut un moyen de sauter
 de début de sous intervalle à début de sous intervalle suivant. 
 
 Pour cela, imaginons que nous sommes au 4eme sous intervalle en partant de la
-gauche. Cela veut dire que nous sommes séparée de 4 sous intervalles du point de
+gauche. Cela veut dire que nous sommes séparés de 4 sous intervalles du point de
 départ, $a$. Donc, nous sommes au point  $a + 4*\frac{b-a}{n}$. Finalement, le
 $k$-ième intervalle $I_k$ peut donc se définir comme :
   $$ I_k = \left[a + k\frac{b-a}{n}, a + (k+1)\frac{b-a}{n}\right]$$
@@ -209,8 +209,8 @@ $$ \boxed{\int_{a}^{b} f = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} f\le
 Nous avons donc vu dans les paragraphes précédents comment était définie la
 notion d'aire sous la courbe. Il suffit de calculer une approximation avec des
 rectangles, puis de rendre cette approximation de plus en plus précise en
-augmentant le nombre de subdivision de l'intervalle. Il y a beaucoup de détails
-techniques qui sont passés sous silence, mais qui sont très intuitif à
+augmentant le nombre de subdivisions de l'intervalle. Il y a beaucoup de détails
+techniques qui sont passés sous silence, mais qui sont très intuitifs à
 comprendre. Voici les détails qui ne sont pas explicités :
 
   - On peut montrer que la définition de l'aire sous la courbe d'une fonction
@@ -231,7 +231,7 @@ d'une aire sous la courbe.
 Il existe deux notations pour désigner l'aire sous la courbe d'une fonction
 $f$ sur l'intervalle $[a,b]$. Les deux notations contiennent le symbole $\int$
 qui forme un « S » pour rappeler que l'on _Somme_ sur des quantités infiniment
-petite.
+petites.
 
 La première notation, est la suivante :
   $$\int_a^{b} f(t)dt$$
@@ -250,7 +250,7 @@ La deuxième notation, est simplement :
 On ne fait donc pas apparaître le variable muette. C'est un style qui n'est pas
 souvent utilisé dans les copies du bac, mais qui apparaît parfois.
 
-Maintenant que vous avez été sensibilisé au deux principales notations de
+Maintenant que vous avez été sensibilisés aux deux principales notations de
 l'intégrale, nous pouvons passer au paragraphe suivant qui a pour objectif de
 déterminer comment varie l'aire sous la courbe sachant une fonction $f$ continue
 sur $[a,b]$ donnée. En outre, la question que l'on se pose est la suivante :
@@ -317,7 +317,7 @@ un dessin.
 
 Proposition :
 
-: 	Soient $f$ une fonction continue et positive sur un intervalle $[a,b]$.
+: 	Soit $f$ une fonction continue et positive sur un intervalle $[a,b]$.
 Soit $\mathcal{C}$ sa courbe représentative dans un repère orthogonal et $T$ un
 réel.  
 Si $\mathcal{C}$ est symétrique par rapport à l'axe des ordonnées,
@@ -348,7 +348,7 @@ utilisez pour faire la moyenne de vos notes de contrôle (par exemple) :
 Et il faut interpréter le valeur de $b-a$ comme la longueur de l'intervalle sur
 lequel vous intégrez. C'est un peu l'équivalent du « nombre de notes ».
 
-# Lien avec la dérivée, théorème fondamentale
+# Lien avec la dérivée, théorème fondamental
 
 Maintenant, que nous avons défini proprement à quoi correspondait l'aire sous la
 courbe d'une fonction $f$ continue et positive, nous essayons de comprendre la
@@ -358,7 +358,7 @@ Là encore, on va supposer, pour la démonstration, que la fonction $f$ est
 croissante et positive.
 
 Pour comprendre une fonction qui a des valeurs réelles, on peut essayer de la
-dérivée, ou dans un premier temps, voir si la dérivée existe !
+dériver, ou dans un premier temps, voir si la dérivée existe !
 
 Pour cela, il nous faut calculer la limite (revoir le cours sur la dérivation
 pour comprendre pourquoi) suivante, pour tout $x \in ]a, b[$[^remarque]:
@@ -434,7 +434,7 @@ n'existe pas d'unique primitive à proprement parler d'une fonction $f$. S'il en
 existe une, alors il en existe une infinité d'autres ! Si vous avez $F$ une
 primitive de $f$, alors $x \mapsto F(x) + 2$ est encore une autre primitive !
 En remplaçant $2$ par n'importe quelle valeur de votre choix, vous avez autant
-de primitive que de valeurs réelles ! Mais la question est : existe-t-il
+de primitives que de valeurs réelles ! Mais la question est : existe-t-il
 d'autres primitives possibles ? Réponse :
 
 Théorème :
@@ -502,7 +502,7 @@ $1$.
 Eh bien, nous connaissons une primitive de la fonction $x \mapsto \exp(x)$.
 Cette fonction est continue, et de plus $\exp' = \exp$. Donc **une** primitive
 de la fonction exponentielle est donnée par la fonction exponentielle. Donc,
-d'après le théorème fondamentale de l'analyse :
+d'après le théorème fondamental de l'analyse :
   $$\int_0^1 \exp(x)dx = [\exp(x)]_0^1 = \exp(1) - \exp(0) = e -1 \approx 1.718$$
 
 Maintenant que nous nous sommes échauffés, essayons de combiner la propriété de
@@ -564,10 +564,10 @@ précédent au rang $n+1$ et non pas au rang $n$) :
 
 ## En physique
 
-Dans ce court paragraphe, je vais essayer de détailler les opérations effectuée
+Dans ce court paragraphe, je vais essayer de détailler les opérations effectuées
 en mécanique du solide en physique.
 
-En effet, la première principe de la mécanique classique est l'énoncé suivant :
+En effet, le premier principe de la mécanique classique est l'énoncé suivant :
   $$ m \vec{a} = \sum_i \vec{F_i}$$
 Où, $m$ est une constante et représente la _masse_ d'un objet, $\vec{a}$ est le
 vecteur accélération de cet objet, et les $\vec{F_i}$ représente les différentes
@@ -576,7 +576,7 @@ forces qui s'exercent sur cet objet.
 Pour simplifier la situation, considérons la chute d'un objet (disons une pomme)
 dans le _vide_ dans un repère galiléen (sinon nous ne pouvons pas appliquer la
 loi de Newton).  Plaçons donc un objet à disons $30$ mètres de hauteur de mon
-repère, placé sur le sol. Lachons l'objet _sans vitesse initiale_ au temps $t_0
+repère, placé sur le sol. Lâchons l'objet _sans vitesse initiale_ au temps $t_0
 = 0$. Puisque la seule force qui s'exerce sur cet objet (c'est là que l'on
 utilise l'hypothèse de l'expérience dans le vide) est la force de
 gravitation[^force] qui se calcule par $mg$, où $g$ est la constante de
