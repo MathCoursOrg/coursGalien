@@ -14,6 +14,6 @@ Ci-dessous le tableau des scores :
   - K. S : 0
   - L. É : 0
   - M. W : 0
-  - M. L : 0
+  - M. L : 30
   - Y. E : 0
 
